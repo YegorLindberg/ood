@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D4CC5D62208BBB400A3FC2A /* IDance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5D52208BBB400A3FC2A /* IDance.swift */; };
+		3D4CC5D82208BD4A00A3FC2A /* CDanceWaltz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5D72208BD4A00A3FC2A /* CDanceWaltz.swift */; };
+		3D4CC5DA2208BD8300A3FC2A /* CDanceMinuet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5D92208BD8300A3FC2A /* CDanceMinuet.swift */; };
+		3D4CC5DC2208C04E00A3FC2A /* CDanceNoWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5DB2208C04E00A3FC2A /* CDanceNoWay.swift */; };
+		3D4CC5DE2208C16700A3FC2A /* RedHeadDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5DD2208C16700A3FC2A /* RedHeadDuck.swift */; };
+		3D4CC5E02208C30A00A3FC2A /* RubberDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5DF2208C30A00A3FC2A /* RubberDuck.swift */; };
+		3D71ED9C2208331C00DB7F6C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71ED9B2208331C00DB7F6C /* main.swift */; };
+		3D71EDA3220833D400DB7F6C /* CDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA2220833D400DB7F6C /* CDuck.swift */; };
+		3D71EDA52208352800DB7F6C /* IFlyBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA42208352800DB7F6C /* IFlyBehavior.swift */; };
+		3D71EDA7220835B500DB7F6C /* CFlyWithWings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA6220835B500DB7F6C /* CFlyWithWings.swift */; };
+		3D71EDA9220835FE00DB7F6C /* CFlyNoWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA8220835FE00DB7F6C /* CFlyNoWay.swift */; };
+		3D71EDAB2208365000DB7F6C /* IQuackBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDAA2208365000DB7F6C /* IQuackBehavior.swift */; };
+		3D71EDAD2208367A00DB7F6C /* CQuack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDAC2208367A00DB7F6C /* CQuack.swift */; };
+		3D71EDAF220836C200DB7F6C /* CSqueak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDAE220836C200DB7F6C /* CSqueak.swift */; };
+		3D71EDB12208370800DB7F6C /* CMuteQuack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDB02208370800DB7F6C /* CMuteQuack.swift */; };
+		3D71EDB32208379A00DB7F6C /* MullardDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDB22208379A00DB7F6C /* MullardDuck.swift */; };
+		5CD361D722113B3600AC2022 /* WoodDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD361D622113B3600AC2022 /* WoodDuck.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3D71ED962208331C00DB7F6C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3D4CC5D52208BBB400A3FC2A /* IDance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDance.swift; sourceTree = "<group>"; };
+		3D4CC5D72208BD4A00A3FC2A /* CDanceWaltz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDanceWaltz.swift; sourceTree = "<group>"; };
+		3D4CC5D92208BD8300A3FC2A /* CDanceMinuet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDanceMinuet.swift; sourceTree = "<group>"; };
+		3D4CC5DB2208C04E00A3FC2A /* CDanceNoWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDanceNoWay.swift; sourceTree = "<group>"; };
+		3D4CC5DD2208C16700A3FC2A /* RedHeadDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedHeadDuck.swift; sourceTree = "<group>"; };
+		3D4CC5DF2208C30A00A3FC2A /* RubberDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubberDuck.swift; sourceTree = "<group>"; };
+		3D71ED982208331C00DB7F6C /* SimUDuck */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimUDuck; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D71ED9B2208331C00DB7F6C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3D71EDA2220833D400DB7F6C /* CDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDuck.swift; sourceTree = "<group>"; };
+		3D71EDA42208352800DB7F6C /* IFlyBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFlyBehavior.swift; sourceTree = "<group>"; };
+		3D71EDA6220835B500DB7F6C /* CFlyWithWings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFlyWithWings.swift; sourceTree = "<group>"; };
+		3D71EDA8220835FE00DB7F6C /* CFlyNoWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFlyNoWay.swift; sourceTree = "<group>"; };
+		3D71EDAA2208365000DB7F6C /* IQuackBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQuackBehavior.swift; sourceTree = "<group>"; };
+		3D71EDAC2208367A00DB7F6C /* CQuack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CQuack.swift; sourceTree = "<group>"; };
+		3D71EDAE220836C200DB7F6C /* CSqueak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSqueak.swift; sourceTree = "<group>"; };
+		3D71EDB02208370800DB7F6C /* CMuteQuack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMuteQuack.swift; sourceTree = "<group>"; };
+		3D71EDB22208379A00DB7F6C /* MullardDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MullardDuck.swift; sourceTree = "<group>"; };
+		5CD361D622113B3600AC2022 /* WoodDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodDuck.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D71ED952208331C00DB7F6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D4CC5D42208BB9E00A3FC2A /* Dance */ = {
+			isa = PBXGroup;
+			children = (
+				3D4CC5D52208BBB400A3FC2A /* IDance.swift */,
+				3D4CC5D72208BD4A00A3FC2A /* CDanceWaltz.swift */,
+				3D4CC5D92208BD8300A3FC2A /* CDanceMinuet.swift */,
+				3D4CC5DB2208C04E00A3FC2A /* CDanceNoWay.swift */,
+			);
+			path = Dance;
+			sourceTree = "<group>";
+		};
+		3D71ED8F2208331C00DB7F6C = {
+			isa = PBXGroup;
+			children = (
+				3D71ED9A2208331C00DB7F6C /* SimUDuck */,
+				3D71ED992208331C00DB7F6C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D71ED992208331C00DB7F6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D71ED982208331C00DB7F6C /* SimUDuck */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D71ED9A2208331C00DB7F6C /* SimUDuck */ = {
+			isa = PBXGroup;
+			children = (
+				3D71EDB622083C7F00DB7F6C /* Duck */,
+				3D4CC5D42208BB9E00A3FC2A /* Dance */,
+				3D71EDB522083C6A00DB7F6C /* Quack */,
+				3D71EDB422083C5800DB7F6C /* Fly */,
+				3D71ED9B2208331C00DB7F6C /* main.swift */,
+			);
+			path = SimUDuck;
+			sourceTree = "<group>";
+		};
+		3D71EDB422083C5800DB7F6C /* Fly */ = {
+			isa = PBXGroup;
+			children = (
+				3D71EDA42208352800DB7F6C /* IFlyBehavior.swift */,
+				3D71EDA6220835B500DB7F6C /* CFlyWithWings.swift */,
+				3D71EDA8220835FE00DB7F6C /* CFlyNoWay.swift */,
+			);
+			path = Fly;
+			sourceTree = "<group>";
+		};
+		3D71EDB522083C6A00DB7F6C /* Quack */ = {
+			isa = PBXGroup;
+			children = (
+				3D71EDAA2208365000DB7F6C /* IQuackBehavior.swift */,
+				3D71EDAC2208367A00DB7F6C /* CQuack.swift */,
+				3D71EDAE220836C200DB7F6C /* CSqueak.swift */,
+				3D71EDB02208370800DB7F6C /* CMuteQuack.swift */,
+			);
+			path = Quack;
+			sourceTree = "<group>";
+		};
+		3D71EDB622083C7F00DB7F6C /* Duck */ = {
+			isa = PBXGroup;
+			children = (
+				3D71EDA2220833D400DB7F6C /* CDuck.swift */,
+				3D71EDB22208379A00DB7F6C /* MullardDuck.swift */,
+				3D4CC5DD2208C16700A3FC2A /* RedHeadDuck.swift */,
+				3D4CC5DF2208C30A00A3FC2A /* RubberDuck.swift */,
+				5CD361D622113B3600AC2022 /* WoodDuck.swift */,
+			);
+			path = Duck;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D71ED972208331C00DB7F6C /* SimUDuck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D71ED9F2208331C00DB7F6C /* Build configuration list for PBXNativeTarget "SimUDuck" */;
+			buildPhases = (
+				3D71ED942208331C00DB7F6C /* Sources */,
+				3D71ED952208331C00DB7F6C /* Frameworks */,
+				3D71ED962208331C00DB7F6C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimUDuck;
+			productName = SimUDuck;
+			productReference = 3D71ED982208331C00DB7F6C /* SimUDuck */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D71ED902208331C00DB7F6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Yegor Lindberg";
+				TargetAttributes = {
+					3D71ED972208331C00DB7F6C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 3D71ED932208331C00DB7F6C /* Build configuration list for PBXProject "SimUDuck" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3D71ED8F2208331C00DB7F6C;
+			productRefGroup = 3D71ED992208331C00DB7F6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D71ED972208331C00DB7F6C /* SimUDuck */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D71ED942208331C00DB7F6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D71EDA7220835B500DB7F6C /* CFlyWithWings.swift in Sources */,
+				3D71EDA52208352800DB7F6C /* IFlyBehavior.swift in Sources */,
+				3D71EDA3220833D400DB7F6C /* CDuck.swift in Sources */,
+				3D4CC5DE2208C16700A3FC2A /* RedHeadDuck.swift in Sources */,
+				3D71EDB12208370800DB7F6C /* CMuteQuack.swift in Sources */,
+				3D4CC5D82208BD4A00A3FC2A /* CDanceWaltz.swift in Sources */,
+				3D4CC5D62208BBB400A3FC2A /* IDance.swift in Sources */,
+				3D71EDAB2208365000DB7F6C /* IQuackBehavior.swift in Sources */,
+				3D4CC5E02208C30A00A3FC2A /* RubberDuck.swift in Sources */,
+				5CD361D722113B3600AC2022 /* WoodDuck.swift in Sources */,
+				3D4CC5DA2208BD8300A3FC2A /* CDanceMinuet.swift in Sources */,
+				3D71EDA9220835FE00DB7F6C /* CFlyNoWay.swift in Sources */,
+				3D71EDB32208379A00DB7F6C /* MullardDuck.swift in Sources */,
+				3D71EDAF220836C200DB7F6C /* CSqueak.swift in Sources */,
+				3D71ED9C2208331C00DB7F6C /* main.swift in Sources */,
+				3D4CC5DC2208C04E00A3FC2A /* CDanceNoWay.swift in Sources */,
+				3D71EDAD2208367A00DB7F6C /* CQuack.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3D71ED9D2208331C00DB7F6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D71ED9E2208331C00DB7F6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3D71EDA02208331C00DB7F6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQ34MQ3ZUS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		3D71EDA12208331C00DB7F6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQ34MQ3ZUS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D71ED932208331C00DB7F6C /* Build configuration list for PBXProject "SimUDuck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D71ED9D2208331C00DB7F6C /* Debug */,
+				3D71ED9E2208331C00DB7F6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D71ED9F2208331C00DB7F6C /* Build configuration list for PBXNativeTarget "SimUDuck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D71EDA02208331C00DB7F6C /* Debug */,
+				3D71EDA12208331C00DB7F6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D71ED902208331C00DB7F6C /* Project object */;
+}
