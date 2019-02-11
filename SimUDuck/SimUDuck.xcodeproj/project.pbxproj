@@ -8,22 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		3D4CC5D62208BBB400A3FC2A /* IDance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5D52208BBB400A3FC2A /* IDance.swift */; };
-		3D4CC5D82208BD4A00A3FC2A /* CDanceWaltz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5D72208BD4A00A3FC2A /* CDanceWaltz.swift */; };
-		3D4CC5DA2208BD8300A3FC2A /* CDanceMinuet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5D92208BD8300A3FC2A /* CDanceMinuet.swift */; };
-		3D4CC5DC2208C04E00A3FC2A /* CDanceNoWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5DB2208C04E00A3FC2A /* CDanceNoWay.swift */; };
+		3D4CC5D82208BD4A00A3FC2A /* DanceWaltz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5D72208BD4A00A3FC2A /* DanceWaltz.swift */; };
+		3D4CC5DA2208BD8300A3FC2A /* DanceMinuet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5D92208BD8300A3FC2A /* DanceMinuet.swift */; };
+		3D4CC5DC2208C04E00A3FC2A /* DanceNoWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5DB2208C04E00A3FC2A /* DanceNoWay.swift */; };
 		3D4CC5DE2208C16700A3FC2A /* RedHeadDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5DD2208C16700A3FC2A /* RedHeadDuck.swift */; };
 		3D4CC5E02208C30A00A3FC2A /* RubberDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CC5DF2208C30A00A3FC2A /* RubberDuck.swift */; };
 		3D71ED9C2208331C00DB7F6C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71ED9B2208331C00DB7F6C /* main.swift */; };
-		3D71EDA3220833D400DB7F6C /* CDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA2220833D400DB7F6C /* CDuck.swift */; };
+		3D71EDA3220833D400DB7F6C /* Duck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA2220833D400DB7F6C /* Duck.swift */; };
 		3D71EDA52208352800DB7F6C /* IFlyBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA42208352800DB7F6C /* IFlyBehavior.swift */; };
-		3D71EDA7220835B500DB7F6C /* CFlyWithWings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA6220835B500DB7F6C /* CFlyWithWings.swift */; };
-		3D71EDA9220835FE00DB7F6C /* CFlyNoWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA8220835FE00DB7F6C /* CFlyNoWay.swift */; };
+		3D71EDA7220835B500DB7F6C /* FlyWithWings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA6220835B500DB7F6C /* FlyWithWings.swift */; };
+		3D71EDA9220835FE00DB7F6C /* FlyNoWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA8220835FE00DB7F6C /* FlyNoWay.swift */; };
 		3D71EDAB2208365000DB7F6C /* IQuackBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDAA2208365000DB7F6C /* IQuackBehavior.swift */; };
-		3D71EDAD2208367A00DB7F6C /* CQuack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDAC2208367A00DB7F6C /* CQuack.swift */; };
-		3D71EDAF220836C200DB7F6C /* CSqueak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDAE220836C200DB7F6C /* CSqueak.swift */; };
-		3D71EDB12208370800DB7F6C /* CMuteQuack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDB02208370800DB7F6C /* CMuteQuack.swift */; };
+		3D71EDAD2208367A00DB7F6C /* Quack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDAC2208367A00DB7F6C /* Quack.swift */; };
+		3D71EDAF220836C200DB7F6C /* Squeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDAE220836C200DB7F6C /* Squeak.swift */; };
+		3D71EDB12208370800DB7F6C /* MuteQuack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDB02208370800DB7F6C /* MuteQuack.swift */; };
 		3D71EDB32208379A00DB7F6C /* MullardDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDB22208379A00DB7F6C /* MullardDuck.swift */; };
 		5CD361D722113B3600AC2022 /* WoodDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD361D622113B3600AC2022 /* WoodDuck.swift */; };
+		5CD361D922114C6700AC2022 /* ModelDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD361D822114C6700AC2022 /* ModelDuck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,23 +41,24 @@
 
 /* Begin PBXFileReference section */
 		3D4CC5D52208BBB400A3FC2A /* IDance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDance.swift; sourceTree = "<group>"; };
-		3D4CC5D72208BD4A00A3FC2A /* CDanceWaltz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDanceWaltz.swift; sourceTree = "<group>"; };
-		3D4CC5D92208BD8300A3FC2A /* CDanceMinuet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDanceMinuet.swift; sourceTree = "<group>"; };
-		3D4CC5DB2208C04E00A3FC2A /* CDanceNoWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDanceNoWay.swift; sourceTree = "<group>"; };
+		3D4CC5D72208BD4A00A3FC2A /* DanceWaltz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanceWaltz.swift; sourceTree = "<group>"; };
+		3D4CC5D92208BD8300A3FC2A /* DanceMinuet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanceMinuet.swift; sourceTree = "<group>"; };
+		3D4CC5DB2208C04E00A3FC2A /* DanceNoWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanceNoWay.swift; sourceTree = "<group>"; };
 		3D4CC5DD2208C16700A3FC2A /* RedHeadDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedHeadDuck.swift; sourceTree = "<group>"; };
 		3D4CC5DF2208C30A00A3FC2A /* RubberDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubberDuck.swift; sourceTree = "<group>"; };
 		3D71ED982208331C00DB7F6C /* SimUDuck */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimUDuck; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D71ED9B2208331C00DB7F6C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		3D71EDA2220833D400DB7F6C /* CDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDuck.swift; sourceTree = "<group>"; };
+		3D71EDA2220833D400DB7F6C /* Duck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck.swift; sourceTree = "<group>"; };
 		3D71EDA42208352800DB7F6C /* IFlyBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFlyBehavior.swift; sourceTree = "<group>"; };
-		3D71EDA6220835B500DB7F6C /* CFlyWithWings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFlyWithWings.swift; sourceTree = "<group>"; };
-		3D71EDA8220835FE00DB7F6C /* CFlyNoWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFlyNoWay.swift; sourceTree = "<group>"; };
+		3D71EDA6220835B500DB7F6C /* FlyWithWings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyWithWings.swift; sourceTree = "<group>"; };
+		3D71EDA8220835FE00DB7F6C /* FlyNoWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyNoWay.swift; sourceTree = "<group>"; };
 		3D71EDAA2208365000DB7F6C /* IQuackBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQuackBehavior.swift; sourceTree = "<group>"; };
-		3D71EDAC2208367A00DB7F6C /* CQuack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CQuack.swift; sourceTree = "<group>"; };
-		3D71EDAE220836C200DB7F6C /* CSqueak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSqueak.swift; sourceTree = "<group>"; };
-		3D71EDB02208370800DB7F6C /* CMuteQuack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMuteQuack.swift; sourceTree = "<group>"; };
+		3D71EDAC2208367A00DB7F6C /* Quack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quack.swift; sourceTree = "<group>"; };
+		3D71EDAE220836C200DB7F6C /* Squeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squeak.swift; sourceTree = "<group>"; };
+		3D71EDB02208370800DB7F6C /* MuteQuack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteQuack.swift; sourceTree = "<group>"; };
 		3D71EDB22208379A00DB7F6C /* MullardDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MullardDuck.swift; sourceTree = "<group>"; };
 		5CD361D622113B3600AC2022 /* WoodDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodDuck.swift; sourceTree = "<group>"; };
+		5CD361D822114C6700AC2022 /* ModelDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDuck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				3D4CC5D52208BBB400A3FC2A /* IDance.swift */,
-				3D4CC5D72208BD4A00A3FC2A /* CDanceWaltz.swift */,
-				3D4CC5D92208BD8300A3FC2A /* CDanceMinuet.swift */,
-				3D4CC5DB2208C04E00A3FC2A /* CDanceNoWay.swift */,
+				3D4CC5D72208BD4A00A3FC2A /* DanceWaltz.swift */,
+				3D4CC5D92208BD8300A3FC2A /* DanceMinuet.swift */,
+				3D4CC5DB2208C04E00A3FC2A /* DanceNoWay.swift */,
 			);
 			path = Dance;
 			sourceTree = "<group>";
@@ -113,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				3D71EDA42208352800DB7F6C /* IFlyBehavior.swift */,
-				3D71EDA6220835B500DB7F6C /* CFlyWithWings.swift */,
-				3D71EDA8220835FE00DB7F6C /* CFlyNoWay.swift */,
+				3D71EDA6220835B500DB7F6C /* FlyWithWings.swift */,
+				3D71EDA8220835FE00DB7F6C /* FlyNoWay.swift */,
 			);
 			path = Fly;
 			sourceTree = "<group>";
@@ -123,9 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				3D71EDAA2208365000DB7F6C /* IQuackBehavior.swift */,
-				3D71EDAC2208367A00DB7F6C /* CQuack.swift */,
-				3D71EDAE220836C200DB7F6C /* CSqueak.swift */,
-				3D71EDB02208370800DB7F6C /* CMuteQuack.swift */,
+				3D71EDAC2208367A00DB7F6C /* Quack.swift */,
+				3D71EDAE220836C200DB7F6C /* Squeak.swift */,
+				3D71EDB02208370800DB7F6C /* MuteQuack.swift */,
 			);
 			path = Quack;
 			sourceTree = "<group>";
@@ -133,11 +135,12 @@
 		3D71EDB622083C7F00DB7F6C /* Duck */ = {
 			isa = PBXGroup;
 			children = (
-				3D71EDA2220833D400DB7F6C /* CDuck.swift */,
+				3D71EDA2220833D400DB7F6C /* Duck.swift */,
 				3D71EDB22208379A00DB7F6C /* MullardDuck.swift */,
 				3D4CC5DD2208C16700A3FC2A /* RedHeadDuck.swift */,
 				3D4CC5DF2208C30A00A3FC2A /* RubberDuck.swift */,
 				5CD361D622113B3600AC2022 /* WoodDuck.swift */,
+				5CD361D822114C6700AC2022 /* ModelDuck.swift */,
 			);
 			path = Duck;
 			sourceTree = "<group>";
@@ -199,23 +202,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D71EDA7220835B500DB7F6C /* CFlyWithWings.swift in Sources */,
+				3D71EDA7220835B500DB7F6C /* FlyWithWings.swift in Sources */,
 				3D71EDA52208352800DB7F6C /* IFlyBehavior.swift in Sources */,
-				3D71EDA3220833D400DB7F6C /* CDuck.swift in Sources */,
+				3D71EDA3220833D400DB7F6C /* Duck.swift in Sources */,
 				3D4CC5DE2208C16700A3FC2A /* RedHeadDuck.swift in Sources */,
-				3D71EDB12208370800DB7F6C /* CMuteQuack.swift in Sources */,
-				3D4CC5D82208BD4A00A3FC2A /* CDanceWaltz.swift in Sources */,
+				3D71EDB12208370800DB7F6C /* MuteQuack.swift in Sources */,
+				3D4CC5D82208BD4A00A3FC2A /* DanceWaltz.swift in Sources */,
+				5CD361D922114C6700AC2022 /* ModelDuck.swift in Sources */,
 				3D4CC5D62208BBB400A3FC2A /* IDance.swift in Sources */,
 				3D71EDAB2208365000DB7F6C /* IQuackBehavior.swift in Sources */,
 				3D4CC5E02208C30A00A3FC2A /* RubberDuck.swift in Sources */,
 				5CD361D722113B3600AC2022 /* WoodDuck.swift in Sources */,
-				3D4CC5DA2208BD8300A3FC2A /* CDanceMinuet.swift in Sources */,
-				3D71EDA9220835FE00DB7F6C /* CFlyNoWay.swift in Sources */,
+				3D4CC5DA2208BD8300A3FC2A /* DanceMinuet.swift in Sources */,
+				3D71EDA9220835FE00DB7F6C /* FlyNoWay.swift in Sources */,
 				3D71EDB32208379A00DB7F6C /* MullardDuck.swift in Sources */,
-				3D71EDAF220836C200DB7F6C /* CSqueak.swift in Sources */,
+				3D71EDAF220836C200DB7F6C /* Squeak.swift in Sources */,
 				3D71ED9C2208331C00DB7F6C /* main.swift in Sources */,
-				3D4CC5DC2208C04E00A3FC2A /* CDanceNoWay.swift in Sources */,
-				3D71EDAD2208367A00DB7F6C /* CQuack.swift in Sources */,
+				3D4CC5DC2208C04E00A3FC2A /* DanceNoWay.swift in Sources */,
+				3D71EDAD2208367A00DB7F6C /* Quack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

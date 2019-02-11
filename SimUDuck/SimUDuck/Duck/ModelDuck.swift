@@ -1,5 +1,5 @@
 //
-//  WoodDuck.swift
+//  ModelDuck.swift
 //  SimUDuck
 //
 //  Created by Yegor Lindberg on 11/02/2019.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-class WoodDuck: Duck {
+class ModelDuck: Duck {
     
     override init() {
         super.init()
@@ -18,8 +18,15 @@ class WoodDuck: Duck {
         dancing = DanceNoWay()
     }
     
+    func setFlying(type: IFlyBehavior) {
+        flying = type
+    }
+    func setQuacking(type: IQuackBehavior) {
+        quacking = type
+    }
+    
     override func display() {
-        print("display wood duck")
+        print("display model duck")
     }
     
 }

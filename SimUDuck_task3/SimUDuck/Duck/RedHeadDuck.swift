@@ -6,16 +6,16 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class RedHeadDuck: CDuck {
+class RedHeadDuck: Duck {
     
     override init() {
         super.init()
         
-        self.setDancing(danceMinuet)
+        self.dancing = danceMinuet
         
-        self.setQuacking(quacking)
+        self.quacking = usualQuacking
         
-        self.setFlying(flyWithWings)
+        self.flying = doFly()
     }
     
     override func display() {

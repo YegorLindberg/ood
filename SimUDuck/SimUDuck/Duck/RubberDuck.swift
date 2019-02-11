@@ -9,13 +9,13 @@
 import Foundation
 
 
-class RubberDuck: CDuck {
+class RubberDuck: Duck {
     
     override init() {
         super.init()
-        setFlying(type: CFlyNoWay())
-        setQuacking(type: CSqueak())
-        setDancing(type: CDanceNoWay())
+        flying = FlyNoWay()
+        quacking = Squeak()
+        dancing = DanceNoWay()
     }
     
     override func display() {

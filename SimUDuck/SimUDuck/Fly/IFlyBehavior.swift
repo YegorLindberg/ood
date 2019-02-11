@@ -12,7 +12,5 @@ import Foundation
 protocol IFlyBehavior {
     
     func fly()
-    func increaseDepartureCount()
-    func printCountOfDepartures()
     
 }

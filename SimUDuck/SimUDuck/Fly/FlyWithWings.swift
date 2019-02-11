@@ -9,19 +9,13 @@
 import Foundation
 
 
-class CFlyWithWings: IFlyBehavior {
+class FlyWithWings: IFlyBehavior {
     
     private var countOfDepartures = 0
     
     func fly() {
-        print("fly with wings")
-    }
-    
-    func increaseDepartureCount() {
         self.countOfDepartures += 1
+        print("fly with wings: ", countOfDepartures)
     }
     
-    func printCountOfDepartures() {
-        print(countOfDepartures)
-    }
 }

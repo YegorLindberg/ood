@@ -9,7 +9,7 @@
 import Foundation
 
 
-func testDuck(_ duck: CDuck, flyCount: Int) {
+func testDuck(_ duck: Duck, flyCount: Int) {
     duck.display()
     duck.swim()
     for _ in 1...flyCount {
@@ -17,8 +17,6 @@ func testDuck(_ duck: CDuck, flyCount: Int) {
     }
     duck.quack()
     duck.dance()
-    print("count of departures: ", terminator: "")
-    duck.printCountOfDepartures()
     print("")
 }
 

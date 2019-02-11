@@ -6,16 +6,16 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class RubberDuck: CDuck {
+class RubberDuck: Duck {
     
     override init() {
         super.init()
         
-        self.setDancing(danceNoWay)
+        self.dancing = danceNoWay
         
-        self.setQuacking(squeak)
+        self.quacking = squeak
         
-        self.setFlying(flyNoWay)
+        self.flying = flyNoWay()
     }
     
     override func display() {

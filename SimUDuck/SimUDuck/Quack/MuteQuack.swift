@@ -1,5 +1,5 @@
 //
-//  CQuack.swift
+//  CMuteQuack.swift
 //  SimUDuck
 //
 //  Created by Yegor Lindberg on 04/02/2019.
@@ -9,10 +9,10 @@
 import Foundation
 
 
-class CQuack: IQuackBehavior {
+class MuteQuack: IQuackBehavior {
     
     func quack() {
-        print("normal quack")
+        print("not quacking")
     }
     
 }

@@ -1,12 +1,15 @@
 //
-//  WoodDuck.swift
+//  ModelDuck.swift
 //  SimUDuck
 //
-//  Created by Yegor Lindberg on 10/02/2019.
+//  Created by Yegor Lindberg on 11/02/2019.
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class WoodDuck: Duck {
+import Foundation
+
+
+class ModelDuck: Duck {
     
     override init() {
         super.init()
@@ -18,7 +21,16 @@ class WoodDuck: Duck {
         self.flying = flyNoWay()
     }
     
+    func setFlying(_ flying: @escaping () -> Int) {
+        self.flying = flying
+    }
+    
+    func setQuacking(_ quacking: @escaping () -> ()) {
+        self.quacking = quacking
+    }
+    
     override func display() {
         print("display wood duck")
     }
+    
 }

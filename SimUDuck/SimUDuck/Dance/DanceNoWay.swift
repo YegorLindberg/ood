@@ -9,7 +9,7 @@
 import Foundation
 
 
-class CDanceNoWay: IDance {
+class DanceNoWay: IDance {
     
     func dance() {
         print("not dancing")

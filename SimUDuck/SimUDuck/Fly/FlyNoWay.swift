@@ -9,20 +9,16 @@
 import Foundation
 
 
-class CFlyNoWay: IFlyBehavior {
+class FlyNoWay: IFlyBehavior {
     
-    private var countOfDeparture = 0
-    
-    func increaseDepartureCount() {
-        self.countOfDeparture = 0 //because she can't flying
-    }
-    
-    func printCountOfDepartures() {
-        print(countOfDeparture)
-    }
+    private let countOfDeparture = 0
     
     func fly() {
         print("not flying")
     }
     
+    func printCountOfDepartures() {
+        print(countOfDeparture)
+    }
+ 
 }

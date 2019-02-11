@@ -9,13 +9,13 @@
 import Foundation
 
 
-class MullardDuck: CDuck {
+class MullardDuck: Duck {
 
     override init () {
         super.init()
-        setFlying(type: CFlyWithWings())
-        setQuacking(type: CQuack())
-        setDancing(type: CDanceWaltz())
+        flying = FlyWithWings()
+        quacking = Quack()
+        dancing = DanceWaltz()
     }
     
     override func display() {

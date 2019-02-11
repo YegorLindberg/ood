@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3D71ED9C2208331C00DB7F6C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71ED9B2208331C00DB7F6C /* main.swift */; };
-		3D71EDA3220833D400DB7F6C /* CDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA2220833D400DB7F6C /* CDuck.swift */; };
+		3D71EDA3220833D400DB7F6C /* Duck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71EDA2220833D400DB7F6C /* Duck.swift */; };
 		5C953109221025580030A6BD /* MallardDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C953108221025580030A6BD /* MallardDuck.swift */; };
+		5CD361DB2211563100AC2022 /* ModelDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD361DA2211563100AC2022 /* ModelDuck.swift */; };
 		5CE847512210B2BF000F2B10 /* duckActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE847502210B2BF000F2B10 /* duckActions.swift */; };
 		5CE847532210B763000F2B10 /* RedHeadDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE847522210B763000F2B10 /* RedHeadDuck.swift */; };
 		5CE847552210B7B7000F2B10 /* RubberDuck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE847542210B7B7000F2B10 /* RubberDuck.swift */; };
@@ -32,8 +33,9 @@
 /* Begin PBXFileReference section */
 		3D71ED982208331C00DB7F6C /* SimUDuck */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimUDuck; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D71ED9B2208331C00DB7F6C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		3D71EDA2220833D400DB7F6C /* CDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDuck.swift; sourceTree = "<group>"; };
+		3D71EDA2220833D400DB7F6C /* Duck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duck.swift; sourceTree = "<group>"; };
 		5C953108221025580030A6BD /* MallardDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallardDuck.swift; sourceTree = "<group>"; };
+		5CD361DA2211563100AC2022 /* ModelDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDuck.swift; sourceTree = "<group>"; };
 		5CE847502210B2BF000F2B10 /* duckActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duckActions.swift; sourceTree = "<group>"; };
 		5CE847522210B763000F2B10 /* RedHeadDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedHeadDuck.swift; sourceTree = "<group>"; };
 		5CE847542210B7B7000F2B10 /* RubberDuck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RubberDuck.swift; sourceTree = "<group>"; };
@@ -82,11 +84,12 @@
 		3D71EDB622083C7F00DB7F6C /* Duck */ = {
 			isa = PBXGroup;
 			children = (
-				3D71EDA2220833D400DB7F6C /* CDuck.swift */,
+				3D71EDA2220833D400DB7F6C /* Duck.swift */,
 				5C953108221025580030A6BD /* MallardDuck.swift */,
 				5CE847522210B763000F2B10 /* RedHeadDuck.swift */,
 				5CE847542210B7B7000F2B10 /* RubberDuck.swift */,
 				5CE847562210B8B5000F2B10 /* WoodDuck.swift */,
+				5CD361DA2211563100AC2022 /* ModelDuck.swift */,
 			);
 			path = Duck;
 			sourceTree = "<group>";
@@ -151,9 +154,10 @@
 				5CE847572210B8B5000F2B10 /* WoodDuck.swift in Sources */,
 				5CE847592210B970000F2B10 /* TestingDuck.swift in Sources */,
 				5CE847512210B2BF000F2B10 /* duckActions.swift in Sources */,
-				3D71EDA3220833D400DB7F6C /* CDuck.swift in Sources */,
+				3D71EDA3220833D400DB7F6C /* Duck.swift in Sources */,
 				3D71ED9C2208331C00DB7F6C /* main.swift in Sources */,
 				5CE847532210B763000F2B10 /* RedHeadDuck.swift in Sources */,
+				5CD361DB2211563100AC2022 /* ModelDuck.swift in Sources */,
 				5CE847552210B7B7000F2B10 /* RubberDuck.swift in Sources */,
 				5C953109221025580030A6BD /* MallardDuck.swift in Sources */,
 			);

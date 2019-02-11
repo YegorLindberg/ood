@@ -1,5 +1,5 @@
 //
-//  CSqueak.swift
+//  CQuack.swift
 //  SimUDuck
 //
 //  Created by Yegor Lindberg on 04/02/2019.
@@ -9,10 +9,10 @@
 import Foundation
 
 
-class CSqueak: IQuackBehavior {
+class Quack: IQuackBehavior {
     
     func quack() {
-        print("squeeeeeak")
+        print("normal quack")
     }
     
 }

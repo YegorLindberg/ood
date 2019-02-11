@@ -9,7 +9,7 @@
 import Foundation
 
 
-class CDanceWaltz: IDance {
+class DanceWaltz: IDance {
     
     func dance() {
         print("dance waltz")

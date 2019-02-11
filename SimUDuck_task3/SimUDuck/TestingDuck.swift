@@ -6,11 +6,13 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-func testingDuck(duck: CDuck) {
+func testingDuck(_ duck: Duck) {
     duck.display()
     duck.swim()
     duck.quack()
-    duck.fly()
+    for _ in 1...3 {
+        duck.fly()
+    }
     duck.dance()
     print("")
 }

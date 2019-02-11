@@ -6,18 +6,18 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class MullardDuck: CDuck {
-    
+class MullardDuck: Duck {
+
     override init() {
         super.init()
         
-        self.setDancing(danceWaltz)
+        self.dancing = danceWaltz
         
-        self.setQuacking(quacking)
+        self.quacking = usualQuacking
         
-        self.setFlying(flyWithWings)
+        self.flying = doFly()
     }
-    
+
     override func display() {
         print("display mullard duck")
     }
