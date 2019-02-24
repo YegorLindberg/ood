@@ -28,6 +28,8 @@ struct WeatherInfo {
 
 class WeatherData: ObservableUnit<WeatherInfo> {
     
+    private var weatherInfo = WeatherInfo()
+    
     private var temperature: Double = 0.0
     private var    humidity: Double = 0.0
     private var    pressure: Double = 760.0
@@ -48,10 +50,10 @@ class WeatherData: ObservableUnit<WeatherInfo> {
         notifyObservers()
     }
     
-    func setMeasurements(temperature: Double, humidity: Double, pressure: Double) {
-        self.temperature = temperature
-        self.humidity    = humidity
-        self.pressure    = pressure
+    func setMeasurements(data: WeatherInfo) {
+        self.temperature = data.temperature
+        self.humidity    = data.humidity
+        self.pressure    = data.pressure
         measurementsChanged()
     }
     

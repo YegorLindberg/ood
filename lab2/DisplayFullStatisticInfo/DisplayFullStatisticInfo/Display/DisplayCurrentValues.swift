@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Display: Observer<WeatherInfo> {
+class DisplayCurrentValues: Observer<WeatherInfo> {
     
     override func update(data: WeatherInfo) {
         print("Current Temperature: \(data.temperature)")
