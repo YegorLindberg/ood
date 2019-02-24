@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C45BEEC221A9DF300D810DF /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45BEEB221A9DF300D810DF /* Display.swift */; };
+		5C45BEEE221AA04B00D810DF /* CalculateSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45BEED221AA04B00D810DF /* CalculateSensor.swift */; };
 		5C9828532217FBE700A73DC6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9828522217FBE700A73DC6 /* main.swift */; };
 		5C98285C2217FED100A73DC6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98285B2217FED100A73DC6 /* Observer.swift */; };
 		5C982860221832F200A73DC6 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98285F221832F200A73DC6 /* WeatherData.swift */; };
-		5C9828622218335400A73DC6 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9828612218335400A73DC6 /* Display.swift */; };
-		5C98286422187B9800A73DC6 /* StatsDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98286322187B9800A73DC6 /* StatsDisplay.swift */; };
+		5C9828622218335400A73DC6 /* DisplayCurrentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9828612218335400A73DC6 /* DisplayCurrentValues.swift */; };
+		5CCB3FD12221301C00203006 /* SensorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB3FD02221301C00203006 /* SensorType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,12 +29,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C45BEEB221A9DF300D810DF /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
+		5C45BEED221AA04B00D810DF /* CalculateSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSensor.swift; sourceTree = "<group>"; };
 		5C98284F2217FBE700A73DC6 /* DisplayFullStatisticInfo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DisplayFullStatisticInfo; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9828522217FBE700A73DC6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5C98285B2217FED100A73DC6 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		5C98285F221832F200A73DC6 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
-		5C9828612218335400A73DC6 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
-		5C98286322187B9800A73DC6 /* StatsDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsDisplay.swift; sourceTree = "<group>"; };
+		5C9828612218335400A73DC6 /* DisplayCurrentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCurrentValues.swift; sourceTree = "<group>"; };
+		5CCB3FD02221301C00203006 /* SensorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C3D52692219B4CD00E4F5EA /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				5C98285B2217FED100A73DC6 /* Observer.swift */,
+			);
+			path = Observer;
+			sourceTree = "<group>";
+		};
+		5C3D526A2219B4E800E4F5EA /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				5C9828612218335400A73DC6 /* DisplayCurrentValues.swift */,
+				5C45BEEB221A9DF300D810DF /* Display.swift */,
+				5C45BEED221AA04B00D810DF /* CalculateSensor.swift */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		5C3D526B2219B50100E4F5EA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5C98285F221832F200A73DC6 /* WeatherData.swift */,
+				5CCB3FD02221301C00203006 /* SensorType.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		5C9828462217FBE700A73DC6 = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +96,10 @@
 		5C9828512217FBE700A73DC6 /* DisplayFullStatisticInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5C3D526B2219B50100E4F5EA /* Entity */,
+				5C3D526A2219B4E800E4F5EA /* Display */,
+				5C3D52692219B4CD00E4F5EA /* Observer */,
 				5C9828522217FBE700A73DC6 /* main.swift */,
-				5C98285B2217FED100A73DC6 /* Observer.swift */,
-				5C98285F221832F200A73DC6 /* WeatherData.swift */,
-				5C9828612218335400A73DC6 /* Display.swift */,
-				5C98286322187B9800A73DC6 /* StatsDisplay.swift */,
 			);
 			path = DisplayFullStatisticInfo;
 			sourceTree = "<group>";
@@ -131,11 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C98286422187B9800A73DC6 /* StatsDisplay.swift in Sources */,
+				5C45BEEE221AA04B00D810DF /* CalculateSensor.swift in Sources */,
 				5C9828532217FBE700A73DC6 /* main.swift in Sources */,
 				5C982860221832F200A73DC6 /* WeatherData.swift in Sources */,
-				5C9828622218335400A73DC6 /* Display.swift in Sources */,
+				5C9828622218335400A73DC6 /* DisplayCurrentValues.swift in Sources */,
 				5C98285C2217FED100A73DC6 /* Observer.swift in Sources */,
+				5CCB3FD12221301C00203006 /* SensorType.swift in Sources */,
+				5C45BEEC221A9DF300D810DF /* Display.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,4 +6,8 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-import Foundation
+enum SensorType: CaseIterable {
+    case Temperature
+    case Pressure
+    case Humidity
+}

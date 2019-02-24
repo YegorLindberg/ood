@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DisplayFullStatisticInfo/Observer/Observer.swift"
+            timestampString = "572701755.14054"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "notifyObservers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DisplayFullStatisticInfo.ObservableUnit.notifyObservers() -&gt; ()"
+                  moduleName = "DisplayFullStatisticInfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yegor.lindberg/Documents/GitHub/ood/lab2/DisplayFullStatisticInfo/DisplayFullStatisticInfo/Observer/Observer.swift"
+                  timestampString = "572701215.631358"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (DisplayFullStatisticInfo.Observer&lt;A&gt;, DisplayFullStatisticInfo.Observer&lt;A&gt;) -&gt; Swift.Bool in DisplayFullStatisticInfo.ObservableUnit.notifyObservers() -&gt; ()"
+                  moduleName = "DisplayFullStatisticInfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yegor.lindberg/Documents/GitHub/ood/lab2/DisplayFullStatisticInfo/DisplayFullStatisticInfo/Observer/Observer.swift"
+                  timestampString = "572701215.635273"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "58">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
