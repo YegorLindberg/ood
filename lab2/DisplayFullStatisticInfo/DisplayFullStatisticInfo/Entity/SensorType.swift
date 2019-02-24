@@ -10,4 +10,6 @@ enum SensorType: CaseIterable {
     case Temperature
     case Pressure
     case Humidity
+    case WindSpeed
+    case WindDirection
 }

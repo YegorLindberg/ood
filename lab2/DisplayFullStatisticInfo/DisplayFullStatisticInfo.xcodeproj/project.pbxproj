@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C3A4D342222CF5D00D16570 /* WindSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3A4D332222CF5D00D16570 /* WindSensor.swift */; };
+		5C3A4D3622230F5E00D16570 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3A4D3522230F5E00D16570 /* Vector.swift */; };
 		5C45BEEC221A9DF300D810DF /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45BEEB221A9DF300D810DF /* Display.swift */; };
 		5C45BEEE221AA04B00D810DF /* CalculateSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45BEED221AA04B00D810DF /* CalculateSensor.swift */; };
 		5C9828532217FBE700A73DC6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9828522217FBE700A73DC6 /* main.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C3A4D332222CF5D00D16570 /* WindSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindSensor.swift; sourceTree = "<group>"; };
+		5C3A4D3522230F5E00D16570 /* Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		5C45BEEB221A9DF300D810DF /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		5C45BEED221AA04B00D810DF /* CalculateSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSensor.swift; sourceTree = "<group>"; };
 		5C98284F2217FBE700A73DC6 /* DisplayFullStatisticInfo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DisplayFullStatisticInfo; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +67,7 @@
 			children = (
 				5C9828612218335400A73DC6 /* DisplayCurrentValues.swift */,
 				5C45BEEB221A9DF300D810DF /* Display.swift */,
+				5C3A4D332222CF5D00D16570 /* WindSensor.swift */,
 				5C45BEED221AA04B00D810DF /* CalculateSensor.swift */,
 			);
 			path = Display;
@@ -73,6 +78,7 @@
 			children = (
 				5C98285F221832F200A73DC6 /* WeatherData.swift */,
 				5CCB3FD02221301C00203006 /* SensorType.swift */,
+				5C3A4D3522230F5E00D16570 /* Vector.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -168,6 +174,8 @@
 				5C98285C2217FED100A73DC6 /* Observer.swift in Sources */,
 				5CCB3FD12221301C00203006 /* SensorType.swift in Sources */,
 				5C45BEEC221A9DF300D810DF /* Display.swift in Sources */,
+				5C3A4D3622230F5E00D16570 /* Vector.swift in Sources */,
+				5C3A4D342222CF5D00D16570 /* WindSensor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

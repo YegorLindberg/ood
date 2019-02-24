@@ -15,22 +15,25 @@ var displayCurrent1 = DisplayCurrentValues()
 var displayStatistic = Display()
 var displayStatistic1 = Display()
 
-wd.addObserver(displayStatistic, withPriority: 10)
-wd.addObserver(displayCurrent, withPriority: 20)
-wd1.addObserver(displayStatistic1, withPriority: 10)
-wd1.addObserver(displayCurrent1, withPriority: 20)
+//wd.addObserver(displayStatistic, withPriority: 10)
+//wd.addObserver(displayCurrent, withPriority: 20)
+//wd1.addObserver(displayStatistic1, withPriority: 10)
+//wd1.addObserver(displayCurrent1, withPriority: 20)
+
+let windSensor = WindSensor()
+wd.addObserver(windSensor)
+wd.setMeasurements(data: WeatherInfo(windSpeed: 10, windDirection: 10))
+wd.setMeasurements(data: WeatherInfo(windSpeed: 6, windDirection: 350))
+wd.setMeasurements(data: WeatherInfo(windSpeed: 1, windDirection: 179))
+wd.setMeasurements(data: WeatherInfo(windSpeed: 1, windDirection: 181))
 
 
-
-
-wd.setMeasurements(data: WeatherInfo(temperature: 3, humidity: 0.3, pressure: 760))
+//wd.setMeasurements(data: WeatherInfo(temperature: 3, humidity: 0.3, pressure: 760))
 //wd.setMeasurements(data: WeatherInfo(temperature: 5, humidity: 0.7, pressure: 761))
 //
 //wd.removeObserver(display)
 //
 //wd.setMeasurements(data: WeatherInfo(temperature: 10, humidity: 0.7, pressure: 761))
 //wd.setMeasurements(data: WeatherInfo(temperature: -10, humidity: 0.7, pressure: 761))
-
-
-wd1.setMeasurements(data: WeatherInfo(temperature: 24, humidity: 0.1, pressure: 765))
+//wd1.setMeasurements(data: WeatherInfo(temperature: 24, humidity: 0.1, pressure: 765))
 

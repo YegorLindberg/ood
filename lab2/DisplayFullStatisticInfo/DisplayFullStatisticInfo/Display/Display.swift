@@ -14,11 +14,13 @@ class Display: Observer<WeatherInfo> {
     private var pressureSensor = CalculateSensor()
     
     override func update(data: WeatherInfo, from station: ObservableUnit<WeatherInfo>) {
-        self.tempSensor.updateStatistic(val: data.temperature)
-        self.humiditySensor.updateStatistic(val: data.humidity)
-        self.pressureSensor.updateStatistic(val: data.pressure)
-        print("Got statistic data from \(station.identifier)")
-        printSensors()
+        if !data.windChanged {
+            self.tempSensor.updateStatistic(val: data.temperature!)
+            self.humiditySensor.updateStatistic(val: data.humidity!)
+            self.pressureSensor.updateStatistic(val: data.pressure!)
+            print("Got statistic data from \"\(station.identifier)\"")
+            printSensors()
+        }
     }
 
     final func resetSensors() {

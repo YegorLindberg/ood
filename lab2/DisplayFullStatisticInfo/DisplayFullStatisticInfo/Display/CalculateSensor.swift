@@ -30,8 +30,14 @@ class CalculateSensor {
     }
 
     final func updateStatistic(val: Double) {
-        self.minValue = min(self.minValue, val)
-        self.maxValue = max(self.maxValue, val)
+        if self.minValue > val {
+            self.minValue = val
+        }
+        if self.maxValue < val {
+            self.maxValue = val
+        }
+//        self.minValue = min(val, self.minValue)
+//        self.maxValue = max(val, self.maxValue)
         self.sumValues += val
         countAvg += 1
     }

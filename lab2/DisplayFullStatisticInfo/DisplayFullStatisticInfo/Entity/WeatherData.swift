@@ -11,9 +11,14 @@ import Foundation
 
 struct WeatherInfo {
     
-    var temperature: Double = 0
-    var    humidity: Double = 0
-    var    pressure: Double = 0
+    var temperature: Double?
+    var    humidity: Double?
+    var    pressure: Double?
+    
+    var     windSpeed: Double?
+    var windDirection: Double?
+    
+    var windChanged = false
     
     init() {}
     
@@ -22,6 +27,12 @@ struct WeatherInfo {
         self.humidity = humidity
         self.pressure = pressure
     }
+    
+    init(windSpeed: Double, windDirection: Double) {
+        self.windSpeed = windSpeed
+        self.windDirection = windDirection
+        self.windChanged = true
+    }
 
 }
 
@@ -29,39 +40,26 @@ class WeatherData: ObservableUnit<WeatherInfo> {
     
     private var weatherInfo = WeatherInfo()
     
-    private var temperature = 0.0
-    private var    humidity = 0.0
-    private var    pressure = 760.0
-    
-    func getTemperature() -> Double {
-        return self.temperature
-    }
-    
-    func getHumidity() -> Double {
-        return self.humidity
-    }
-    
-    func getPressure() -> Double {
-        return self.pressure
-    }
-    
     func measurementsChanged() {
         notifyObservers()
     }
     
     func setMeasurements(data: WeatherInfo) {
-        self.temperature = data.temperature
-        self.humidity    = data.humidity
-        self.pressure    = data.pressure
+        if data.windChanged {
+            self.weatherInfo.windSpeed     = data.windSpeed!
+            self.weatherInfo.windDirection = data.windDirection!
+            self.weatherInfo.windChanged = true
+        } else {
+            self.weatherInfo.temperature = data.temperature!
+            self.weatherInfo.humidity    = data.humidity!
+            self.weatherInfo.pressure    = data.pressure!
+            self.weatherInfo.windChanged = false
+        }
         measurementsChanged()
     }
     
     override func GetChangedData() -> WeatherInfo {
-        var info = WeatherInfo()
-        info.temperature = getTemperature()
-        info.humidity    = getHumidity()
-        info.pressure    = getPressure()
-        return info
+        return self.weatherInfo
     }
     
 }
