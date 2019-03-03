@@ -9,22 +9,37 @@
 import Foundation
 
 
-class DisplayCurrentValues: Observer<WeatherInfo> {
+class DisplayCurrentValues: Observer {
     
-    override func update(data: WeatherInfo, from station: ObservableUnit<WeatherInfo>) {
-        print("Got current data from \"\(station.identifier)\"")
-        if let temp = data.temperature {
+    var weatherData: WeatherData
+    var priority: Int
+    
+    init (observable: WeatherData, priority: Int = 10) {
+        self.weatherData = observable
+        self.priority    = priority
+        self.weatherData.addObserver(ObserverUnit(observer: self, priority: self.priority))
+    }
+    
+    func update(from: Observable) {
+        update(data: self.weatherData)
+    }
+    
+    func update(data: WeatherData) {
+        print("Got current data from \"\(data.identifier)\"")
+        if let temp = data.weatherInfo.temperature {
             print("Current Temperature: \(temp)")
         }
-        if let humidity = data.humidity {
+        if let humidity = data.weatherInfo.humidity {
             print("Current Humidity: \(humidity)")
         }
-        if let pressure = data.pressure {
+        if let pressure = data.weatherInfo.pressure {
             print("Current Pressure: \(pressure)")
         }
-        if data.windSpeed != nil {
-            print("Current wind speed: \(data.windSpeed!)")
-            print("Current wind direction: \(data.windDirection!)")
+        if let windSpeed = data.weatherInfo.windSpeed {
+            print("Current wind speed: \(windSpeed)")
+        }
+        if let windDirection = data.weatherInfo.windDirection {
+            print("Current wind direction: \(windDirection)")
         }
         print("--------------------")
     }

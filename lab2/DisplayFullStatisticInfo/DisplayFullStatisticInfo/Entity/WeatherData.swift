@@ -18,48 +18,37 @@ struct WeatherInfo {
     var     windSpeed: Double?
     var windDirection: Double?
     
-    var windChanged = false
-    
     init() {}
     
     init(temperature: Double, humidity: Double, pressure: Double) {
         self.temperature = temperature
-        self.humidity = humidity
-        self.pressure = pressure
+        self.humidity    = humidity
+        self.pressure    = pressure
     }
     
     init(windSpeed: Double, windDirection: Double) {
-        self.windSpeed = windSpeed
+        self.windSpeed     = windSpeed
         self.windDirection = windDirection
-        self.windChanged = true
     }
 
 }
 
 class WeatherData: ObservableUnit<WeatherInfo> {
     
-    private var weatherInfo = WeatherInfo()
+    var weatherInfo = WeatherInfo()
     
-    func measurementsChanged() {
-        notifyObservers()
+    init(name: String) {
+        super.init(withName: name)
     }
     
     func setMeasurements(data: WeatherInfo) {
-        if data.windChanged {
-            self.weatherInfo.windSpeed     = data.windSpeed!
-            self.weatherInfo.windDirection = data.windDirection!
-            self.weatherInfo.windChanged = true
-        } else {
-            self.weatherInfo.temperature = data.temperature!
-            self.weatherInfo.humidity    = data.humidity!
-            self.weatherInfo.pressure    = data.pressure!
-            self.weatherInfo.windChanged = false
-        }
-        measurementsChanged()
-    }
-    
-    override func GetChangedData() -> WeatherInfo {
-        return self.weatherInfo
+        self.weatherInfo.windSpeed     = data.windSpeed ?? self.weatherInfo.windSpeed
+        self.weatherInfo.windDirection = data.windDirection ?? self.weatherInfo.windDirection
+        self.weatherInfo.temperature   = data.temperature ?? self.weatherInfo.temperature
+        self.weatherInfo.humidity      = data.humidity ?? self.weatherInfo.humidity
+        self.weatherInfo.pressure      = data.pressure ?? self.weatherInfo.pressure
+        
+        notifyObservers()
     }
     
 }

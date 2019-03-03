@@ -7,24 +7,40 @@
 //
 
 
-class Display: Observer<WeatherInfo> {
+class Display: Observer {
     
-    private var tempSensor = CalculateSensor()
-    private var humiditySensor = CalculateSensor()
-    private var pressureSensor = CalculateSensor()
+    var weatherData: WeatherData
+    var priority: Int
     
-    override func update(data: WeatherInfo, from station: ObservableUnit<WeatherInfo>) {
-        if !data.windChanged {
-            self.tempSensor.updateStatistic(val: data.temperature!)
-            self.humiditySensor.updateStatistic(val: data.humidity!)
-            self.pressureSensor.updateStatistic(val: data.pressure!)
-            print("Got statistic data from \"\(station.identifier)\"")
+    init (observable: WeatherData, priority: Int = 10) {
+        self.weatherData = observable
+        self.priority    = priority
+        self.weatherData.addObserver(ObserverUnit(observer: self, priority: self.priority))
+    }
+    
+    func update(from: Observable) {
+        update(data: weatherData)
+    }
+    
+    private var temperatureSensor = CalculateSensor()
+    private var humiditySensor    = CalculateSensor()
+    private var pressureSensor    = CalculateSensor()
+    
+    final private func update(data: WeatherData) {
+        if let temp = data.weatherInfo.temperature,
+           let humidity = data.weatherInfo.humidity,
+           let pressure = data.weatherInfo.pressure {
+            
+            self.temperatureSensor.updateStatistic(val: temp)
+            self.humiditySensor.updateStatistic(val: humidity)
+            self.pressureSensor.updateStatistic(val: pressure)
+            print("Got statistic data from \"\(data.identifier)\"")
             printSensors()
         }
     }
 
     final func resetSensors() {
-        self.tempSensor.resetSensorsStatistic()
+        self.temperatureSensor.resetSensorsStatistic()
         self.humiditySensor.resetSensorsStatistic()
         self.pressureSensor.resetSensorsStatistic()
     }
@@ -32,7 +48,7 @@ class Display: Observer<WeatherInfo> {
     final func printSensors(sensors: Set<SensorType> = Set(SensorType.allCases)) {
         if sensors.contains(.Temperature) {
             print("Temperature sensor:")
-            printSensorInfo(tempSensor)
+            printSensorInfo(temperatureSensor)
         }
         if sensors.contains(.Pressure) {
             print("Pressure sensor:")
@@ -46,7 +62,7 @@ class Display: Observer<WeatherInfo> {
     }
     
     
-    private func printSensorInfo(_ sensor: CalculateSensor) {
+    final private func printSensorInfo(_ sensor: CalculateSensor) {
         print("Min: \(sensor.getMinVal())")
         print("Max: \(sensor.getMaxVal())")
         print("Average: \(sensor.getAvgVal())")

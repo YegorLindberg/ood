@@ -8,21 +8,40 @@
 
 import Foundation
 
-class WindSensor: Observer<WeatherInfo> {
+
+class WindSensor: Observer {
+    
+    var weatherData: WeatherData
+    var priority: Int
+    
+    init (observable: WeatherData, priority: Int = 10) {
+        self.weatherData = observable
+        self.priority    = priority
+        self.weatherData.addObserver(ObserverUnit(observer: self, priority: self.priority))
+    }
+    
+    func update(from: Observable) {
+        update(data: weatherData)
+    }
     
     private var windSpeedSensor = CalculateSensor()
+    private var windDirection = CalculateSensor()
     private var dirX = CalculateSensor()
     private var dirY = CalculateSensor()
     
-    override func update(data: WeatherInfo, from station: ObservableUnit<WeatherInfo>) {
-        if data.windChanged {
-            self.windSpeedSensor.updateStatistic(val: data.windSpeed!)
-            let vector = Vector(direction: data.windDirection!)
+    func update(data: WeatherData) {
+        if let windSpeed = data.weatherInfo.windSpeed,
+           let windDirection = data.weatherInfo.windDirection {
+            
+            self.windSpeedSensor.updateStatistic(val: windSpeed)
+            self.windDirection.updateStatistic(val: windDirection)
+            let vector = Vector(direction: windDirection)
             self.dirX.updateStatistic(val: vector.x)
             self.dirY.updateStatistic(val: vector.y)
-            print("Got statistic data from \(station.identifier)")
+            print("Got statistic data from \(data.identifier)")
             printSensors()
         }
+        
     }
     
     final func resetSensors() {
@@ -38,8 +57,8 @@ class WindSensor: Observer<WeatherInfo> {
         }
         if sensors.contains(.WindDirection) {
             print("Wind Direction sensor:")
-            print("Min direction: \(Float(calculateDirection(x: self.dirX.getMinVal(), y: self.dirY.getMinVal())))")
-            print("Max direction: \(Float(calculateDirection(x: self.dirX.getMaxVal(), y: self.dirY.getMaxVal())))")
+            print("Min direction: \(Float(self.windDirection.getMinVal()))")
+            print("Max direction: \(Float(self.windDirection.getMaxVal()))")
             print("Average direction: \(Float(calculateDirection(x: self.dirX.getAvgVal(), y: self.dirY.getAvgVal())))")
             print()
         }

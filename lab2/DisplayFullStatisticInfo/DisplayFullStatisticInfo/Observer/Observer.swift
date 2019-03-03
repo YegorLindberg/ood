@@ -8,56 +8,61 @@
 
 import Foundation
 
-class Observer<T>: Hashable {
-    func update(data: T, from station: ObservableUnit<T>){
-        fatalError("Observer<T>, func update(_ data: T) - Should be overriden")
-    }
-    
-    static func == (lhs: Observer<T>, rhs: Observer<T>) -> Bool {
-        return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
-    }
-    
-    var hashValue: Int {
-        return ObjectIdentifier(self).hashValue
-    }
 
+protocol Observer: class {
+    func update(from: Observable)
 }
 
+
 protocol Observable: class {
-    associatedtype ObservableArgType
-    
-    func addObserver(_ observer: Observer<ObservableArgType>, withPriority priority: Int)
-    func removeObserver(_ observer: Observer<ObservableArgType>)
+    func addObserver(_ observer: ObserverUnit)
+    func removeObserver(_ observer: ObserverUnit)
     func notifyObservers()
 }
 
+
+class ObserverUnit {
+    
+    var observer: Observer!
+    var priority: Int = 10
+    
+    init(observer: Observer, priority: Int) {
+        self.observer = observer
+        self.priority = priority
+    }
+    
+}
+
+
 class ObservableUnit<T>: Observable {
-    typealias ObservableArgType = T
     
     let identifier: String
     
     init(withName name: String) {
         self.identifier = name
     }
-
-    private var observers = [Observer<T>: Int]()
-
-    func addObserver(_ observer: Observer<T>, withPriority priority: Int = 10) {
-        self.observers[observer] = priority
+    
+    private var observers = [ObserverUnit]()
+    
+    func addObserver(_ observer: ObserverUnit) {
+        self.observers.append(observer)
+        self.observers = self.observers.sorted(by: { $0.priority > $1.priority })
+        for unit in self.observers {
+            print(unit.priority)
+        }
+        print()
     }
     
-    func removeObserver(_ observer: Observer<T>) {
-        self.observers.removeValue(forKey: observer)
-    }
-
-    func notifyObservers() {
-        let data: T = GetChangedData()
-        
-        for observer in self.observers.keys.sorted(by: { self.observers[$0]! > self.observers[$1]! }) {
-            observer.update(data: data, from: self)
+    func removeObserver(_ observer: ObserverUnit) {
+        if let index = self.observers.firstIndex(where: { (item) -> Bool in observer === item }) {
+            self.observers.remove(at: index)
         }
     }
 
-    func GetChangedData() -> T { return T?.self as! T }
+    func notifyObservers() {
+        for unit in self.observers {
+            unit.observer.update(from: self)
+        }
+    }
 
 }

@@ -7,33 +7,23 @@
 //
 
 
-var wd = WeatherData(withName: "weatherStation")
-var wd1 = WeatherData(withName: "anotherWeatherStation")
+var wd = WeatherData(name: "On street")
+var displayCurrent = DisplayCurrentValues(observable: wd)
 
-var displayCurrent = DisplayCurrentValues()
-var displayCurrent1 = DisplayCurrentValues()
-var displayStatistic = Display()
-var displayStatistic1 = Display()
+wd.setMeasurements(data: WeatherInfo(windSpeed: 5, windDirection: 10))
+wd.setMeasurements(data: WeatherInfo(temperature: 24, humidity: 0.5, pressure: 760))
 
-//wd.addObserver(displayStatistic, withPriority: 10)
-//wd.addObserver(displayCurrent, withPriority: 20)
-//wd1.addObserver(displayStatistic1, withPriority: 10)
-//wd1.addObserver(displayCurrent1, withPriority: 20)
+print(); print()
 
-let windSensor = WindSensor()
-wd.addObserver(windSensor)
-wd.setMeasurements(data: WeatherInfo(windSpeed: 10, windDirection: 10))
-wd.setMeasurements(data: WeatherInfo(windSpeed: 6, windDirection: 350))
-wd.setMeasurements(data: WeatherInfo(windSpeed: 1, windDirection: 179))
-wd.setMeasurements(data: WeatherInfo(windSpeed: 1, windDirection: 181))
+var calcSensors = Display(observable: wd, priority: 20)
+wd.setMeasurements(data: WeatherInfo(temperature: 20, humidity: 0.5, pressure: 760))
+wd.setMeasurements(data: WeatherInfo(temperature: 24, humidity: 0.6, pressure: 762))
+wd.setMeasurements(data: WeatherInfo(temperature: 30, humidity: 0.8, pressure: 766))
 
 
-//wd.setMeasurements(data: WeatherInfo(temperature: 3, humidity: 0.3, pressure: 760))
-//wd.setMeasurements(data: WeatherInfo(temperature: 5, humidity: 0.7, pressure: 761))
-//
-//wd.removeObserver(display)
-//
-//wd.setMeasurements(data: WeatherInfo(temperature: 10, humidity: 0.7, pressure: 761))
-//wd.setMeasurements(data: WeatherInfo(temperature: -10, humidity: 0.7, pressure: 761))
-//wd1.setMeasurements(data: WeatherInfo(temperature: 24, humidity: 0.1, pressure: 765))
+var wd1 = WeatherData(name: "In room")
+var dispCurr1 = DisplayCurrentValues(observable: wd1)
+wd1.setMeasurements(data: WeatherInfo(temperature: 21, humidity: 0.4, pressure: 759))
+wd1.setMeasurements(data: WeatherInfo(temperature: 21, humidity: 0.4, pressure: 759))
+
 

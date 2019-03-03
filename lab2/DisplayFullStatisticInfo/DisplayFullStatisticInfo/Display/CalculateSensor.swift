@@ -24,20 +24,14 @@ class CalculateSensor {
     
     final func getAvgVal() -> Double {
         guard countAvg != 0 else {
-            return Double.infinity
+            return 0
         }
         return (self.sumValues / Double(self.countAvg))
     }
 
     final func updateStatistic(val: Double) {
-        if self.minValue > val {
-            self.minValue = val
-        }
-        if self.maxValue < val {
-            self.maxValue = val
-        }
-//        self.minValue = min(val, self.minValue)
-//        self.maxValue = max(val, self.maxValue)
+        self.minValue = min(val, self.minValue)
+        self.maxValue = max(val, self.maxValue)
         self.sumValues += val
         countAvg += 1
     }
