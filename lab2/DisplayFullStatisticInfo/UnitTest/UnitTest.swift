@@ -11,9 +11,25 @@ import XCTest
 
 class UnitTest: XCTestCase {
     
-    
+    var weatherStation1 = WeatherData(name: "first")
+    var weatherStation2 = WeatherData(name: "second")
 
-    func checkMultipleSubjects() {
+    override func setUp() {
+        super.setUp()
+        
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        
+    }
+    
+    func testCheckMultipleSubjects() {
+        
+        XCTAssertNotEqual(weatherStation1.identifier, weatherStation2.identifier)
+    }
+    
+    func testCheckObserverPriority() {
         
     }
     

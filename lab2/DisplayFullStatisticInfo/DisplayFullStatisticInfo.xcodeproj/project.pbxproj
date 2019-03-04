@@ -11,11 +11,11 @@
 		5C3A4D3622230F5E00D16570 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3A4D3522230F5E00D16570 /* Vector.swift */; };
 		5C45BEEC221A9DF300D810DF /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45BEEB221A9DF300D810DF /* Display.swift */; };
 		5C45BEEE221AA04B00D810DF /* CalculateSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45BEED221AA04B00D810DF /* CalculateSensor.swift */; };
+		5C8FAD07222CEC1800AC0995 /* UnitTest.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 5CC20B3B2223B137008624E6 /* UnitTest.xctest */; };
 		5C9828532217FBE700A73DC6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9828522217FBE700A73DC6 /* main.swift */; };
 		5C98285C2217FED100A73DC6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98285B2217FED100A73DC6 /* Observer.swift */; };
 		5C982860221832F200A73DC6 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C98285F221832F200A73DC6 /* WeatherData.swift */; };
 		5C9828622218335400A73DC6 /* DisplayCurrentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9828612218335400A73DC6 /* DisplayCurrentValues.swift */; };
-		5CC20B3E2223B137008624E6 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC20B3D2223B137008624E6 /* UnitTest.swift */; };
 		5CCB3FD12221301C00203006 /* SensorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB3FD02221301C00203006 /* SensorType.swift */; };
 /* End PBXBuildFile section */
 
@@ -210,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8FAD07222CEC1800AC0995 /* UnitTest.xctest in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +237,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CC20B3E2223B137008624E6 /* UnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +362,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -371,7 +374,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

@@ -25,7 +25,6 @@ class WindSensor: Observer {
     }
     
     private var windSpeedSensor = CalculateSensor()
-    private var windDirection = CalculateSensor()
     private var dirX = CalculateSensor()
     private var dirY = CalculateSensor()
     
@@ -34,7 +33,6 @@ class WindSensor: Observer {
            let windDirection = data.weatherInfo.windDirection {
             
             self.windSpeedSensor.updateStatistic(val: windSpeed)
-            self.windDirection.updateStatistic(val: windDirection)
             let vector = Vector(direction: windDirection)
             self.dirX.updateStatistic(val: vector.x)
             self.dirY.updateStatistic(val: vector.y)
@@ -57,8 +55,6 @@ class WindSensor: Observer {
         }
         if sensors.contains(.WindDirection) {
             print("Wind Direction sensor:")
-            print("Min direction: \(Float(self.windDirection.getMinVal()))")
-            print("Max direction: \(Float(self.windDirection.getMaxVal()))")
             print("Average direction: \(Float(calculateDirection(x: self.dirX.getAvgVal(), y: self.dirY.getAvgVal())))")
             print()
         }
@@ -66,13 +62,7 @@ class WindSensor: Observer {
     }
     
     private func calculateDirection(x: Double, y: Double) -> Double {
-        let hypotenuse = sqrt(x * x + y * y)
-        let multiplier = 1 / hypotenuse
-        var direction = acos(x * multiplier) * 180 / Double.pi
-        if asin(y) < 0 {
-            direction = 360 - direction
-        }
-        return direction
+        return (atan2(-y, -x) * (180/Double.pi) + 180)
     }
     
     private func printSensorInfo(_ sensor: CalculateSensor) {

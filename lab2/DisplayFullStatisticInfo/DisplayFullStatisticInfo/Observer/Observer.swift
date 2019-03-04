@@ -16,7 +16,7 @@ protocol Observer: class {
 
 protocol Observable: class {
     func addObserver(_ observer: ObserverUnit)
-    func removeObserver(_ observer: ObserverUnit)
+    func removeObserver(_ observer: Observer)
     func notifyObservers()
 }
 
@@ -47,14 +47,10 @@ class ObservableUnit<T>: Observable {
     func addObserver(_ observer: ObserverUnit) {
         self.observers.append(observer)
         self.observers = self.observers.sorted(by: { $0.priority > $1.priority })
-        for unit in self.observers {
-            print(unit.priority)
-        }
-        print()
     }
     
-    func removeObserver(_ observer: ObserverUnit) {
-        if let index = self.observers.firstIndex(where: { (item) -> Bool in observer === item }) {
+    func removeObserver(_ observer: Observer) {
+        if let index = self.observers.firstIndex(where: { (item) -> Bool in observer === item.observer }) {
             self.observers.remove(at: index)
         }
     }

@@ -26,15 +26,9 @@ class DisplayCurrentValues: Observer {
     
     func update(data: WeatherData) {
         print("Got current data from \"\(data.identifier)\"")
-        if let temp = data.weatherInfo.temperature {
-            print("Current Temperature: \(temp)")
-        }
-        if let humidity = data.weatherInfo.humidity {
-            print("Current Humidity: \(humidity)")
-        }
-        if let pressure = data.weatherInfo.pressure {
-            print("Current Pressure: \(pressure)")
-        }
+        print("Current Temperature: \(data.weatherInfo.temperature)")
+        print("Current Humidity: \(data.weatherInfo.humidity)")
+        print("Current Pressure: \(data.weatherInfo.pressure)")
         if let windSpeed = data.weatherInfo.windSpeed {
             print("Current wind speed: \(windSpeed)")
         }

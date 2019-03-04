@@ -27,16 +27,11 @@ class Display: Observer {
     private var pressureSensor    = CalculateSensor()
     
     final private func update(data: WeatherData) {
-        if let temp = data.weatherInfo.temperature,
-           let humidity = data.weatherInfo.humidity,
-           let pressure = data.weatherInfo.pressure {
-            
-            self.temperatureSensor.updateStatistic(val: temp)
-            self.humiditySensor.updateStatistic(val: humidity)
-            self.pressureSensor.updateStatistic(val: pressure)
-            print("Got statistic data from \"\(data.identifier)\"")
-            printSensors()
-        }
+        self.temperatureSensor.updateStatistic(val: data.weatherInfo.temperature)
+        self.humiditySensor.updateStatistic(val: data.weatherInfo.humidity)
+        self.pressureSensor.updateStatistic(val: data.weatherInfo.pressure)
+        print("Got statistic data from \"\(data.identifier)\"")
+        printSensors()
     }
 
     final func resetSensors() {

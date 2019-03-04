@@ -11,9 +11,9 @@ import Foundation
 
 struct WeatherInfo {
     
-    var temperature: Double?
-    var    humidity: Double?
-    var    pressure: Double?
+    var temperature = 0.0
+    var    humidity = 0.0
+    var    pressure = 760.0
     
     var     windSpeed: Double?
     var windDirection: Double?
@@ -41,12 +41,24 @@ class WeatherData: ObservableUnit<WeatherInfo> {
         super.init(withName: name)
     }
     
+    func getTemperature() -> Double {
+        return weatherInfo.temperature
+    }
+    
+    func getHumidity() -> Double {
+        return weatherInfo.humidity
+    }
+    
+    func getPressure() -> Double {
+        return weatherInfo.pressure
+    }
+    
     func setMeasurements(data: WeatherInfo) {
+        self.weatherInfo.temperature   = data.temperature
+        self.weatherInfo.humidity      = data.humidity
+        self.weatherInfo.pressure      = data.pressure
         self.weatherInfo.windSpeed     = data.windSpeed ?? self.weatherInfo.windSpeed
         self.weatherInfo.windDirection = data.windDirection ?? self.weatherInfo.windDirection
-        self.weatherInfo.temperature   = data.temperature ?? self.weatherInfo.temperature
-        self.weatherInfo.humidity      = data.humidity ?? self.weatherInfo.humidity
-        self.weatherInfo.pressure      = data.pressure ?? self.weatherInfo.pressure
         
         notifyObservers()
     }
