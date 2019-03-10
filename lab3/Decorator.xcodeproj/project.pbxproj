@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C7F9630223506AE003BA015 /* Lemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F962F223506AE003BA015 /* Lemon.swift */; };
+		5C7F963222350A50003BA015 /* IceCubes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F963122350A50003BA015 /* IceCubes.swift */; };
+		5C7F963422350D77003BA015 /* Syrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F963322350D77003BA015 /* Syrop.swift */; };
+		5C7F96362235111B003BA015 /* ChocolateCrumbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F96352235111B003BA015 /* ChocolateCrumbs.swift */; };
+		5C8FB431223586E4005F92DE /* CoconutFlakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB430223586E4005F92DE /* CoconutFlakes.swift */; };
+		5C8FB43522358EB0005F92DE /* DoubleLatte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB43422358EB0005F92DE /* DoubleLatte.swift */; };
+		5C8FB43722359030005F92DE /* DoubleCapuchino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB43622359030005F92DE /* DoubleCapuchino.swift */; };
+		5C8FB43922359084005F92DE /* BlackTea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB43822359084005F92DE /* BlackTea.swift */; };
+		5C8FB43B223591C5005F92DE /* RedTea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB43A223591C5005F92DE /* RedTea.swift */; };
+		5C8FB43D223591EB005F92DE /* BritishTea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB43C223591EB005F92DE /* BritishTea.swift */; };
+		5C8FB43F22359211005F92DE /* IndianTea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB43E22359211005F92DE /* IndianTea.swift */; };
+		5C8FB442223592B9005F92DE /* SmallMilkshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB441223592B9005F92DE /* SmallMilkshake.swift */; };
+		5C8FB444223593F5005F92DE /* AverageMilkshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB443223593F5005F92DE /* AverageMilkshake.swift */; };
+		5C8FB4462235942A005F92DE /* LargeMilkshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB4452235942A005F92DE /* LargeMilkshake.swift */; };
+		5C8FB44822359591005F92DE /* Cream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB44722359591005F92DE /* Cream.swift */; };
+		5C8FB44A223595F5005F92DE /* Chocolate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB449223595F5005F92DE /* Chocolate.swift */; };
+		5C8FB44C22359796005F92DE /* Liquor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8FB44B22359796005F92DE /* Liquor.swift */; };
+		5CAB02E82233C71B001A9B03 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB02E72233C71B001A9B03 /* main.swift */; };
+		5CAB02EF2233C9DB001A9B03 /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB02EE2233C9DB001A9B03 /* Beverage.swift */; };
+		5CAB02F12233DD26001A9B03 /* CondimentDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB02F02233DD26001A9B03 /* CondimentDecorator.swift */; };
+		5CAB02F42233DE20001A9B03 /* BeverageUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB02F32233DE20001A9B03 /* BeverageUnit.swift */; };
+		5CAB02F62233DE52001A9B03 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB02F52233DE52001A9B03 /* Coffee.swift */; };
+		5CAB02F82233DE70001A9B03 /* Capuchino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB02F72233DE70001A9B03 /* Capuchino.swift */; };
+		5CAB02FA2233DEDE001A9B03 /* Latte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB02F92233DEDE001A9B03 /* Latte.swift */; };
+		5CAB02FC2233DEF8001A9B03 /* Tea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB02FB2233DEF8001A9B03 /* Tea.swift */; };
+		5CAB02FE2233DF13001A9B03 /* Milkshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB02FD2233DF13001A9B03 /* Milkshake.swift */; };
+		5CAB03012233DFBD001A9B03 /* Cinnamon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB03002233DFBD001A9B03 /* Cinnamon.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5CAB02E22233C71B001A9B03 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5C7F962F223506AE003BA015 /* Lemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lemon.swift; sourceTree = "<group>"; };
+		5C7F963122350A50003BA015 /* IceCubes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCubes.swift; sourceTree = "<group>"; };
+		5C7F963322350D77003BA015 /* Syrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syrop.swift; sourceTree = "<group>"; };
+		5C7F96352235111B003BA015 /* ChocolateCrumbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocolateCrumbs.swift; sourceTree = "<group>"; };
+		5C8FB430223586E4005F92DE /* CoconutFlakes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoconutFlakes.swift; sourceTree = "<group>"; };
+		5C8FB43422358EB0005F92DE /* DoubleLatte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLatte.swift; sourceTree = "<group>"; };
+		5C8FB43622359030005F92DE /* DoubleCapuchino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCapuchino.swift; sourceTree = "<group>"; };
+		5C8FB43822359084005F92DE /* BlackTea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackTea.swift; sourceTree = "<group>"; };
+		5C8FB43A223591C5005F92DE /* RedTea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedTea.swift; sourceTree = "<group>"; };
+		5C8FB43C223591EB005F92DE /* BritishTea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BritishTea.swift; sourceTree = "<group>"; };
+		5C8FB43E22359211005F92DE /* IndianTea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianTea.swift; sourceTree = "<group>"; };
+		5C8FB441223592B9005F92DE /* SmallMilkshake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallMilkshake.swift; sourceTree = "<group>"; };
+		5C8FB443223593F5005F92DE /* AverageMilkshake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageMilkshake.swift; sourceTree = "<group>"; };
+		5C8FB4452235942A005F92DE /* LargeMilkshake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeMilkshake.swift; sourceTree = "<group>"; };
+		5C8FB44722359591005F92DE /* Cream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cream.swift; sourceTree = "<group>"; };
+		5C8FB449223595F5005F92DE /* Chocolate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chocolate.swift; sourceTree = "<group>"; };
+		5C8FB44B22359796005F92DE /* Liquor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liquor.swift; sourceTree = "<group>"; };
+		5CAB02E42233C71B001A9B03 /* Decorator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Decorator; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CAB02E72233C71B001A9B03 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5CAB02EE2233C9DB001A9B03 /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		5CAB02F02233DD26001A9B03 /* CondimentDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CondimentDecorator.swift; sourceTree = "<group>"; };
+		5CAB02F32233DE20001A9B03 /* BeverageUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageUnit.swift; sourceTree = "<group>"; };
+		5CAB02F52233DE52001A9B03 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		5CAB02F72233DE70001A9B03 /* Capuchino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capuchino.swift; sourceTree = "<group>"; };
+		5CAB02F92233DEDE001A9B03 /* Latte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Latte.swift; sourceTree = "<group>"; };
+		5CAB02FB2233DEF8001A9B03 /* Tea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tea.swift; sourceTree = "<group>"; };
+		5CAB02FD2233DF13001A9B03 /* Milkshake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milkshake.swift; sourceTree = "<group>"; };
+		5CAB03002233DFBD001A9B03 /* Cinnamon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinnamon.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CAB02E12233C71B001A9B03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C8FB43222358E5E005F92DE /* Coffee */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB02F52233DE52001A9B03 /* Coffee.swift */,
+				5CAB02F72233DE70001A9B03 /* Capuchino.swift */,
+				5CAB02F92233DEDE001A9B03 /* Latte.swift */,
+				5C8FB43422358EB0005F92DE /* DoubleLatte.swift */,
+				5C8FB43622359030005F92DE /* DoubleCapuchino.swift */,
+			);
+			path = Coffee;
+			sourceTree = "<group>";
+		};
+		5C8FB43322358E71005F92DE /* Tea */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB02FB2233DEF8001A9B03 /* Tea.swift */,
+				5C8FB43822359084005F92DE /* BlackTea.swift */,
+				5C8FB43A223591C5005F92DE /* RedTea.swift */,
+				5C8FB43C223591EB005F92DE /* BritishTea.swift */,
+				5C8FB43E22359211005F92DE /* IndianTea.swift */,
+			);
+			path = Tea;
+			sourceTree = "<group>";
+		};
+		5C8FB4402235926B005F92DE /* Milkshake */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB02FD2233DF13001A9B03 /* Milkshake.swift */,
+				5C8FB441223592B9005F92DE /* SmallMilkshake.swift */,
+				5C8FB443223593F5005F92DE /* AverageMilkshake.swift */,
+				5C8FB4452235942A005F92DE /* LargeMilkshake.swift */,
+			);
+			path = Milkshake;
+			sourceTree = "<group>";
+		};
+		5CAB02DB2233C71B001A9B03 = {
+			isa = PBXGroup;
+			children = (
+				5CAB02E62233C71B001A9B03 /* Decorator */,
+				5CAB02E52233C71B001A9B03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CAB02E52233C71B001A9B03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB02E42233C71B001A9B03 /* Decorator */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CAB02E62233C71B001A9B03 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB02FF2233DFAA001A9B03 /* Decorators */,
+				5CAB02F22233DDE5001A9B03 /* Beverages */,
+				5CAB02E72233C71B001A9B03 /* main.swift */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		5CAB02F22233DDE5001A9B03 /* Beverages */ = {
+			isa = PBXGroup;
+			children = (
+				5C8FB4402235926B005F92DE /* Milkshake */,
+				5C8FB43322358E71005F92DE /* Tea */,
+				5C8FB43222358E5E005F92DE /* Coffee */,
+				5CAB02EE2233C9DB001A9B03 /* Beverage.swift */,
+				5CAB02F32233DE20001A9B03 /* BeverageUnit.swift */,
+			);
+			path = Beverages;
+			sourceTree = "<group>";
+		};
+		5CAB02FF2233DFAA001A9B03 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB02F02233DD26001A9B03 /* CondimentDecorator.swift */,
+				5CAB03002233DFBD001A9B03 /* Cinnamon.swift */,
+				5C7F962F223506AE003BA015 /* Lemon.swift */,
+				5C7F963122350A50003BA015 /* IceCubes.swift */,
+				5C7F963322350D77003BA015 /* Syrop.swift */,
+				5C7F96352235111B003BA015 /* ChocolateCrumbs.swift */,
+				5C8FB430223586E4005F92DE /* CoconutFlakes.swift */,
+				5C8FB44722359591005F92DE /* Cream.swift */,
+				5C8FB449223595F5005F92DE /* Chocolate.swift */,
+				5C8FB44B22359796005F92DE /* Liquor.swift */,
+			);
+			path = Decorators;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CAB02E32233C71B001A9B03 /* Decorator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CAB02EB2233C71B001A9B03 /* Build configuration list for PBXNativeTarget "Decorator" */;
+			buildPhases = (
+				5CAB02E02233C71B001A9B03 /* Sources */,
+				5CAB02E12233C71B001A9B03 /* Frameworks */,
+				5CAB02E22233C71B001A9B03 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Decorator;
+			productName = Decorator;
+			productReference = 5CAB02E42233C71B001A9B03 /* Decorator */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CAB02DC2233C71B001A9B03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Yegor Lindberg";
+				TargetAttributes = {
+					5CAB02E32233C71B001A9B03 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 5CAB02DF2233C71B001A9B03 /* Build configuration list for PBXProject "Decorator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5CAB02DB2233C71B001A9B03;
+			productRefGroup = 5CAB02E52233C71B001A9B03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CAB02E32233C71B001A9B03 /* Decorator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CAB02E02233C71B001A9B03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7F96362235111B003BA015 /* ChocolateCrumbs.swift in Sources */,
+				5C8FB43722359030005F92DE /* DoubleCapuchino.swift in Sources */,
+				5C8FB43D223591EB005F92DE /* BritishTea.swift in Sources */,
+				5C8FB43522358EB0005F92DE /* DoubleLatte.swift in Sources */,
+				5CAB02EF2233C9DB001A9B03 /* Beverage.swift in Sources */,
+				5CAB02FA2233DEDE001A9B03 /* Latte.swift in Sources */,
+				5CAB02F12233DD26001A9B03 /* CondimentDecorator.swift in Sources */,
+				5C8FB442223592B9005F92DE /* SmallMilkshake.swift in Sources */,
+				5C7F9630223506AE003BA015 /* Lemon.swift in Sources */,
+				5C7F963222350A50003BA015 /* IceCubes.swift in Sources */,
+				5CAB02F82233DE70001A9B03 /* Capuchino.swift in Sources */,
+				5C8FB4462235942A005F92DE /* LargeMilkshake.swift in Sources */,
+				5CAB03012233DFBD001A9B03 /* Cinnamon.swift in Sources */,
+				5C8FB43F22359211005F92DE /* IndianTea.swift in Sources */,
+				5C8FB44A223595F5005F92DE /* Chocolate.swift in Sources */,
+				5C8FB431223586E4005F92DE /* CoconutFlakes.swift in Sources */,
+				5CAB02F42233DE20001A9B03 /* BeverageUnit.swift in Sources */,
+				5C8FB43922359084005F92DE /* BlackTea.swift in Sources */,
+				5C8FB43B223591C5005F92DE /* RedTea.swift in Sources */,
+				5CAB02E82233C71B001A9B03 /* main.swift in Sources */,
+				5C8FB444223593F5005F92DE /* AverageMilkshake.swift in Sources */,
+				5C8FB44C22359796005F92DE /* Liquor.swift in Sources */,
+				5C8FB44822359591005F92DE /* Cream.swift in Sources */,
+				5CAB02FE2233DF13001A9B03 /* Milkshake.swift in Sources */,
+				5CAB02FC2233DEF8001A9B03 /* Tea.swift in Sources */,
+				5C7F963422350D77003BA015 /* Syrop.swift in Sources */,
+				5CAB02F62233DE52001A9B03 /* Coffee.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5CAB02E92233C71B001A9B03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5CAB02EA2233C71B001A9B03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		5CAB02EC2233C71B001A9B03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		5CAB02ED2233C71B001A9B03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CAB02DF2233C71B001A9B03 /* Build configuration list for PBXProject "Decorator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CAB02E92233C71B001A9B03 /* Debug */,
+				5CAB02EA2233C71B001A9B03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CAB02EB2233C71B001A9B03 /* Build configuration list for PBXNativeTarget "Decorator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CAB02EC2233C71B001A9B03 /* Debug */,
+				5CAB02ED2233C71B001A9B03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CAB02DC2233C71B001A9B03 /* Project object */;
+}
