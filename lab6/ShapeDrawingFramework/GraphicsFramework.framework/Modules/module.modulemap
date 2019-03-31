@@ -1,0 +1,11 @@
+framework module GraphicsFramework {
+  umbrella header "GraphicsFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module GraphicsFramework.Swift {
+    header "GraphicsFramework-Swift.h"
+    requires objc
+}

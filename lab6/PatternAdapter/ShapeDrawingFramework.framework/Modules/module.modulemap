@@ -1,0 +1,11 @@
+framework module ShapeDrawingFramework {
+  umbrella header "ShapeDrawingFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module ShapeDrawingFramework.Swift {
+    header "ShapeDrawingFramework-Swift.h"
+    requires objc
+}

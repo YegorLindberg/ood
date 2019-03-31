@@ -1,0 +1,11 @@
+framework module ModernGraphicsFramework {
+  umbrella header "ModernGraphicsFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module ModernGraphicsFramework.Swift {
+    header "ModernGraphicsFramework-Swift.h"
+    requires objc
+}
