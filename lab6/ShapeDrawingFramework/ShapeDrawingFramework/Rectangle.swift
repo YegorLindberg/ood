@@ -8,7 +8,7 @@
 import GraphicsFramework
 
 
-public class Rectangle: CanvasDrawableInterface {
+public class Rectangle: CanvasDrawable {
     private var leftTop: Point
     private var width: Int
     private var height: Int
@@ -19,11 +19,11 @@ public class Rectangle: CanvasDrawableInterface {
         self.height = height
     }
     
-    public func Draw(canvas: CanvasInterface) {
+    public func Draw(canvas: Canvas) {
         canvas.moveTo(x: self.leftTop.x, y: self.leftTop.y)
         canvas.lineTo(x: (self.leftTop.x + width), y: self.leftTop.y)
+        canvas.lineTo(x: (self.leftTop.x + width), y: (self.leftTop.y - height))
         canvas.lineTo(x: self.leftTop.x, y: (self.leftTop.y - height))
-        canvas.lineTo(x: (self.leftTop.x - width), y: self.leftTop.y)
         canvas.lineTo(x: self.leftTop.x, y: self.leftTop.y)
     }
    

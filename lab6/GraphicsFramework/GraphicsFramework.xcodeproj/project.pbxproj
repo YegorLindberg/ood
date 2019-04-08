@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5C551D4E22510FBE0046FA0C /* GraphicsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C551D4C22510FBE0046FA0C /* GraphicsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5C551D5622510FE50046FA0C /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C551D5422510FE50046FA0C /* Canvas.swift */; };
-		5C551D5722510FE50046FA0C /* CanvasInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C551D5522510FE50046FA0C /* CanvasInterface.swift */; };
+		5C551D5622510FE50046FA0C /* ConsoleCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C551D5422510FE50046FA0C /* ConsoleCanvas.swift */; };
+		5C551D5722510FE50046FA0C /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C551D5522510FE50046FA0C /* Canvas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C551D4922510FBE0046FA0C /* GraphicsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphicsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C551D4C22510FBE0046FA0C /* GraphicsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphicsFramework.h; sourceTree = "<group>"; };
 		5C551D4D22510FBE0046FA0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C551D5422510FE50046FA0C /* Canvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
-		5C551D5522510FE50046FA0C /* CanvasInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasInterface.swift; sourceTree = "<group>"; };
+		5C551D5422510FE50046FA0C /* ConsoleCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleCanvas.swift; sourceTree = "<group>"; };
+		5C551D5522510FE50046FA0C /* Canvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +50,8 @@
 		5C551D4B22510FBE0046FA0C /* GraphicsFramework */ = {
 			isa = PBXGroup;
 			children = (
-				5C551D5422510FE50046FA0C /* Canvas.swift */,
-				5C551D5522510FE50046FA0C /* CanvasInterface.swift */,
+				5C551D5422510FE50046FA0C /* ConsoleCanvas.swift */,
+				5C551D5522510FE50046FA0C /* Canvas.swift */,
 				5C551D4C22510FBE0046FA0C /* GraphicsFramework.h */,
 				5C551D4D22510FBE0046FA0C /* Info.plist */,
 			);
@@ -137,8 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C551D5622510FE50046FA0C /* Canvas.swift in Sources */,
-				5C551D5722510FE50046FA0C /* CanvasInterface.swift in Sources */,
+				5C551D5622510FE50046FA0C /* ConsoleCanvas.swift in Sources */,
+				5C551D5722510FE50046FA0C /* Canvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

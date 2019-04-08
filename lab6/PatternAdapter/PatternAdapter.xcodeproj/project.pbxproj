@@ -7,22 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C47A77A2251DEF000EF61EB /* GraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A7792251DEF000EF61EB /* GraphicsFramework.framework */; };
+		5C47A77C2251DEFB00EF61EB /* ModernGraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A77B2251DEFB00EF61EB /* ModernGraphicsFramework.framework */; };
+		5C47A77E2251DF0700EF61EB /* ShapeDrawingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A77D2251DF0700EF61EB /* ShapeDrawingFramework.framework */; };
+		5C47A77F2251DF0E00EF61EB /* ShapeDrawingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A77D2251DF0700EF61EB /* ShapeDrawingFramework.framework */; };
+		5C47A7802251DF0E00EF61EB /* ShapeDrawingFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A77D2251DF0700EF61EB /* ShapeDrawingFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C47A7812251DF1200EF61EB /* ModernGraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A77B2251DEFB00EF61EB /* ModernGraphicsFramework.framework */; };
+		5C47A7822251DF1200EF61EB /* ModernGraphicsFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A77B2251DEFB00EF61EB /* ModernGraphicsFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C47A7832251DF1700EF61EB /* GraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A7792251DEF000EF61EB /* GraphicsFramework.framework */; };
+		5C47A7842251DF1700EF61EB /* GraphicsFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A7792251DEF000EF61EB /* GraphicsFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C47A78F2251E67E00EF61EB /* PatternAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C47A78E2251E67E00EF61EB /* PatternAdapterTests.swift */; };
+		5C47A7972251E84800EF61EB /* ShapeDrawingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A77D2251DF0700EF61EB /* ShapeDrawingFramework.framework */; };
+		5C47A7982251E84800EF61EB /* ModernGraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A77B2251DEFB00EF61EB /* ModernGraphicsFramework.framework */; };
+		5C47A7992251E84800EF61EB /* GraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C47A7792251DEF000EF61EB /* GraphicsFramework.framework */; };
 		5CD1AE3722511ADB00F4E0E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD1AE3622511ADB00F4E0E1 /* AppDelegate.swift */; };
 		5CD1AE3922511ADB00F4E0E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD1AE3822511ADB00F4E0E1 /* ViewController.swift */; };
 		5CD1AE3C22511ADB00F4E0E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD1AE3A22511ADB00F4E0E1 /* Main.storyboard */; };
 		5CD1AE3E22511ADC00F4E0E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD1AE3D22511ADC00F4E0E1 /* Assets.xcassets */; };
-		5CD1AE4122511ADC00F4E0E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD1AE3F22511ADC00F4E0E1 /* LaunchScreen.storyboard */; };
-		5CD1AE4D22511BC100F4E0E1 /* GraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD1AE4C22511BC100F4E0E1 /* GraphicsFramework.framework */; };
-		5CD1AE4F22511C5B00F4E0E1 /* ShapeDrawingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD1AE4E22511C5B00F4E0E1 /* ShapeDrawingFramework.framework */; };
-		5CD1AE5122511CA400F4E0E1 /* ModernGraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD1AE5022511CA400F4E0E1 /* ModernGraphicsFramework.framework */; };
 		5CD1AE53225129C900F4E0E1 /* AdaptGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD1AE52225129C900F4E0E1 /* AdaptGraphics.swift */; };
-		5CD1AE542251332C00F4E0E1 /* GraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD1AE4C22511BC100F4E0E1 /* GraphicsFramework.framework */; };
-		5CD1AE552251332C00F4E0E1 /* GraphicsFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD1AE4C22511BC100F4E0E1 /* GraphicsFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5CD1AE572251333000F4E0E1 /* ModernGraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD1AE5022511CA400F4E0E1 /* ModernGraphicsFramework.framework */; };
-		5CD1AE582251333000F4E0E1 /* ModernGraphicsFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD1AE5022511CA400F4E0E1 /* ModernGraphicsFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5CD1AE592251333400F4E0E1 /* ShapeDrawingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD1AE4E22511C5B00F4E0E1 /* ShapeDrawingFramework.framework */; };
-		5CD1AE5A2251333400F4E0E1 /* ShapeDrawingFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD1AE4E22511C5B00F4E0E1 /* ShapeDrawingFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C47A7912251E67E00EF61EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CD1AE2B22511ADB00F4E0E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CD1AE3222511ADB00F4E0E1;
+			remoteInfo = PatternAdapter;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5CD1AE562251332C00F4E0E1 /* Embed Frameworks */ = {
@@ -31,9 +44,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5CD1AE552251332C00F4E0E1 /* GraphicsFramework.framework in Embed Frameworks */,
-				5CD1AE5A2251333400F4E0E1 /* ShapeDrawingFramework.framework in Embed Frameworks */,
-				5CD1AE582251333000F4E0E1 /* ModernGraphicsFramework.framework in Embed Frameworks */,
+				5C47A7802251DF0E00EF61EB /* ShapeDrawingFramework.framework in Embed Frameworks */,
+				5C47A7842251DF1700EF61EB /* GraphicsFramework.framework in Embed Frameworks */,
+				5C47A7822251DF1200EF61EB /* ModernGraphicsFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,43 +54,65 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C47A7792251DEF000EF61EB /* GraphicsFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GraphicsFramework.framework; sourceTree = "<group>"; };
+		5C47A77B2251DEFB00EF61EB /* ModernGraphicsFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ModernGraphicsFramework.framework; sourceTree = "<group>"; };
+		5C47A77D2251DF0700EF61EB /* ShapeDrawingFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShapeDrawingFramework.framework; sourceTree = "<group>"; };
+		5C47A78C2251E67E00EF61EB /* PatternAdapterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PatternAdapterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C47A78E2251E67E00EF61EB /* PatternAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternAdapterTests.swift; sourceTree = "<group>"; };
+		5C47A7902251E67E00EF61EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CD1AE3322511ADB00F4E0E1 /* PatternAdapter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternAdapter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD1AE3622511ADB00F4E0E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CD1AE3822511ADB00F4E0E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5CD1AE3B22511ADB00F4E0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CD1AE3D22511ADC00F4E0E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5CD1AE4022511ADC00F4E0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CD1AE4222511ADC00F4E0E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CD1AE4C22511BC100F4E0E1 /* GraphicsFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GraphicsFramework.framework; sourceTree = "<group>"; };
-		5CD1AE4E22511C5B00F4E0E1 /* ShapeDrawingFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShapeDrawingFramework.framework; sourceTree = "<group>"; };
-		5CD1AE5022511CA400F4E0E1 /* ModernGraphicsFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ModernGraphicsFramework.framework; sourceTree = "<group>"; };
 		5CD1AE52225129C900F4E0E1 /* AdaptGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptGraphics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5C47A7892251E67E00EF61EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C47A7972251E84800EF61EB /* ShapeDrawingFramework.framework in Frameworks */,
+				5C47A7992251E84800EF61EB /* GraphicsFramework.framework in Frameworks */,
+				5C47A7982251E84800EF61EB /* ModernGraphicsFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CD1AE3022511ADB00F4E0E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD1AE4F22511C5B00F4E0E1 /* ShapeDrawingFramework.framework in Frameworks */,
-				5CD1AE572251333000F4E0E1 /* ModernGraphicsFramework.framework in Frameworks */,
-				5CD1AE4D22511BC100F4E0E1 /* GraphicsFramework.framework in Frameworks */,
-				5CD1AE542251332C00F4E0E1 /* GraphicsFramework.framework in Frameworks */,
-				5CD1AE592251333400F4E0E1 /* ShapeDrawingFramework.framework in Frameworks */,
-				5CD1AE5122511CA400F4E0E1 /* ModernGraphicsFramework.framework in Frameworks */,
+				5C47A77A2251DEF000EF61EB /* GraphicsFramework.framework in Frameworks */,
+				5C47A7812251DF1200EF61EB /* ModernGraphicsFramework.framework in Frameworks */,
+				5C47A77E2251DF0700EF61EB /* ShapeDrawingFramework.framework in Frameworks */,
+				5C47A77F2251DF0E00EF61EB /* ShapeDrawingFramework.framework in Frameworks */,
+				5C47A7832251DF1700EF61EB /* GraphicsFramework.framework in Frameworks */,
+				5C47A77C2251DEFB00EF61EB /* ModernGraphicsFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C47A78D2251E67E00EF61EB /* PatternAdapterTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C47A78E2251E67E00EF61EB /* PatternAdapterTests.swift */,
+				5C47A7902251E67E00EF61EB /* Info.plist */,
+			);
+			path = PatternAdapterTests;
+			sourceTree = "<group>";
+		};
 		5CD1AE2A22511ADB00F4E0E1 = {
 			isa = PBXGroup;
 			children = (
-				5CD1AE5022511CA400F4E0E1 /* ModernGraphicsFramework.framework */,
-				5CD1AE4E22511C5B00F4E0E1 /* ShapeDrawingFramework.framework */,
-				5CD1AE4C22511BC100F4E0E1 /* GraphicsFramework.framework */,
+				5C47A77D2251DF0700EF61EB /* ShapeDrawingFramework.framework */,
+				5C47A77B2251DEFB00EF61EB /* ModernGraphicsFramework.framework */,
+				5C47A7792251DEF000EF61EB /* GraphicsFramework.framework */,
 				5CD1AE3522511ADB00F4E0E1 /* PatternAdapter */,
+				5C47A78D2251E67E00EF61EB /* PatternAdapterTests */,
 				5CD1AE3422511ADB00F4E0E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5CD1AE3322511ADB00F4E0E1 /* PatternAdapter.app */,
+				5C47A78C2251E67E00EF61EB /* PatternAdapterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,7 +134,6 @@
 				5CD1AE3822511ADB00F4E0E1 /* ViewController.swift */,
 				5CD1AE3A22511ADB00F4E0E1 /* Main.storyboard */,
 				5CD1AE3D22511ADC00F4E0E1 /* Assets.xcassets */,
-				5CD1AE3F22511ADC00F4E0E1 /* LaunchScreen.storyboard */,
 				5CD1AE4222511ADC00F4E0E1 /* Info.plist */,
 			);
 			path = PatternAdapter;
@@ -107,6 +142,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5C47A78B2251E67E00EF61EB /* PatternAdapterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C47A7932251E67E00EF61EB /* Build configuration list for PBXNativeTarget "PatternAdapterTests" */;
+			buildPhases = (
+				5C47A7882251E67E00EF61EB /* Sources */,
+				5C47A7892251E67E00EF61EB /* Frameworks */,
+				5C47A78A2251E67E00EF61EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C47A7922251E67E00EF61EB /* PBXTargetDependency */,
+			);
+			name = PatternAdapterTests;
+			productName = PatternAdapterTests;
+			productReference = 5C47A78C2251E67E00EF61EB /* PatternAdapterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5CD1AE3222511ADB00F4E0E1 /* PatternAdapter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CD1AE4522511ADC00F4E0E1 /* Build configuration list for PBXNativeTarget "PatternAdapter" */;
@@ -135,6 +188,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Yegor Lindberg";
 				TargetAttributes = {
+					5C47A78B2251E67E00EF61EB = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 5CD1AE3222511ADB00F4E0E1;
+					};
 					5CD1AE3222511ADB00F4E0E1 = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -154,16 +211,23 @@
 			projectRoot = "";
 			targets = (
 				5CD1AE3222511ADB00F4E0E1 /* PatternAdapter */,
+				5C47A78B2251E67E00EF61EB /* PatternAdapterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5C47A78A2251E67E00EF61EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CD1AE3122511ADB00F4E0E1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD1AE4122511ADC00F4E0E1 /* LaunchScreen.storyboard in Resources */,
 				5CD1AE3E22511ADC00F4E0E1 /* Assets.xcassets in Resources */,
 				5CD1AE3C22511ADB00F4E0E1 /* Main.storyboard in Resources */,
 			);
@@ -172,6 +236,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5C47A7882251E67E00EF61EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C47A78F2251E67E00EF61EB /* PatternAdapterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CD1AE2F22511ADB00F4E0E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,6 +256,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5C47A7922251E67E00EF61EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CD1AE3222511ADB00F4E0E1 /* PatternAdapter */;
+			targetProxy = 5C47A7912251E67E00EF61EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		5CD1AE3A22511ADB00F4E0E1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -193,17 +273,57 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5CD1AE3F22511ADC00F4E0E1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5CD1AE4022511ADC00F4E0E1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5C47A7942251E67E00EF61EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQ34MQ3ZUS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = PatternAdapterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = university.PatternAdapterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PatternAdapter.app/PatternAdapter";
+			};
+			name = Debug;
+		};
+		5C47A7952251E67E00EF61EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQ34MQ3ZUS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = PatternAdapterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = university.PatternAdapterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PatternAdapter.app/PatternAdapter";
+			};
+			name = Release;
+		};
 		5CD1AE4322511ADC00F4E0E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -369,6 +489,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5C47A7932251E67E00EF61EB /* Build configuration list for PBXNativeTarget "PatternAdapterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C47A7942251E67E00EF61EB /* Debug */,
+				5C47A7952251E67E00EF61EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5CD1AE2E22511ADB00F4E0E1 /* Build configuration list for PBXProject "PatternAdapter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

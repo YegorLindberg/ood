@@ -13,7 +13,7 @@
 		5C551D91225110D70046FA0C /* CanvasDrawableInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C551D8C225110D70046FA0C /* CanvasDrawableInterface.swift */; };
 		5C551D92225110D70046FA0C /* CanvasPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C551D8D225110D70046FA0C /* CanvasPainter.swift */; };
 		5C551D93225110D70046FA0C /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C551D8E225110D70046FA0C /* Point.swift */; };
-		5CD1AE4B22511BB700F4E0E1 /* GraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD1AE4A22511BB700F4E0E1 /* GraphicsFramework.framework */; };
+		5CE338992251DDCE0060D6B4 /* GraphicsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE338982251DDCE0060D6B4 /* GraphicsFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		5C551D8C225110D70046FA0C /* CanvasDrawableInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasDrawableInterface.swift; sourceTree = "<group>"; };
 		5C551D8D225110D70046FA0C /* CanvasPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasPainter.swift; sourceTree = "<group>"; };
 		5C551D8E225110D70046FA0C /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
-		5CD1AE4A22511BB700F4E0E1 /* GraphicsFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GraphicsFramework.framework; sourceTree = "<group>"; };
+		5CE338982251DDCE0060D6B4 /* GraphicsFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GraphicsFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD1AE4B22511BB700F4E0E1 /* GraphicsFramework.framework in Frameworks */,
+				5CE338992251DDCE0060D6B4 /* GraphicsFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +43,7 @@
 		5C551D73225110800046FA0C = {
 			isa = PBXGroup;
 			children = (
-				5CD1AE4A22511BB700F4E0E1 /* GraphicsFramework.framework */,
+				5CE338982251DDCE0060D6B4 /* GraphicsFramework.framework */,
 				5C551D7F225110800046FA0C /* ShapeDrawingFramework */,
 				5C551D7E225110800046FA0C /* Products */,
 			);

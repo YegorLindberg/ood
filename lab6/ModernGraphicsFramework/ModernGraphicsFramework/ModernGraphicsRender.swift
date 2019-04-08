@@ -22,14 +22,14 @@ public class ModernGraphicsRender {
             throw DrawingError.DrawingHasAlreadyBegun
         }
         self.isDrawing = true
-        print("<draw>\n")
+        print("<draw>")
     }
     
     public func drawLine(start: Point, end: Point) throws {
         if !isDrawing {
             throw DrawingError.DrawingCannotBePerformed
         }
-        print("(<line fromX=\"\(start.x)\" fromY=\"\(start.y)\", toX=\"\(end.x)\" toY=\"\(end.y)\"/>)\n")
+        print("(<line fromX=\"\(start.x)\" fromY=\"\(start.y)\", toX=\"\(end.x)\" toY=\"\(end.y)\"/>)")
     }
     
     public func endDraw() throws {

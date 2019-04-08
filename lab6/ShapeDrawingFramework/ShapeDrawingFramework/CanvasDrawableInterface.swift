@@ -8,6 +8,6 @@
 import GraphicsFramework
 
 
-public protocol CanvasDrawableInterface {
-    func Draw(canvas: CanvasInterface)
+public protocol CanvasDrawable {
+    func Draw(canvas: Canvas)
 }

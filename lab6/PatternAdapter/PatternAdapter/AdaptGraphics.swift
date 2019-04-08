@@ -9,7 +9,7 @@
 import GraphicsFramework
 import ModernGraphicsFramework
 
-class AdaptGraphics: CanvasInterface {
+class AdaptGraphics: Canvas {
     private var render: ModernGraphicsRender
     private var beginPoint: Point?
     
@@ -28,9 +28,9 @@ class AdaptGraphics: CanvasInterface {
         }
         
         do {
-            try self.render.beginDraw()
-            try self.render.drawLine(start: self.beginPoint!, end: Point(x: x, y: y))
-            try self.render.endDraw()
+            let endPoint = Point(x: x, y: y)
+            try self.render.drawLine(start: self.beginPoint!, end: endPoint)
+            self.beginPoint = endPoint
         } catch {
             print(error.localizedDescription)
         }

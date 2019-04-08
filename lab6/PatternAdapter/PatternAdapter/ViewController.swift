@@ -32,20 +32,29 @@ class ViewController: UIViewController {
         let rectangle = Rectangle(leftTop: Point(x: 30, y: 40), width: 18, height: 24)
         
         painter.Draw(drawable: triangle)
+        print()
         painter.Draw(drawable: rectangle)
     }
     
     func paintPictureOnCanvas() {
-        let simpleCanvas = Canvas()
+        let simpleCanvas = ConsoleCanvas()
         let painter = CanvasPainter(canvas: simpleCanvas)
         self.paintPicture(painter: painter)
+        print("\n")
     }
     
     func paintPictureOnModernGraphicsRenderer() {
         let render = ModernGraphicsRender()
-        let adaptedCanvas = AdaptGraphics(render: render)
-        let painter = CanvasPainter(canvas: adaptedCanvas)
-        self.paintPicture(painter: painter)
+        do {
+            try render.beginDraw()
+            let adaptedCanvas = AdaptGraphics(render: render)
+            let painter = CanvasPainter(canvas: adaptedCanvas)
+            self.paintPicture(painter: painter)
+            try render.endDraw()
+        } catch {
+            print(error.localizedDescription)
+        }
+        print("\n")
     }
     
     override func viewDidLoad() {

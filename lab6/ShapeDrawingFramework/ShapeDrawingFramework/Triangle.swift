@@ -8,7 +8,7 @@
 import GraphicsFramework
 
 
-public class Triangle: CanvasDrawableInterface {
+public class Triangle: CanvasDrawable {
     private var top1: Point
     private var top2: Point
     private var top3: Point
@@ -19,7 +19,7 @@ public class Triangle: CanvasDrawableInterface {
         self.top3 = top3
     }
     
-    public func Draw(canvas: CanvasInterface) {
+    public func Draw(canvas: Canvas) {
         canvas.moveTo(x: self.top1.x, y: self.top1.y)
         canvas.lineTo(x: self.top2.x, y: self.top2.y)
         canvas.lineTo(x: self.top3.x, y: self.top3.y)

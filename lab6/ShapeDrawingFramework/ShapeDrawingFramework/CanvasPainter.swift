@@ -9,13 +9,13 @@ import GraphicsFramework
 
 
 public class CanvasPainter {
-    private var canvas: CanvasInterface
+    private var canvas: Canvas
     
-    public init(canvas: CanvasInterface) {
+    public init(canvas: Canvas) {
         self.canvas = canvas
     }
     
-    public func Draw(drawable: CanvasDrawableInterface) {
+    public func Draw(drawable: CanvasDrawable) {
         drawable.Draw(canvas: self.canvas)
     }
 }
