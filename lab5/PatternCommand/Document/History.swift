@@ -8,7 +8,7 @@
 
 class History {
     private let maxLength = 10
-    private var commands = [Command]()
+    private var commands = [Commandable]()
     private var nextCommandIndex = 0
     
     func canUndo() -> Bool {
@@ -23,6 +23,8 @@ class History {
         if canUndo() {
             self.commands[self.nextCommandIndex - 1].unexecute()
             self.nextCommandIndex -= 1
+        } else {
+            print("you can't undo.")
         }
     }
     
@@ -30,10 +32,16 @@ class History {
         if canRedo() {
             self.commands[self.nextCommandIndex].execute()
             self.nextCommandIndex += 1
+        }  else {
+            print("you can't redo.")
         }
     }
     
-    func addAndExecute(command: Command) {
+    func addAndExecute(command: Commandable) {
+        while canRedo() {
+            self.commands.removeLast()
+        }
+        
         command.execute()
         self.commands.append(command)
         self.nextCommandIndex += 1

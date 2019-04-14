@@ -6,7 +6,7 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class MaterialDocumentItem: DocumentItem {
+class DocumentListItem: DocumentItem {
     
     private(set) var paragraph: Paragraph?
     private(set) var image: Image?
@@ -15,7 +15,7 @@ class MaterialDocumentItem: DocumentItem {
     var description: String {
         switch self.documentContentType {
         case .image:
-            return "Image: \(image?.getPath() ?? "not found") \(image?.getWidth() ?? 0) x \(image?.getHeight() ?? 0)\n"
+            return "Image: \(image?.path ?? "not found") \(image?.width ?? 0) x \(image?.height ?? 0)\n"
         case .paragraph:
             return "Paragraph: \"\(paragraph?.getText() ?? "paragraph text not found")\"\n"
         }

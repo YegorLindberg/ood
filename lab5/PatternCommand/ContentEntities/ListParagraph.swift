@@ -6,8 +6,8 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class MaterialParagraph: Paragraph {
-    private var text: String = ""
+class ListParagraph: Paragraph {
+    private(set) var text: String = ""
     private var oldText: String = ""
 
     init(text: String?) {
@@ -20,12 +20,12 @@ class MaterialParagraph: Paragraph {
     }
     
     func setText(newText: String) -> Void {
+        self.oldText = self.text
         self.text = newText
     }
     
     func setToOldText() {
         self.text = self.oldText
-        
     }
 
 }

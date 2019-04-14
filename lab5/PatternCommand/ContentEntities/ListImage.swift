@@ -6,7 +6,7 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class MaterialImage: Image {
+class ListImage: Image {
     private let maxWidth = 10_000
     private let maxHeight = 10_000
     
@@ -18,18 +18,6 @@ class MaterialImage: Image {
         self.path = path
         self.width = width > maxWidth ? maxWidth : width
         self.height = height > maxHeight ? maxHeight : height
-    }
-    
-    func getPath() -> String {
-        return self.path
-    }
-    
-    func getWidth() -> Int {
-        return self.width
-    }
-    
-    func getHeight() -> Int {
-        return self.height
     }
     
     func resize(width: Int, height: Int) {

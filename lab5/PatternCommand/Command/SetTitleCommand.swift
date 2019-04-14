@@ -6,7 +6,7 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class SetTitleCommand: Command {
+class SetTitleCommand: Commandable {
     private var document: Document
     private var title: String
     private var oldTitle: String

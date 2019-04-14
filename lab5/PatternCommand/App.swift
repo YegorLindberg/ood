@@ -8,7 +8,7 @@
 
 class App {
     
-    var document = MaterialDocument()
+    var document = DocumentList()
     private var appIsRunning = true
     private var commandDefenitions = [String]()
     
@@ -36,6 +36,7 @@ class App {
                 insertParagraph()
                 break
             case "insertImage":
+                //--
                 break
             case "setTitle":
                 setTitle()
@@ -44,9 +45,14 @@ class App {
                 printList()
                 break
             case "replaceText":
-                
+                do {
+                    try replaceText()
+                } catch {
+                    print("\n\(error.localizedDescription)")
+                }
                 break
             case "resizeImage":
+                //--
                 break
             case "deleteItem":
                 deleteItem()
@@ -61,12 +67,12 @@ class App {
                 self.document.redo()
                 break
             case "save":
+                save()
                 break
             default:
                 printException()
                 break
             }
-            
         }
     }
     
@@ -75,8 +81,6 @@ class App {
         let text = getText(from: 2)
         
         document.insertParagraph(text: text, position: position)
-//        let par = document.getItem(at: Int(position))
-//        print(par.description)
     }
     
     func deleteItem() {
@@ -88,12 +92,20 @@ class App {
     }
     
     func setTitle() {
-        document.title = getText(from: 1)
-//        print(document.getTitle())
+        document.setTitle(title: self.getText(from: 1))
+    }
+    
+    func replaceText() throws {
+        let position = Int(getPosition())
+        let fullText = getText(from: 2)
+        if self.document.getItem(at: position).paragraph == nil {
+            throw InputError.WrongPositionForItem
+        }
+        self.document.editParagraph(text: fullText, position: position)
     }
     
     func getPosition() -> UInt {
-        guard self.commandDefenitions.count == 3, self.self.commandDefenitions[1] != "end", let position = Int(self.commandDefenitions[1]) else {
+        guard self.commandDefenitions.count >= 3, self.self.commandDefenitions[1] != "end", let position = Int(self.commandDefenitions[1]) else {
             return UInt(document.getItemsCount())
         }
         if position >= 0 && position < self.document.getItemsCount() {
@@ -121,14 +133,12 @@ class App {
         }
     }
     
-    
     func printException() {
-        print("Invalid command or argument. Enter \"help\" to view instructions.")
-//        printHelp()
+        print("\nInvalid command or argument. Enter \"help\" to view instructions.\n")
     }
     
     func printHelp() {
-        print("insertParagraph <position>|end <text>")
+        print("\ninsertParagraph <position>|end <text>")
         print("insertImage <position>|end <width> <height> <path>")
         print("setTitle <title text>")
         print("list")
@@ -138,6 +148,12 @@ class App {
         print("help")
         print("undo")
         print("redo")
-        print("save <path>\n\n")
+        print("save <path>")
+        print("exit\n\n")
+    }
+    
+    func save() {
+        let path = getText(from: 1)
+        self.document.save(path: path)
     }
 }

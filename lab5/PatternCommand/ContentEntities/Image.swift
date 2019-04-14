@@ -7,9 +7,8 @@
 //
 
 protocol Image {
-    // Возвращает путь относительно каталога документа
-    func getPath() -> String
-    func getWidth() -> Int
-    func getHeight() -> Int
+    var width: Int { get }
+    var height: Int { get }
+    var path: String { get }
     func resize(width: Int, height: Int)
 }
