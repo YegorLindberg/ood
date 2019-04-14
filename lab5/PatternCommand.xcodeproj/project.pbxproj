@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C10AE88226355390070D912 /* InputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10AE87226355390070D912 /* InputError.swift */; };
+		5C10AE9E226399AB0070D912 /* HtmlWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10AE9D226399AB0070D912 /* HtmlWriter.swift */; };
 		5C17B8EB225A0A1000AF047B /* Commandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B8EA225A0A1000AF047B /* Commandable.swift */; };
 		5C17B8EE225A0F2900AF047B /* DocumentContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B8ED225A0F2900AF047B /* DocumentContentType.swift */; };
 		5C17B8F4225A113100AF047B /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B8F3225A113100AF047B /* Paragraph.swift */; };
@@ -15,7 +16,6 @@
 		5C17B8F8225A149000AF047B /* ListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B8F7225A149000AF047B /* ListImage.swift */; };
 		5C17B8FA225A168D00AF047B /* DocumentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B8F9225A168D00AF047B /* DocumentList.swift */; };
 		5C17B8FC225A16EA00AF047B /* ListParagraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B8FB225A16EA00AF047B /* ListParagraph.swift */; };
-		5C17B8FE225A1A9500AF047B /* SetTitleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B8FD225A1A9500AF047B /* SetTitleCommand.swift */; };
 		5C17B900225A27E700AF047B /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B8FF225A27E700AF047B /* History.swift */; };
 		5C17B902225A31A800AF047B /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B901225A31A800AF047B /* Command.swift */; };
 		5C17B904225A444700AF047B /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B903225A444700AF047B /* App.swift */; };
@@ -39,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		5C10AE87226355390070D912 /* InputError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputError.swift; sourceTree = "<group>"; };
+		5C10AE9D226399AB0070D912 /* HtmlWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlWriter.swift; sourceTree = "<group>"; };
 		5C17B8EA225A0A1000AF047B /* Commandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commandable.swift; sourceTree = "<group>"; };
 		5C17B8ED225A0F2900AF047B /* DocumentContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentContentType.swift; sourceTree = "<group>"; };
 		5C17B8F3225A113100AF047B /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		5C17B8F7225A149000AF047B /* ListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImage.swift; sourceTree = "<group>"; };
 		5C17B8F9225A168D00AF047B /* DocumentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentList.swift; sourceTree = "<group>"; };
 		5C17B8FB225A16EA00AF047B /* ListParagraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListParagraph.swift; sourceTree = "<group>"; };
-		5C17B8FD225A1A9500AF047B /* SetTitleCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTitleCommand.swift; sourceTree = "<group>"; };
 		5C17B8FF225A27E700AF047B /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		5C17B901225A31A800AF047B /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		5C17B903225A444700AF047B /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -68,11 +68,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C10AE9C226399940070D912 /* Saver */ = {
+			isa = PBXGroup;
+			children = (
+				5C10AE9D226399AB0070D912 /* HtmlWriter.swift */,
+			);
+			path = Saver;
+			sourceTree = "<group>";
+		};
 		5C17B8E9225A0A0600AF047B /* Command */ = {
 			isa = PBXGroup;
 			children = (
 				5C17B8EA225A0A1000AF047B /* Commandable.swift */,
-				5C17B8FD225A1A9500AF047B /* SetTitleCommand.swift */,
 				5C17B901225A31A800AF047B /* Command.swift */,
 			);
 			path = Command;
@@ -129,6 +136,7 @@
 		5C3DFCBB225888670050B9A1 /* PatternCommand */ = {
 			isa = PBXGroup;
 			children = (
+				5C10AE9C226399940070D912 /* Saver */,
 				5C17B8F0225A0F8F00AF047B /* ContentEntities */,
 				5C17B8EF225A0F7B00AF047B /* Enum */,
 				5C17B8EC225A0F0D00AF047B /* Document */,
@@ -208,8 +216,8 @@
 				5C17B8FC225A16EA00AF047B /* ListParagraph.swift in Sources */,
 				5C17B8F4225A113100AF047B /* Paragraph.swift in Sources */,
 				5C17B8F8225A149000AF047B /* ListImage.swift in Sources */,
-				5C17B8FE225A1A9500AF047B /* SetTitleCommand.swift in Sources */,
 				5C17B900225A27E700AF047B /* History.swift in Sources */,
+				5C10AE9E226399AB0070D912 /* HtmlWriter.swift in Sources */,
 				5C17B8EE225A0F2900AF047B /* DocumentContentType.swift in Sources */,
 				5C17B8EB225A0A1000AF047B /* Commandable.swift in Sources */,
 			);

@@ -35,9 +35,9 @@ class App {
             case "insertParagraph":
                 insertParagraph()
                 break
-            case "insertImage":
+//            case "insertImage":
                 //--
-                break
+//                break
             case "setTitle":
                 setTitle()
                 break
@@ -51,9 +51,9 @@ class App {
                     print("\n\(error.localizedDescription)")
                 }
                 break
-            case "resizeImage":
+//            case "resizeImage":
                 //--
-                break
+//                break
             case "deleteItem":
                 deleteItem()
                 break
@@ -139,11 +139,11 @@ class App {
     
     func printHelp() {
         print("\ninsertParagraph <position>|end <text>")
-        print("insertImage <position>|end <width> <height> <path>")
+//        print("insertImage <position>|end <width> <height> <path>")
         print("setTitle <title text>")
         print("list")
         print("replaceText <position> <text>")
-        print("resizeImage <position> <width> <height>")
+//        print("resizeImage <position> <width> <height>")
         print("deleteItem <position>")
         print("help")
         print("undo")

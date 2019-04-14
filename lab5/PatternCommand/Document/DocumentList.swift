@@ -10,7 +10,6 @@ import Foundation
 
 class DocumentList: Document {
     var title: String = ""
-    private var oldTitle = ""
     
     private var items = [DocumentItem]()
     private var history = History()
@@ -27,6 +26,7 @@ class DocumentList: Document {
     func editParagraph(text: String, position: Int) {
         let paragraph = self.items[position].paragraph
         let oldValue = paragraph?.getText()
+        
         self.history.addAndExecute(command: Command(onExecute: { paragraph?.setText(newText: text) },
                                                     onUnexecute: { paragraph?.setText(newText: oldValue!) }))
     }
@@ -51,6 +51,7 @@ class DocumentList: Document {
     
     func deleteItem(index: Int) {
         let item = self.items[index]
+        
         self.history.addAndExecute(command: Command(onExecute: { self.items.remove(at: index) },
                                                     onUnexecute: { self.items.insert(item, at: index) }))
     }
@@ -60,9 +61,10 @@ class DocumentList: Document {
     }
     
     func setTitle(title: String) {
-        let setTitleCommand = SetTitleCommand(document: self, title: title)
-        self.history.addAndExecute(command: Command(onExecute: { setTitleCommand.execute() },
-                                                    onUnexecute: { setTitleCommand.unexecute() }))
+        let oldTitle = self.title
+        
+        self.history.addAndExecute(command: Command(onExecute: { self.title = title },
+                                                    onUnexecute: { self.title = oldTitle }))
     }
     
     func canUndo() -> Bool {
@@ -82,7 +84,7 @@ class DocumentList: Document {
     }
     
     func save(path: String) {
-        
+        HtmlWriter(documentTitle: self.title, bodyItems: self.items, path: path)
     }
     
     
