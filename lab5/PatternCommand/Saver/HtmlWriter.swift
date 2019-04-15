@@ -51,7 +51,7 @@ class HtmlWriter {
         for (index, item) in bodyItems.enumerated() {
             switch item.documentContentType {
             case .paragraph:
-                body += "<p>\(index). \(item.paragraph!.getText())</p>\n"
+                body += "<p>\(index). \(item.paragraph!.text)</p>\n"
                 break
             case .image:
                 //--

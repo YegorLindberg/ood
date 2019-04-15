@@ -7,6 +7,6 @@
 //
 
 protocol Paragraph {
-    func getText() -> String
+    var text: String { get }
     func setText(newText: String)
 }

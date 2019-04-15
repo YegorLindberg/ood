@@ -25,7 +25,7 @@ class DocumentList: Document {
     
     func editParagraph(text: String, position: Int) {
         let paragraph = self.items[position].paragraph
-        let oldValue = paragraph?.getText()
+        let oldValue = paragraph?.text
         
         self.history.addAndExecute(command: Command(onExecute: { paragraph?.setText(newText: text) },
                                                     onUnexecute: { paragraph?.setText(newText: oldValue!) }))

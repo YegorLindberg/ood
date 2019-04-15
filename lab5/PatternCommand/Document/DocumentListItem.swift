@@ -17,7 +17,7 @@ class DocumentListItem: DocumentItem {
         case .image:
             return "Image: \(image?.path ?? "not found") \(image?.width ?? 0) x \(image?.height ?? 0)\n"
         case .paragraph:
-            return "Paragraph: \"\(paragraph?.getText() ?? "paragraph text not found")\"\n"
+            return "Paragraph: \"\(paragraph?.text ?? "paragraph text not found")\"\n"
         }
     }
     
