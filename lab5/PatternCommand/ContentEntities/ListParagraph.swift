@@ -14,8 +14,11 @@ class ListParagraph: Paragraph {
         self.text = text == nil ? "" : text!
     }
     
-    func setText(newText: String) -> Void {
-        self.text = newText
+    func setText(newText: String, history: Historible) -> Void {
+        let oldText = self.text
+        
+        history.addAndExecute(command: Command(onExecute: { self.text = newText },
+                                               onUnexecute: { self.text = oldText }))
     }
 
 }

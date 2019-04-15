@@ -40,6 +40,9 @@
 		5CF8DC822264652F0022F48F /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B8FF225A27E700AF047B /* History.swift */; };
 		5CF8DC83226465320022F48F /* Commandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B8EA225A0A1000AF047B /* Commandable.swift */; };
 		5CF8DC84226465340022F48F /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B901225A31A800AF047B /* Command.swift */; };
+		5CF8DC86226478700022F48F /* Historible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8DC85226478700022F48F /* Historible.swift */; };
+		5CF8DC87226479700022F48F /* Historible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8DC85226478700022F48F /* Historible.swift */; };
+		5CF8DC8822647C7C0022F48F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17B903225A444700AF047B /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,6 +79,7 @@
 		5CF8DC6C22645B800022F48F /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF8DC6E22645B800022F48F /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		5CF8DC7022645B800022F48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF8DC85226478700022F48F /* Historible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 				5C17B8F5225A122300AF047B /* DocumentListItem.swift */,
 				5C17B8F9225A168D00AF047B /* DocumentList.swift */,
 				5C17B8FF225A27E700AF047B /* History.swift */,
+				5CF8DC85226478700022F48F /* Historible.swift */,
 			);
 			path = Document;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF8DC86226478700022F48F /* Historible.swift in Sources */,
 				5C610B54225911EE00831E65 /* Image.swift in Sources */,
 				5C17B8FA225A168D00AF047B /* DocumentList.swift in Sources */,
 				5C17B902225A31A800AF047B /* Command.swift in Sources */,
@@ -308,12 +314,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF8DC87226479700022F48F /* Historible.swift in Sources */,
 				5CF8DC812264652C0022F48F /* DocumentList.swift in Sources */,
 				5CF8DC792264650B0022F48F /* Paragraph.swift in Sources */,
 				5CF8DC6F22645B800022F48F /* UnitTests.swift in Sources */,
 				5CF8DC7A2264650E0022F48F /* ListImage.swift in Sources */,
 				5CF8DC78226465080022F48F /* Image.swift in Sources */,
 				5CF8DC7B226465110022F48F /* ListParagraph.swift in Sources */,
+				5CF8DC8822647C7C0022F48F /* App.swift in Sources */,
 				5CF8DC7E226465240022F48F /* Document.swift in Sources */,
 				5CF8DC802264652A0022F48F /* DocumentListItem.swift in Sources */,
 				5CF8DC84226465340022F48F /* Command.swift in Sources */,

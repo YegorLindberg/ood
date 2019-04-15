@@ -12,7 +12,7 @@ class DocumentList: Document {
     var title: String = ""
     
     private var items = [DocumentItem]()
-    private var history = History()
+    var history = History()
     
     func insertParagraph(text: String, position: UInt?) {
         let actualPosition = position != nil ? Int(position!) : items.count
@@ -21,14 +21,6 @@ class DocumentList: Document {
         
         self.history.addAndExecute(command: Command(onExecute: { self.items.insert(docItem, at: actualPosition) },
                                                     onUnexecute: { self.items.remove(at: actualPosition) }))
-    }
-    
-    func editParagraph(text: String, position: Int) {
-        let paragraph = self.items[position].paragraph
-        let oldValue = paragraph?.text
-        
-        self.history.addAndExecute(command: Command(onExecute: { paragraph?.setText(newText: text) },
-                                                    onUnexecute: { paragraph?.setText(newText: oldValue!) }))
     }
 
     func insertImage(path: String, width: Int, height: Int, position: UInt?) {

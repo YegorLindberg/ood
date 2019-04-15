@@ -46,7 +46,7 @@ class App {
                 break
             case "replaceText":
                 do {
-                    try replaceText()
+                    try replaceText(text: getText(from: 2), position: Int(getPosition()))
                 } catch {
                     print("\n\(error.localizedDescription)")
                 }
@@ -95,13 +95,11 @@ class App {
         document.setTitle(title: self.getText(from: 1))
     }
     
-    func replaceText() throws {
-        let position = Int(getPosition())
-        let fullText = getText(from: 2)
+    func replaceText(text: String, position: Int) throws {
         if self.document.getItem(at: position).paragraph == nil {
             throw InputError.WrongPositionForItem
         }
-        self.document.editParagraph(text: fullText, position: position)
+        self.document.getItem(at: position).paragraph?.setText(newText: text, history: self.document.history)
     }
     
     func getPosition() -> UInt {

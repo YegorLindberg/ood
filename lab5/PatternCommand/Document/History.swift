@@ -6,10 +6,10 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class History {
-    private let maxLength = 10
-    private var commands = [Commandable]()
-    private var nextCommandIndex = 0
+class History: Historible {
+    let maxLength = 10
+    var commands = [Commandable]()
+    var nextCommandIndex = 0
     
     func canUndo() -> Bool {
         return self.nextCommandIndex != 0

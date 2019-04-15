@@ -51,40 +51,60 @@ class UnitTests: XCTestCase {
     }
     
     func testEditingParagraphs() {
-        let document = DocumentList()
-        document.insertParagraph(text: "hello", position: 0)
-        document.insertParagraph(text: "bye", position: 1)
-        document.insertParagraph(text: "take a little bit", position: 0)
+        let app = App()
+        app.document.insertParagraph(text: "hello", position: 0)
+        app.document.insertParagraph(text: "bye", position: 1)
+        app.document.insertParagraph(text: "take a little bit", position: 0)
         
-        document.editParagraph(text: "this paragraph was changed", position: 0)
-        XCTAssertEqual(document.getItem(at: 0).paragraph?.text, "this paragraph was changed")
-        XCTAssertEqual(document.getItem(at: 1).paragraph?.text, "hello")
-        XCTAssertEqual(document.getItem(at: 2).paragraph?.text, "bye")
+        do {
+            try app.replaceText(text: "this paragraph was changed", position: 0)
+            XCTAssertEqual(app.document.getItem(at: 0).paragraph?.text, "this paragraph was changed")
+            XCTAssertEqual(app.document.getItem(at: 1).paragraph?.text, "hello")
+            XCTAssertEqual(app.document.getItem(at: 2).paragraph?.text, "bye")
+        } catch {
+            print(error.localizedDescription)
+        }
         
-        document.editParagraph(text: "this paragraph was changed TOO", position: 1)
-        XCTAssertEqual(document.getItem(at: 0).paragraph?.text, "this paragraph was changed")
-        XCTAssertEqual(document.getItem(at: 1).paragraph?.text, "this paragraph was changed TOO")
-        XCTAssertEqual(document.getItem(at: 2).paragraph?.text, "bye")
+        do {
+            try app.replaceText(text: "this paragraph was changed TOO", position: 1)
+            XCTAssertEqual(app.document.getItem(at: 0).paragraph?.text, "this paragraph was changed")
+            XCTAssertEqual(app.document.getItem(at: 1).paragraph?.text, "this paragraph was changed TOO")
+            XCTAssertEqual(app.document.getItem(at: 2).paragraph?.text, "bye")
+        } catch {
+            print(error.localizedDescription)
+        }
         
-        document.editParagraph(text: "this paragraph was changed TOO and this is last", position: 2)
-        XCTAssertEqual(document.getItem(at: 0).paragraph?.text, "this paragraph was changed")
-        XCTAssertEqual(document.getItem(at: 1).paragraph?.text, "this paragraph was changed TOO")
-        XCTAssertEqual(document.getItem(at: 2).paragraph?.text, "this paragraph was changed TOO and this is last")
+        do {
+            try app.replaceText(text: "this paragraph was changed TOO and this is last", position: 2)
+            XCTAssertEqual(app.document.getItem(at: 0).paragraph?.text, "this paragraph was changed")
+            XCTAssertEqual(app.document.getItem(at: 1).paragraph?.text, "this paragraph was changed TOO")
+            XCTAssertEqual(app.document.getItem(at: 2).paragraph?.text, "this paragraph was changed TOO and this is last")
+        } catch {
+            print(error.localizedDescription)
+        }
+        do {
+            try app.replaceText(text: "rock", position: 0)
+            XCTAssertEqual(app.document.getItem(at: 0).paragraph?.text, "rock")
+        } catch {
+            print(error.localizedDescription)
+        }
         
-        document.editParagraph(text: "rock", position: 0)
-        XCTAssertEqual(document.getItem(at: 0).paragraph?.text, "rock")
-        document.editParagraph(text: "jazz", position: 0)
-        XCTAssertEqual(document.getItem(at: 0).paragraph?.text, "jazz")
+        do {
+            try app.replaceText(text: "jazz", position: 0)
+            XCTAssertEqual(app.document.getItem(at: 0).paragraph?.text, "jazz")
+        } catch {
+            print(error.localizedDescription)
+        }
         
-        document.undo()
-        XCTAssertEqual(document.getItem(at: 0).paragraph?.text, "rock")
-        document.undo()
-        XCTAssertEqual(document.getItem(at: 0).paragraph?.text, "this paragraph was changed")
+        app.document.undo()
+        XCTAssertEqual(app.document.getItem(at: 0).paragraph?.text, "rock")
+        app.document.undo()
+        XCTAssertEqual(app.document.getItem(at: 0).paragraph?.text, "this paragraph was changed")
         
-        document.redo()
-        XCTAssertEqual(document.getItem(at: 0).paragraph?.text, "rock")
-        document.redo()
-        XCTAssertEqual(document.getItem(at: 0).paragraph?.text, "jazz")
+        app.document.redo()
+        XCTAssertEqual(app.document.getItem(at: 0).paragraph?.text, "rock")
+        app.document.redo()
+        XCTAssertEqual(app.document.getItem(at: 0).paragraph?.text, "jazz")
     }
 
     func testSetTitle() {
