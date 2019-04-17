@@ -9,6 +9,5 @@
 protocol DocumentItem {
     var paragraph: Paragraph? { get }
     var image: Image? { get }
-    var description: String { get }
     var documentContentType: DocumentContentType { get }
 }

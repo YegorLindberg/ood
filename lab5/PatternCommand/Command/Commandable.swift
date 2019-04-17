@@ -7,6 +7,6 @@
 //
 
 protocol Commandable {
-    func execute()
-    func unexecute()
+    func execute() throws
+    func unexecute() throws
 }

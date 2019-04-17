@@ -6,10 +6,10 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class History: Historible {
-    let maxLength = 10
-    var commands = [Commandable]()
-    var nextCommandIndex = 0
+class History: Executor {
+    private let maxLength = 10
+    private var commands = [Commandable]()
+    private var nextCommandIndex = 0
     
     func canUndo() -> Bool {
         return self.nextCommandIndex != 0
@@ -21,8 +21,12 @@ class History: Historible {
     
     func undo() {
         if canUndo() {
-            self.commands[self.nextCommandIndex - 1].unexecute()
-            self.nextCommandIndex -= 1
+            do {
+                try self.commands[self.nextCommandIndex - 1].unexecute()
+                self.nextCommandIndex -= 1
+            } catch {
+                print(error.localizedDescription)
+            }
         } else {
             print("you can't undo.")
         }
@@ -30,8 +34,12 @@ class History: Historible {
     
     func redo() {
         if canRedo() {
-            self.commands[self.nextCommandIndex].execute()
-            self.nextCommandIndex += 1
+            do {
+                try self.commands[self.nextCommandIndex].execute()
+                self.nextCommandIndex += 1
+            } catch {
+                print(error.localizedDescription)
+            }
         }  else {
             print("you can't redo.")
         }
@@ -41,8 +49,12 @@ class History: Historible {
         while canRedo() {
             self.commands.removeLast()
         }
+        do {
+            try command.execute()
+        } catch {
+            print(error.localizedDescription)
+        }
         
-        command.execute()
         self.commands.append(command)
         self.nextCommandIndex += 1
         

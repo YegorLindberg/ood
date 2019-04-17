@@ -8,5 +8,5 @@
 
 protocol Paragraph {
     var text: String { get }
-    func setText(newText: String, history: Historible)
+    func setText(newText: String, history: Executor)
 }

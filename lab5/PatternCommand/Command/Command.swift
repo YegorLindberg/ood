@@ -17,17 +17,21 @@ class Command: Commandable {
         self.onUnexecute = onUnexecute
     }
     
-    func execute() {
+    func execute() throws {
         if !self.executed {
             self.executed = true
             self.onExecute()
+        } else {
+            throw NSError.init(domain: "Can't execute command twice.", code: 1, userInfo: nil)
         }
     }
     
-    func unexecute() {
+    func unexecute() throws {
         if self.executed {
             self.executed = false
             self.onUnexecute()
+        } else {
+            throw NSError.init(domain: "Can't unexecute command twice.", code: 2, userInfo: nil)
         }
     }
     

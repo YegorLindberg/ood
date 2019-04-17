@@ -8,7 +8,7 @@
 
 class App {
     
-    var document = DocumentList()
+    var document = Document()
     private var appIsRunning = true
     private var commandDefenitions = [String]()
     
@@ -126,7 +126,14 @@ class App {
         if self.document.getItemsCount() != 0 {
             for i in 0...(self.document.getItemsCount() - 1) {
                 let item = self.document.getItem(at: i)
-                print("\(i). \(item.description)", terminator: "")
+                switch item.documentContentType {
+                case .image:
+                    print("\(i). Image: \(item.image?.path ?? "not found") \(item.image?.width ?? 0) x \(item.image?.height ?? 0))", terminator: "")
+                    break
+                case .paragraph:
+                    print("\(i). Paragraph: \(item.paragraph?.text ?? "paragraph text not found")", terminator: "")
+                    break
+                }
             }
         }
     }

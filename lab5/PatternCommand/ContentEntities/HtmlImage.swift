@@ -6,7 +6,7 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class ListImage: Image {
+class HtmlImage: Image {
     private let maxWidth = 10_000
     private let maxHeight = 10_000
     
