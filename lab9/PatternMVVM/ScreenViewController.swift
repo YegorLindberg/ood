@@ -34,11 +34,19 @@ class ScreenViewController: UIViewController {
             self.viewSelectedHarmonic.isHidden = self.selectedIndex == nil ? true : false
         }
     }
-
+    
+    //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewAddHarmonic.isHidden = true
+        self.harmonicViewModel.delegate = self
         self.harmonicViewModel.onAddNewHarmonic = {
+            if self.selectedIndex != nil {
+                self.harmonicViewModel.points.remove(at: self.selectedIndex!.row)
+                self.selectedIndex = nil
+            } else {
+                self.harmonicViewModel.calculatePoint(by: self.harmonicViewModel.harmonics.count - 1)
+            }
             self.reloadTableView()
             //TODO: redraw grahpic
         }
@@ -95,7 +103,6 @@ class ScreenViewController: UIViewController {
     @IBAction func onDeleteSelectedButtonTouch(_ sender: UIButton) {
         if self.selectedIndex != nil {
             self.harmonicViewModel.harmonics.remove(at: self.selectedIndex!.row)
-            self.selectedIndex = nil
             self.tableView.reloadData()
         }
     }
@@ -105,7 +112,8 @@ class ScreenViewController: UIViewController {
         guard let frequency = self.checkTextFieldForNumber(self.textFieldFrequency) else { return }
         guard let phase = self.checkTextFieldForNumber(self.textFieldPhase) else { return }
         let newHarmonic = Harmonic(amplitude: amplitude, frequency: frequency, phase: phase, trigonometricFunc: self.newTrigonometricFunc)
-        newHarmonic.bind { (value) in
+        newHarmonic.bind {
+            self.harmonicViewModel.calculatePoint(by: self.selectedIndex?.row ?? 0)
             self.reloadTableRow(by: self.selectedIndex ?? IndexPath(row: 0, section: 0))
             //TODO: redraw grahpic
         }
@@ -211,8 +219,8 @@ extension ScreenViewController: UITextFieldDelegate {
         return true
     }
     
-    func checkTextFieldForNumber(_ textField: UITextField) -> Int? {
-        guard let value = Int(textField.text!) else {
+    func checkTextFieldForNumber(_ textField: UITextField) -> Double? {
+        guard let value = Double(textField.text!) else {
             textField.layer.borderWidth = 1.0
             textField.layer.borderColor = UIColor.red.cgColor
             return nil

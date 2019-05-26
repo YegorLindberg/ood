@@ -8,35 +8,35 @@
 
 
 class Harmonic {
-    typealias Listener = (Int) -> Void
+    typealias Listener = () -> Void
     var listener  : Listener?
     var formula   : String = ""
-    var amplitude : Int {
+    var amplitude : Double {
         didSet {
             self.updateFormula()
-            listener?(amplitude)
+            listener?()
         }
     }
-    var frequency: Int {
+    var frequency: Double {
         didSet {
             self.updateFormula()
-            listener?(frequency)
+            listener?()
         }
     }
-    var phase: Int {
+    var phase: Double {
         didSet {
             self.updateFormula()
-            listener?(phase)
+            listener?()
         }
     }
     var trigonometricFunc: TrigonometricFunc {
         didSet {
             self.updateFormula()
-            listener?(trigonometricFunc.rawValue)
+            listener?()
         }
     }
     
-    init(amplitude: Int, frequency: Int, phase: Int, trigonometricFunc: TrigonometricFunc) {
+    init(amplitude: Double, frequency: Double, phase: Double, trigonometricFunc: TrigonometricFunc) {
         self.amplitude = amplitude
         self.frequency = frequency
         self.phase     = phase
