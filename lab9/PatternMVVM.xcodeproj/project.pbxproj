@@ -15,6 +15,7 @@
 		5C766E1D2286C701009E18B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C766E1C2286C701009E18B6 /* Assets.xcassets */; };
 		5C766E202286C701009E18B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C766E1E2286C701009E18B6 /* LaunchScreen.storyboard */; };
 		5C766E2B2286C701009E18B6 /* PatternMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C766E2A2286C701009E18B6 /* PatternMVVMTests.swift */; };
+		5C8367EA229B572700A444EE /* PointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8367E9229B572700A444EE /* PointTableViewCell.swift */; };
 		5CBCEDC6228829C700D0F21B /* Harmonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBCEDC5228829C700D0F21B /* Harmonic.swift */; };
 		5CBCEDC922882C3500D0F21B /* HarmonicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBCEDC822882C3500D0F21B /* HarmonicTableViewCell.swift */; };
 		5CE80BAD229AC1B80014B9A8 /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE80BAC229AC1B80014B9A8 /* ScreenViewController.swift */; };
@@ -44,6 +45,7 @@
 		5C766E262286C701009E18B6 /* PatternMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PatternMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C766E2A2286C701009E18B6 /* PatternMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternMVVMTests.swift; sourceTree = "<group>"; };
 		5C766E2C2286C701009E18B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C8367E9229B572700A444EE /* PointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointTableViewCell.swift; sourceTree = "<group>"; };
 		5CBCEDC5228829C700D0F21B /* Harmonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Harmonic.swift; sourceTree = "<group>"; };
 		5CBCEDC822882C3500D0F21B /* HarmonicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicTableViewCell.swift; sourceTree = "<group>"; };
 		5CE80BAC229AC1B80014B9A8 /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				5C766E162286C700009E18B6 /* Main.storyboard */,
 				5C766E1E2286C701009E18B6 /* LaunchScreen.storyboard */,
 				5CBCEDC822882C3500D0F21B /* HarmonicTableViewCell.swift */,
+				5C8367E9229B572700A444EE /* PointTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8367EA229B572700A444EE /* PointTableViewCell.swift in Sources */,
 				5C766E132286C700009E18B6 /* AppDelegate.swift in Sources */,
 				5CBCEDC6228829C700D0F21B /* Harmonic.swift in Sources */,
 				5C3745D72291C17D00F79C5A /* TrigonometricFunc.swift in Sources */,

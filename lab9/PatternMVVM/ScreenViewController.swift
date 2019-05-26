@@ -22,9 +22,12 @@ class ScreenViewController: UIViewController, ChartViewDelegate {
     @IBOutlet var labelFormula      : UILabel!
     //MARK: - Views variables group
     @IBOutlet var viewGraphic         : LineChartView!
+    @IBOutlet var viewPoints          : UIView!
     @IBOutlet var viewAddHarmonic     : UIView!
-    @IBOutlet var tableView           : UITableView!
+    @IBOutlet var tableViewHarmonics  : UITableView!
+    @IBOutlet var tableViewPoints     : UITableView!
     @IBOutlet var viewSelectedHarmonic: UIView!
+    
     
     //MARK: - VC variables
     private var harmonicViewModel    = HarmonicViewModel()
@@ -97,6 +100,18 @@ class ScreenViewController: UIViewController, ChartViewDelegate {
         self.labelFormula.text = "\(self.textFieldApmlitude.text!) * \(self.newTrigonometricFunc)(\(self.textFieldFrequency.text!) * x + \(self.textFieldPhase.text!))"
     }
     
+    @IBAction func selectedViewSegmentedControl(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.viewPoints.isHidden = true
+        case 1:
+            self.tableViewPoints.reloadData()
+            self.viewPoints.isHidden = false
+        default:
+            break
+        }
+    }
+    
     @IBAction func onAddNewButtonTouch(_ sender: UIButton) {
         self.viewAddHarmonic.isHidden = false
         self.selectedIndex = nil
@@ -105,7 +120,7 @@ class ScreenViewController: UIViewController, ChartViewDelegate {
     @IBAction func onDeleteSelectedButtonTouch(_ sender: UIButton) {
         if self.selectedIndex != nil {
             self.harmonicViewModel.harmonics.remove(at: self.selectedIndex!.row)
-            self.tableView.reloadData()
+            self.tableViewHarmonics.reloadData()
         }
     }
     
@@ -159,33 +174,49 @@ class ScreenViewController: UIViewController, ChartViewDelegate {
 //MARK: - TableView processing
 extension ScreenViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.harmonicViewModel.harmonics.count
+        if tableView == self.tableViewHarmonics {
+            return self.harmonicViewModel.harmonics.count
+        } else if tableView == self.tableViewPoints {
+            return self.harmonicViewModel.points.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "harmonicCell") as? HarmonicTableViewCell else {
-            return UITableViewCell()
+        if tableView == self.tableViewHarmonics {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "harmonicCell") as? HarmonicTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.harmoniс = self.harmonicViewModel.harmonics[indexPath.row]
+            return cell
+        } else if tableView == self.tableViewPoints {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "pointCell") as? PointTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.point = self.harmonicViewModel.points[indexPath.row]
+            return cell
         }
-        cell.harmoniс = harmonicViewModel.harmonics[indexPath.row]
-        return cell
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedIndex = indexPath
-        self.textFieldAmplitudeEdit.text = "\(self.harmonicViewModel.harmonics[indexPath.row].amplitude)"
-        self.textFieldFrequencyEdit.text = "\(self.harmonicViewModel.harmonics[indexPath.row].frequency)"
-        self.textFieldPhaseEdit.text = "\(self.harmonicViewModel.harmonics[indexPath.row].phase)"
-        self.segmentedCtrlSinCos.selectedSegmentIndex = self.harmonicViewModel.harmonics[indexPath.row].trigonometricFunc == TrigonometricFunc.sin ? 0 : 1
+        if tableView == self.tableViewHarmonics {
+            self.selectedIndex = indexPath
+            self.textFieldAmplitudeEdit.text = "\(self.harmonicViewModel.harmonics[indexPath.row].amplitude)"
+            self.textFieldFrequencyEdit.text = "\(self.harmonicViewModel.harmonics[indexPath.row].frequency)"
+            self.textFieldPhaseEdit.text = "\(self.harmonicViewModel.harmonics[indexPath.row].phase)"
+            self.segmentedCtrlSinCos.selectedSegmentIndex = self.harmonicViewModel.harmonics[indexPath.row].trigonometricFunc == TrigonometricFunc.sin ? 0 : 1
+        }
     }
     
     private func reloadTableView() {
-        self.tableView.reloadData()
+        self.tableViewHarmonics.reloadData()
         self.selectedIndex = nil
     }
     
     private func reloadTableRow(by index: IndexPath) {
-        self.tableView.reloadRows(at: [index], with: .none)
-        self.tableView.selectRow(at: index, animated: false, scrollPosition: .top)
+        self.tableViewHarmonics.reloadRows(at: [index], with: .none)
+        self.tableViewHarmonics.selectRow(at: index, animated: false, scrollPosition: .top)
     }
 }
 
