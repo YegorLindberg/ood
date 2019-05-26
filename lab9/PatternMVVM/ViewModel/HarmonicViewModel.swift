@@ -6,6 +6,7 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 import Foundation
+import Charts
 
 
 class HarmonicViewModel {
@@ -14,7 +15,7 @@ class HarmonicViewModel {
     
     var delegate: ScreenViewController?
     var onAddNewHarmonic: (() -> Void)?
-    var points = [Point]()
+    var points = [ChartDataEntry]()
     var harmonics = [Harmonic]() {
         didSet {
             self.onAddNewHarmonic?()
@@ -22,12 +23,12 @@ class HarmonicViewModel {
     }
     
     func calculatePoints(points count: Int, step: Double) {
-        self.points = [Point]()
+        self.points = [ChartDataEntry]()
         for i in 0...count {
             let x = Double(i) * step
             let y = getSumY(by: x)
             
-            self.points.append(Point(x: x, y: y))
+            self.points.append(ChartDataEntry(x: x, y: y))
         }
         print("points calculated")
     }

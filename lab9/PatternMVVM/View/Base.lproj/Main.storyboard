@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amplitude formula" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bQ-VK-HCU">
-                                                    <rect key="frame" x="5" y="13.5" width="140" height="17"/>
+                                                    <rect key="frame" x="5" y="13.5" width="132" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Bgq-Iq-zSf"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5S-aK-zMb" userLabel="GraphicView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5S-aK-zMb" userLabel="GraphicView" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="10" y="288" width="300" height="222"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -356,7 +356,7 @@
                         <outlet property="textFieldPhase" destination="oO0-0w-24i" id="YG7-Zj-nxp"/>
                         <outlet property="textFieldPhaseEdit" destination="i5F-rT-Mhf" id="TEw-gv-wGX"/>
                         <outlet property="viewAddHarmonic" destination="0ep-zY-WH1" id="FMN-KE-B5C"/>
-                        <outlet property="viewGraphic" destination="e5S-aK-zMb" id="x3i-U9-SfE"/>
+                        <outlet property="viewGraphic" destination="e5S-aK-zMb" id="Wvg-rc-OEy"/>
                         <outlet property="viewSelectedHarmonic" destination="6d8-bT-EOD" id="l0u-Zh-V7a"/>
                     </connections>
                 </viewController>

@@ -6,9 +6,10 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 import UIKit
+import Charts
 
 
-class ScreenViewController: UIViewController {
+class ScreenViewController: UIViewController, ChartViewDelegate {
     //MARK: - Editing variables group
     @IBOutlet var textFieldAmplitudeEdit: UITextField!
     @IBOutlet var textFieldFrequencyEdit: UITextField!
@@ -20,7 +21,7 @@ class ScreenViewController: UIViewController {
     @IBOutlet var textFieldPhase    : UITextField!
     @IBOutlet var labelFormula      : UILabel!
     //MARK: - Views variables group
-    @IBOutlet var viewGraphic         : UIView!
+    @IBOutlet var viewGraphic         : LineChartView!
     @IBOutlet var viewAddHarmonic     : UIView!
     @IBOutlet var tableView           : UITableView!
     @IBOutlet var viewSelectedHarmonic: UIView!
@@ -44,15 +45,12 @@ class ScreenViewController: UIViewController {
         super.viewDidLoad()
         self.viewAddHarmonic.isHidden = true
         self.harmonicViewModel.delegate = self
+        self.viewGraphic.delegate = self
+        self.lineChartUpdate()
         self.harmonicViewModel.onAddNewHarmonic = {
-            if self.selectedIndex != nil {
-                self.harmonicViewModel.points.remove(at: self.selectedIndex!.row)
-                self.selectedIndex = nil
-            } else {
-                self.harmonicViewModel.calculatePoints(points: self.pointsCount, step: self.step)
-            }
+            self.harmonicViewModel.calculatePoints(points: self.pointsCount, step: self.step)
             self.reloadTableView()
-            //TODO: redraw grahpic
+            self.lineChartUpdate()
         }
         print("app running")
         resetFieldsToAdd()
@@ -119,7 +117,7 @@ class ScreenViewController: UIViewController {
         newHarmonic.bind {
             self.harmonicViewModel.calculatePoints(points: self.pointsCount, step: self.step)
             self.reloadTableRow(by: self.selectedIndex ?? IndexPath(row: 0, section: 0))
-            //TODO: redraw grahpic
+            self.lineChartUpdate()
         }
         self.harmonicViewModel.harmonics.append(newHarmonic)
         clearAddingView()
@@ -130,6 +128,14 @@ class ScreenViewController: UIViewController {
     }
     
     //MARK: - Reset Views
+    private func lineChartUpdate() {
+        let set = LineChartDataSet(values: self.harmonicViewModel.points, label: "Harmonics")
+        let data = LineChartData(dataSet: set)
+        
+        self.viewGraphic.legend.form = .square
+        self.viewGraphic.data = data
+    }
+    
     private func resetVariableFields() {
         self.textFieldAmplitudeEdit.layer.borderColor = UIColor.clear.cgColor
         self.textFieldFrequencyEdit.layer.borderColor = UIColor.clear.cgColor
