@@ -5,8 +5,8 @@
 //  Created by Yegor Lindberg on 12/05/2019.
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
-
 import UIKit
+
 
 class HarmonicTableViewCell: UITableViewCell {
     

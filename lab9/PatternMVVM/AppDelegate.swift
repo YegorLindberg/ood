@@ -5,9 +5,9 @@
 //  Created by Yegor Lindberg on 11/05/2019.
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
-
 import UIKit
 import CoreData
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

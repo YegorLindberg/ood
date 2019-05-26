@@ -5,28 +5,32 @@
 //  Created by Yegor Lindberg on 11/05/2019.
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
-
 import UIKit
 
+
 class ScreenViewController: UIViewController {
-    
+    //MARK: - Editing variables group
     @IBOutlet var textFieldAmplitudeEdit: UITextField!
     @IBOutlet var textFieldFrequencyEdit: UITextField!
     @IBOutlet var textFieldPhaseEdit    : UITextField!
     @IBOutlet var segmentedCtrlSinCos   : UISegmentedControl!
-    
+    //MARK: - Adding variables group
     @IBOutlet var textFieldApmlitude: UITextField!
     @IBOutlet var textFieldFrequency: UITextField!
     @IBOutlet var textFieldPhase    : UITextField!
     @IBOutlet var labelFormula      : UILabel!
-
+    //MARK: - Views variables group
     @IBOutlet var viewGraphic         : UIView!
     @IBOutlet var viewAddHarmonic     : UIView!
     @IBOutlet var tableView           : UITableView!
     @IBOutlet var viewSelectedHarmonic: UIView!
     
+    //MARK: - VC variables
     private var harmonicViewModel    = HarmonicViewModel()
     private var newTrigonometricFunc = TrigonometricFunc.sin
+    
+    var pointsCount = 100
+    var step = 1.0
     
     private var selectedIndex: IndexPath? {
         didSet {
@@ -35,7 +39,7 @@ class ScreenViewController: UIViewController {
         }
     }
     
-    //MARK: -
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewAddHarmonic.isHidden = true
@@ -45,7 +49,7 @@ class ScreenViewController: UIViewController {
                 self.harmonicViewModel.points.remove(at: self.selectedIndex!.row)
                 self.selectedIndex = nil
             } else {
-                self.harmonicViewModel.calculatePoint(by: self.harmonicViewModel.harmonics.count - 1)
+                self.harmonicViewModel.calculatePoints(points: self.pointsCount, step: self.step)
             }
             self.reloadTableView()
             //TODO: redraw grahpic
@@ -113,7 +117,7 @@ class ScreenViewController: UIViewController {
         guard let phase = self.checkTextFieldForNumber(self.textFieldPhase) else { return }
         let newHarmonic = Harmonic(amplitude: amplitude, frequency: frequency, phase: phase, trigonometricFunc: self.newTrigonometricFunc)
         newHarmonic.bind {
-            self.harmonicViewModel.calculatePoint(by: self.selectedIndex?.row ?? 0)
+            self.harmonicViewModel.calculatePoints(points: self.pointsCount, step: self.step)
             self.reloadTableRow(by: self.selectedIndex ?? IndexPath(row: 0, section: 0))
             //TODO: redraw grahpic
         }

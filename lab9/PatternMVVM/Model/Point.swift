@@ -8,10 +8,10 @@
 
 
 class Point {
-    var x: Int
-    var y: Int
+    var x: Double
+    var y: Double
     
-    init(x: Int, y: Int) {
+    init(x: Double, y: Double) {
         self.x = x
         self.y = y
     }

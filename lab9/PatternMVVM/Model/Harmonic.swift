@@ -44,7 +44,6 @@ class Harmonic {
         self.formula   = "\(amplitude) * \(trigonometricFunc.rawValue == 0 ? "sin" : "cos")(\(frequency) * x + \(phase))"
     }
     
-    
     func bind(listener: Listener?) {
         self.listener = listener
     }
