@@ -155,10 +155,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8b-vh-fuV">
                                 <rect key="frame" x="64" y="238" width="88" height="26"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.7734375" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Delete Selected">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onDeleteSelectedButtonTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vJD-mX-i8c"/>
@@ -166,10 +166,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1S-re-cbC">
                                 <rect key="frame" x="10" y="238" width="51" height="26"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.7734375" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Add new">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onAddNewButtonTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RPk-aQ-wSb"/>
@@ -408,7 +408,7 @@
                                                                         <rect key="frame" x="74" y="0.0" width="152" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="Brk-h8-jFG"/>
                                                                         </connections>
@@ -510,6 +510,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="buttonDelete" destination="n8b-vh-fuV" id="6pr-V3-1KU"/>
                         <outlet property="labelFormula" destination="aEc-qv-r1n" id="3y1-2P-UHi"/>
                         <outlet property="segmentedCtrlSinCos" destination="6gq-qC-VQW" id="hsX-Vm-VNl"/>
                         <outlet property="selectedViewSC" destination="Y54-Rc-F7S" id="fjF-mG-muv"/>

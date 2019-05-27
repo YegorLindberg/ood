@@ -24,23 +24,25 @@ class ScreenViewController: UIViewController, ChartViewDelegate {
     @IBOutlet var viewGraphic         : LineChartView!
     @IBOutlet var viewPoints          : UIView!
     @IBOutlet var viewAddHarmonic     : UIView!
+    @IBOutlet var viewSelectedHarmonic: UIView!
     @IBOutlet var tableViewHarmonics  : UITableView!
     @IBOutlet var tableViewPoints     : UITableView!
-    @IBOutlet var viewSelectedHarmonic: UIView!
     @IBOutlet var selectedViewSC      : UISegmentedControl!
     
+    @IBOutlet var buttonDelete: UIButton!
     
     //MARK: - VC variables
     private var harmonicViewModel    = HarmonicViewModel()
     private var newTrigonometricFunc = TrigonometricFunc.sin
     
     var pointsCount = 100
-    var step = 1.0
+    var step = 0.1
     
     private var selectedIndex: IndexPath? {
         didSet {
             self.resetVariableFields()
             self.viewSelectedHarmonic.isHidden = self.selectedIndex == nil ? true : false
+            self.buttonDelete.isUserInteractionEnabled = self.selectedIndex == nil ? false : true
         }
     }
     
@@ -155,11 +157,23 @@ class ScreenViewController: UIViewController, ChartViewDelegate {
     }
     
     private func lineChartUpdate() {
-        let set = LineChartDataSet(values: self.harmonicViewModel.points, label: "Harmonics")
-        let data = LineChartData(dataSet: set)
-        
-        self.viewGraphic.legend.form = .square
-        self.viewGraphic.data = data
+        if self.harmonicViewModel.points.count > 0 {
+            self.viewGraphic.isHidden = false
+            let set = LineChartDataSet(values: self.harmonicViewModel.points, label: "Harmonics")
+            set.drawFilledEnabled = false
+            set.drawCirclesEnabled = false
+            set.setDrawHighlightIndicators(false)
+            set.setColor(NSUIColor.init(cgColor: UIColor.blue.cgColor), alpha: 1.0)
+            set.lineWidth = 1.5
+            
+            let data = LineChartData(dataSet: set)
+            self.viewGraphic.legend.form = .square
+            data.setDrawValues(false)
+            
+            self.viewGraphic.data = data
+        } else {
+            self.viewGraphic.isHidden = true
+        }
     }
     
     private func resetVariableFields() {

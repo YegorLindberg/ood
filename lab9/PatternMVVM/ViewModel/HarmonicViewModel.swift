@@ -9,7 +9,7 @@ import Foundation
 import Charts
 
 
-class HarmonicViewModel {
+class HarmonicListViewModel {
     
     init() {}
 
