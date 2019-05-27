@@ -512,6 +512,7 @@
                     <connections>
                         <outlet property="labelFormula" destination="aEc-qv-r1n" id="3y1-2P-UHi"/>
                         <outlet property="segmentedCtrlSinCos" destination="6gq-qC-VQW" id="hsX-Vm-VNl"/>
+                        <outlet property="selectedViewSC" destination="Y54-Rc-F7S" id="fjF-mG-muv"/>
                         <outlet property="tableViewHarmonics" destination="DLZ-bl-HYl" id="DHx-ht-m4K"/>
                         <outlet property="tableViewPoints" destination="OmZ-X6-SOK" id="CO3-JE-w9z"/>
                         <outlet property="textFieldAmplitudeEdit" destination="zCP-mw-KRr" id="Fyl-Zi-7NO"/>

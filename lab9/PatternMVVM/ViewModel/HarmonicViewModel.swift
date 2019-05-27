@@ -12,8 +12,7 @@ import Charts
 class HarmonicViewModel {
     
     init() {}
-    
-    var delegate: ScreenViewController?
+
     var onAddNewHarmonic: (() -> Void)?
     var points = [ChartDataEntry]()
     var harmonics = [Harmonic]() {
@@ -24,6 +23,7 @@ class HarmonicViewModel {
     
     func calculatePoints(points count: Int, step: Double) {
         self.points = [ChartDataEntry]()
+        guard harmonics.count > 0 else { return }
         for i in 0...count {
             let x = Double(i) * step
             let y = getSumY(by: x)

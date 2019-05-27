@@ -27,6 +27,7 @@ class ScreenViewController: UIViewController, ChartViewDelegate {
     @IBOutlet var tableViewHarmonics  : UITableView!
     @IBOutlet var tableViewPoints     : UITableView!
     @IBOutlet var viewSelectedHarmonic: UIView!
+    @IBOutlet var selectedViewSC      : UISegmentedControl!
     
     
     //MARK: - VC variables
@@ -47,13 +48,12 @@ class ScreenViewController: UIViewController, ChartViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewAddHarmonic.isHidden = true
-        self.harmonicViewModel.delegate = self
         self.viewGraphic.delegate = self
         self.lineChartUpdate()
         self.harmonicViewModel.onAddNewHarmonic = {
             self.harmonicViewModel.calculatePoints(points: self.pointsCount, step: self.step)
             self.reloadTableView()
-            self.lineChartUpdate()
+            self.reloadSelectedView()
         }
         print("app running")
         resetFieldsToAdd()
@@ -105,11 +105,11 @@ class ScreenViewController: UIViewController, ChartViewDelegate {
         case 0:
             self.viewPoints.isHidden = true
         case 1:
-            self.tableViewPoints.reloadData()
             self.viewPoints.isHidden = false
         default:
             break
         }
+        self.reloadSelectedView()
     }
     
     @IBAction func onAddNewButtonTouch(_ sender: UIButton) {
@@ -132,7 +132,7 @@ class ScreenViewController: UIViewController, ChartViewDelegate {
         newHarmonic.bind {
             self.harmonicViewModel.calculatePoints(points: self.pointsCount, step: self.step)
             self.reloadTableRow(by: self.selectedIndex ?? IndexPath(row: 0, section: 0))
-            self.lineChartUpdate()
+            self.reloadSelectedView()
         }
         self.harmonicViewModel.harmonics.append(newHarmonic)
         clearAddingView()
@@ -143,6 +143,17 @@ class ScreenViewController: UIViewController, ChartViewDelegate {
     }
     
     //MARK: - Reset Views
+    func reloadSelectedView() {
+        switch selectedViewSC.selectedSegmentIndex {
+        case 0:
+            self.lineChartUpdate()
+        case 1:
+            self.tableViewPoints.reloadData()
+        default:
+            break
+        }
+    }
+    
     private func lineChartUpdate() {
         let set = LineChartDataSet(values: self.harmonicViewModel.points, label: "Harmonics")
         let data = LineChartData(dataSet: set)
@@ -240,15 +251,21 @@ extension ScreenViewController: UITextFieldDelegate {
         switch textField {
         case self.textFieldAmplitudeEdit:
             guard let value = self.checkTextFieldForNumber(self.textFieldAmplitudeEdit) else { return }
-            self.harmonicViewModel.harmonics[index.row].amplitude = value
+            if self.harmonicViewModel.harmonics[index.row].amplitude != value {
+               self.harmonicViewModel.harmonics[index.row].amplitude = value
+            }
             
         case self.textFieldFrequencyEdit:
             guard let value = self.checkTextFieldForNumber(self.textFieldFrequencyEdit) else { return }
-            self.harmonicViewModel.harmonics[index.row].frequency = value
+            if self.harmonicViewModel.harmonics[index.row].frequency != value {
+               self.harmonicViewModel.harmonics[index.row].frequency = value
+            }
             
         case self.textFieldPhaseEdit:
             guard let value = self.checkTextFieldForNumber(self.textFieldPhaseEdit) else { return }
-            self.harmonicViewModel.harmonics[index.row].phase = value
+            if self.harmonicViewModel.harmonics[index.row].phase != value {
+               self.harmonicViewModel.harmonics[index.row].phase = value
+            }
             
         default:
             break

@@ -11,24 +11,25 @@ import XCTest
 
 class PatternMVVMTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testModelClosure() {
+        let harmonic = Harmonic(amplitude: 1, frequency: 2, phase: 0, trigonometricFunc: TrigonometricFunc.sin)
+        var integer = 0
+        harmonic.bind {
+            integer += 1
         }
+        
+        XCTAssert(integer == 0)
+        XCTAssert(harmonic.formula == "1.0 * sin(2.0 * x + 0.0)")
+        
+        harmonic.amplitude = 3.0
+        harmonic.frequency = 4.0
+        XCTAssert(integer == 2)
+        XCTAssert(harmonic.formula == "3.0 * sin(4.0 * x + 0.0)")
+        
+        harmonic.phase = 0.5
+        harmonic.trigonometricFunc = .cos
+        XCTAssert(integer == 4)
+        XCTAssert(harmonic.formula == "3.0 * cos(4.0 * x + 0.5)")
     }
 
 }
