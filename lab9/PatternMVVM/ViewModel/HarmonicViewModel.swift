@@ -2,48 +2,32 @@
 //  HarmonicViewModel.swift
 //  PatternMVVM
 //
-//  Created by Yegor Lindberg on 19/05/2019.
+//  Created by Yegor Lindberg on 01/06/2019.
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
+
 import Foundation
-import Charts
 
 
-class HarmonicListViewModel {
-    
-    init() {}
-
-    var onAddNewHarmonic: (() -> Void)?
-    var points = [ChartDataEntry]()
-    var harmonics = [Harmonic]() {
+class HarmonicViewModel {
+    var harmonic: Harmonic {
         didSet {
-            self.onAddNewHarmonic?()
+            updateFormula()
         }
     }
+    var formula : String = ""
     
-    func calculatePoints(points count: Int, step: Double) {
-        self.points = [ChartDataEntry]()
-        guard harmonics.count > 0 else { return }
-        for i in 0...count {
-            let x = Double(i) * step
-            let y = getSumY(by: x)
-            
-            self.points.append(ChartDataEntry(x: x, y: y))
-        }
-        print("points calculated")
+    init(harmonic: Harmonic) {
+        self.harmonic = harmonic
+        self.formula   = "\(harmonic.amplitude) * \(harmonic.trigonometricFunc.rawValue == 0 ? "sin" : "cos")(\(harmonic.frequency) * x + \(harmonic.phase))"
     }
     
-    private func getSumY(by x: Double) -> Double {
-        var result = 0.0
-        for harmonic in self.harmonics {
-            result += getYPoint(by: x, harmonic: harmonic)
-        }
-        return result
+    func updateFormula() {
+        self.formula   = "\(self.harmonic.amplitude) * \(self.harmonic.trigonometricFunc.rawValue == 0 ? "sin" : "cos")(\(self.harmonic.frequency) * x + \(self.harmonic.phase))"
     }
     
-    private func getYPoint(by x: Double, harmonic: Harmonic) -> Double {
-        let angle = harmonic.frequency * x + harmonic.phase
-        let harmonicFunc = harmonic.trigonometricFunc == TrigonometricFunc.sin ? sin(angle) : cos(angle)
-        return harmonic.amplitude * harmonicFunc
+    func bind(listener: Listener?) {
+        self.harmonic.listener = listener
     }
+    
 }

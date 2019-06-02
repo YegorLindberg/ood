@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C3745D42291B1E800F79C5A /* HarmonicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3745D32291B1E800F79C5A /* HarmonicViewModel.swift */; };
+		5C257D2422A2A59C00ADCF71 /* HarmonicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C257D2322A2A59C00ADCF71 /* HarmonicViewModel.swift */; };
+		5C3745D42291B1E800F79C5A /* HarmonicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3745D32291B1E800F79C5A /* HarmonicListViewModel.swift */; };
 		5C3745D72291C17D00F79C5A /* TrigonometricFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3745D62291C17D00F79C5A /* TrigonometricFunc.swift */; };
 		5C766E132286C700009E18B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C766E122286C700009E18B6 /* AppDelegate.swift */; };
 		5C766E182286C700009E18B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C766E162286C700009E18B6 /* Main.storyboard */; };
@@ -18,6 +19,10 @@
 		5C8367EA229B572700A444EE /* PointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8367E9229B572700A444EE /* PointTableViewCell.swift */; };
 		5CBCEDC6228829C700D0F21B /* Harmonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBCEDC5228829C700D0F21B /* Harmonic.swift */; };
 		5CBCEDC922882C3500D0F21B /* HarmonicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBCEDC822882C3500D0F21B /* HarmonicTableViewCell.swift */; };
+		5CCF80E722A2F3B7002A4744 /* AddHarmonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF80E622A2F3B7002A4744 /* AddHarmonicViewController.swift */; };
+		5CCF80E922A2F3E8002A4744 /* HarmonicsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF80E822A2F3E8002A4744 /* HarmonicsTableViewController.swift */; };
+		5CCF80EB22A2F474002A4744 /* SelectedHarmonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF80EA22A2F474002A4744 /* SelectedHarmonicViewController.swift */; };
+		5CCF80ED22A2F577002A4744 /* DisplayHarmonicChartAndTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF80EC22A2F577002A4744 /* DisplayHarmonicChartAndTableVC.swift */; };
 		5CE80BAD229AC1B80014B9A8 /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE80BAC229AC1B80014B9A8 /* ScreenViewController.swift */; };
 		E22A4198BDAAF96A30A97F99 /* Pods_PatternMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F867304E5C7CF7E949D894 /* Pods_PatternMVVM.framework */; };
 /* End PBXBuildFile section */
@@ -33,7 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C3745D32291B1E800F79C5A /* HarmonicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicViewModel.swift; sourceTree = "<group>"; };
+		5C257D2322A2A59C00ADCF71 /* HarmonicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicViewModel.swift; sourceTree = "<group>"; };
+		5C3745D32291B1E800F79C5A /* HarmonicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicListViewModel.swift; sourceTree = "<group>"; };
 		5C3745D62291C17D00F79C5A /* TrigonometricFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrigonometricFunc.swift; sourceTree = "<group>"; };
 		5C766E0F2286C700009E18B6 /* PatternMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C766E122286C700009E18B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +54,10 @@
 		5C8367E9229B572700A444EE /* PointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointTableViewCell.swift; sourceTree = "<group>"; };
 		5CBCEDC5228829C700D0F21B /* Harmonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Harmonic.swift; sourceTree = "<group>"; };
 		5CBCEDC822882C3500D0F21B /* HarmonicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicTableViewCell.swift; sourceTree = "<group>"; };
+		5CCF80E622A2F3B7002A4744 /* AddHarmonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHarmonicViewController.swift; sourceTree = "<group>"; };
+		5CCF80E822A2F3E8002A4744 /* HarmonicsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicsTableViewController.swift; sourceTree = "<group>"; };
+		5CCF80EA22A2F474002A4744 /* SelectedHarmonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedHarmonicViewController.swift; sourceTree = "<group>"; };
+		5CCF80EC22A2F577002A4744 /* DisplayHarmonicChartAndTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayHarmonicChartAndTableVC.swift; sourceTree = "<group>"; };
 		5CE80BAC229AC1B80014B9A8 /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
 		86F867304E5C7CF7E949D894 /* Pods_PatternMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatternMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9100F9BE2A569BC0A1C7B49D /* Pods-PatternMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatternMVVM.release.xcconfig"; path = "Target Support Files/Pods-PatternMVVM/Pods-PatternMVVM.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,7 +94,8 @@
 		5C3745D122918F6100F79C5A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				5C3745D32291B1E800F79C5A /* HarmonicViewModel.swift */,
+				5C3745D32291B1E800F79C5A /* HarmonicListViewModel.swift */,
+				5C257D2322A2A59C00ADCF71 /* HarmonicViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -96,6 +107,11 @@
 				5C766E1E2286C701009E18B6 /* LaunchScreen.storyboard */,
 				5CBCEDC822882C3500D0F21B /* HarmonicTableViewCell.swift */,
 				5C8367E9229B572700A444EE /* PointTableViewCell.swift */,
+				5CE80BAC229AC1B80014B9A8 /* ScreenViewController.swift */,
+				5CCF80EA22A2F474002A4744 /* SelectedHarmonicViewController.swift */,
+				5CCF80E622A2F3B7002A4744 /* AddHarmonicViewController.swift */,
+				5CCF80E822A2F3E8002A4744 /* HarmonicsTableViewController.swift */,
+				5CCF80EC22A2F577002A4744 /* DisplayHarmonicChartAndTableVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,7 +151,6 @@
 				5CBCEDC722882C1C00D0F21B /* Model */,
 				5C3745D222918F7100F79C5A /* View */,
 				5C3745D122918F6100F79C5A /* ViewModel */,
-				5CE80BAC229AC1B80014B9A8 /* ScreenViewController.swift */,
 				5C766E122286C700009E18B6 /* AppDelegate.swift */,
 				5C766E1C2286C701009E18B6 /* Assets.xcassets */,
 				5C766E212286C701009E18B6 /* Info.plist */,
@@ -320,14 +335,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CCF80EB22A2F474002A4744 /* SelectedHarmonicViewController.swift in Sources */,
+				5CCF80ED22A2F577002A4744 /* DisplayHarmonicChartAndTableVC.swift in Sources */,
 				5C8367EA229B572700A444EE /* PointTableViewCell.swift in Sources */,
 				5C766E132286C700009E18B6 /* AppDelegate.swift in Sources */,
 				5CBCEDC6228829C700D0F21B /* Harmonic.swift in Sources */,
 				5C3745D72291C17D00F79C5A /* TrigonometricFunc.swift in Sources */,
 				5CE80BAD229AC1B80014B9A8 /* ScreenViewController.swift in Sources */,
-				5C3745D42291B1E800F79C5A /* HarmonicViewModel.swift in Sources */,
+				5C3745D42291B1E800F79C5A /* HarmonicListViewModel.swift in Sources */,
+				5C257D2422A2A59C00ADCF71 /* HarmonicViewModel.swift in Sources */,
+				5CCF80E922A2F3E8002A4744 /* HarmonicsTableViewController.swift in Sources */,
 				5C766E1B2286C700009E18B6 /* PatternMVVM.xcdatamodeld in Sources */,
 				5CBCEDC922882C3500D0F21B /* HarmonicTableViewCell.swift in Sources */,
+				5CCF80E722A2F3B7002A4744 /* AddHarmonicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

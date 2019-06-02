@@ -12,9 +12,9 @@ class HarmonicTableViewCell: UITableViewCell {
     
     @IBOutlet var labelFormula: UILabel!
     
-    var harmoniс: Harmonic? {
+    var harmoniсViewModel: HarmonicViewModel? {
         didSet {
-            self.labelFormula.text = harmoniс?.formula
+            self.labelFormula.text = self.harmoniсViewModel?.formula
         }
     }
     
