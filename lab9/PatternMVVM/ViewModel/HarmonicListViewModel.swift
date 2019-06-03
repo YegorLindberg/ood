@@ -24,7 +24,7 @@ class HarmonicListViewModel {
     func calculatePoints(points count: Int, step: Double) {
         self.points = [ChartDataEntry]()
         guard harmonicVMs.count > 0 else { return }
-        for i in 0...count {
+        for i in 0...(count - 1) {
             let x = Double(i) * step
             let y = getSumY(by: x)
             

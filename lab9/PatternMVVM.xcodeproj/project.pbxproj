@@ -23,8 +23,11 @@
 		5CCF80E922A2F3E8002A4744 /* HarmonicsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF80E822A2F3E8002A4744 /* HarmonicsTableViewController.swift */; };
 		5CCF80EB22A2F474002A4744 /* SelectedHarmonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF80EA22A2F474002A4744 /* SelectedHarmonicViewController.swift */; };
 		5CCF80ED22A2F577002A4744 /* DisplayHarmonicChartAndTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF80EC22A2F577002A4744 /* DisplayHarmonicChartAndTableVC.swift */; };
+		5CD7929B22A506EE0083D95A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD7929A22A506EE0083D95A /* Charts.framework */; };
+		5CD7929D22A506FC0083D95A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD7929C22A506FC0083D95A /* Charts.framework */; };
+		5CD7929E22A507280083D95A /* Pods_PatternMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51CFF3538AF2F87C3955C47 /* Pods_PatternMVVM.framework */; };
 		5CE80BAD229AC1B80014B9A8 /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE80BAC229AC1B80014B9A8 /* ScreenViewController.swift */; };
-		E22A4198BDAAF96A30A97F99 /* Pods_PatternMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F867304E5C7CF7E949D894 /* Pods_PatternMVVM.framework */; };
+		8869FFEE01E023B7649D5EA9 /* Pods_PatternMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51CFF3538AF2F87C3955C47 /* Pods_PatternMVVM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		256AF701D347E27B98799600 /* Pods-PatternMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatternMVVM.release.xcconfig"; path = "Target Support Files/Pods-PatternMVVM/Pods-PatternMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		5C257D2322A2A59C00ADCF71 /* HarmonicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicViewModel.swift; sourceTree = "<group>"; };
 		5C3745D32291B1E800F79C5A /* HarmonicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicListViewModel.swift; sourceTree = "<group>"; };
 		5C3745D62291C17D00F79C5A /* TrigonometricFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrigonometricFunc.swift; sourceTree = "<group>"; };
@@ -52,16 +56,18 @@
 		5C766E2A2286C701009E18B6 /* PatternMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternMVVMTests.swift; sourceTree = "<group>"; };
 		5C766E2C2286C701009E18B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C8367E9229B572700A444EE /* PointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointTableViewCell.swift; sourceTree = "<group>"; };
+		5CBB781722A504EC00AAF21E /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CBCEDC5228829C700D0F21B /* Harmonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Harmonic.swift; sourceTree = "<group>"; };
 		5CBCEDC822882C3500D0F21B /* HarmonicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicTableViewCell.swift; sourceTree = "<group>"; };
 		5CCF80E622A2F3B7002A4744 /* AddHarmonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHarmonicViewController.swift; sourceTree = "<group>"; };
 		5CCF80E822A2F3E8002A4744 /* HarmonicsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarmonicsTableViewController.swift; sourceTree = "<group>"; };
 		5CCF80EA22A2F474002A4744 /* SelectedHarmonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedHarmonicViewController.swift; sourceTree = "<group>"; };
 		5CCF80EC22A2F577002A4744 /* DisplayHarmonicChartAndTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayHarmonicChartAndTableVC.swift; sourceTree = "<group>"; };
+		5CD7929A22A506EE0083D95A /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CD7929C22A506FC0083D95A /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE80BAC229AC1B80014B9A8 /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
-		86F867304E5C7CF7E949D894 /* Pods_PatternMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatternMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9100F9BE2A569BC0A1C7B49D /* Pods-PatternMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatternMVVM.release.xcconfig"; path = "Target Support Files/Pods-PatternMVVM/Pods-PatternMVVM.release.xcconfig"; sourceTree = "<group>"; };
-		E117798EE3AB7557D0097E91 /* Pods-PatternMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatternMVVM.debug.xcconfig"; path = "Target Support Files/Pods-PatternMVVM/Pods-PatternMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		A51CFF3538AF2F87C3955C47 /* Pods_PatternMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatternMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9A1704F07871C934F03B0C9 /* Pods-PatternMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatternMVVM.debug.xcconfig"; path = "Target Support Files/Pods-PatternMVVM/Pods-PatternMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22A4198BDAAF96A30A97F99 /* Pods_PatternMVVM.framework in Frameworks */,
+				5CD7929D22A506FC0083D95A /* Charts.framework in Frameworks */,
+				8869FFEE01E023B7649D5EA9 /* Pods_PatternMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CD7929E22A507280083D95A /* Pods_PatternMVVM.framework in Frameworks */,
+				5CD7929B22A506EE0083D95A /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +95,10 @@
 		4587E7632B7FF66DC46D5283 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				86F867304E5C7CF7E949D894 /* Pods_PatternMVVM.framework */,
+				5CD7929C22A506FC0083D95A /* Charts.framework */,
+				5CD7929A22A506EE0083D95A /* Charts.framework */,
+				5CBB781722A504EC00AAF21E /* Charts.framework */,
+				A51CFF3538AF2F87C3955C47 /* Pods_PatternMVVM.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,8 +191,8 @@
 		80144E08C95CB1BDBA6D4F88 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E117798EE3AB7557D0097E91 /* Pods-PatternMVVM.debug.xcconfig */,
-				9100F9BE2A569BC0A1C7B49D /* Pods-PatternMVVM.release.xcconfig */,
+				A9A1704F07871C934F03B0C9 /* Pods-PatternMVVM.debug.xcconfig */,
+				256AF701D347E27B98799600 /* Pods-PatternMVVM.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -192,11 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C766E2F2286C701009E18B6 /* Build configuration list for PBXNativeTarget "PatternMVVM" */;
 			buildPhases = (
-				C8B64DB41A3925D500E057A7 /* [CP] Check Pods Manifest.lock */,
+				F6771C7C28C8BEFCB1ADDF70 /* [CP] Check Pods Manifest.lock */,
 				5C766E0B2286C700009E18B6 /* Sources */,
 				5C766E0C2286C700009E18B6 /* Frameworks */,
 				5C766E0D2286C700009E18B6 /* Resources */,
-				CCA9C9286AC61B142CF4B1A1 /* [CP] Embed Pods Frameworks */,
+				DB2B192BAF0CB71BE6D75590 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,29 +296,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C8B64DB41A3925D500E057A7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PatternMVVM-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CCA9C9286AC61B142CF4B1A1 /* [CP] Embed Pods Frameworks */ = {
+		DB2B192BAF0CB71BE6D75590 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,6 +316,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PatternMVVM/Pods-PatternMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6771C7C28C8BEFCB1ADDF70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PatternMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -507,10 +519,11 @@
 		};
 		5C766E302286C701009E18B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E117798EE3AB7557D0097E91 /* Pods-PatternMVVM.debug.xcconfig */;
+			baseConfigurationReference = A9A1704F07871C934F03B0C9 /* Pods-PatternMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DQ34MQ3ZUS;
 				INFOPLIST_FILE = PatternMVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -526,10 +539,11 @@
 		};
 		5C766E312286C701009E18B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9100F9BE2A569BC0A1C7B49D /* Pods-PatternMVVM.release.xcconfig */;
+			baseConfigurationReference = 256AF701D347E27B98799600 /* Pods-PatternMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DQ34MQ3ZUS;
 				INFOPLIST_FILE = PatternMVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
