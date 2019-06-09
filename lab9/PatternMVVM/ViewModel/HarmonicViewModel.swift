@@ -7,19 +7,21 @@
 //
 
 import Foundation
+import Charts
 
 
 class HarmonicViewModel {
-    var harmonic: Harmonic {
-        didSet {
-            updateFormula()
-        }
-    }
-    var formula : String = ""
+    var harmonic: Harmonic
+    private(set) var formula : String = ""
+    private(set) var points = [ChartDataEntry]()
+    
+    let pointsCount = 1000
+    let step = 0.01
     
     init(harmonic: Harmonic) {
         self.harmonic = harmonic
         self.formula   = "\(harmonic.amplitude) * \(harmonic.trigonometricFunc.rawValue == 0 ? "sin" : "cos")(\(harmonic.frequency) * x + \(harmonic.phase))"
+        self.calculateHarmonicPoints()
     }
     
     func updateFormula() {
@@ -27,7 +29,27 @@ class HarmonicViewModel {
     }
     
     func bind(listener: Listener?) {
-        self.harmonic.listener = listener
+        self.harmonic.listener = {
+            self.updateFormula()
+            self.calculateHarmonicPoints()
+            listener?()
+        }
+    }
+    
+    private func calculateHarmonicPoints() {
+        self.points = [ChartDataEntry]()
+        for i in 0...(self.pointsCount - 1) {
+            let x = Double(i) * self.step
+            let y = self.getYPoint(by: x)
+            
+            self.points.append(ChartDataEntry(x: x, y: y))
+        }
+    }
+    
+    private func getYPoint(by x: Double) -> Double {
+        let angle = self.harmonic.frequency * x + self.harmonic.phase
+        let harmonicFunc = self.harmonic.trigonometricFunc == TrigonometricFunc.sin ? sin(angle) : cos(angle)
+        return self.harmonic.amplitude * harmonicFunc
     }
     
 }

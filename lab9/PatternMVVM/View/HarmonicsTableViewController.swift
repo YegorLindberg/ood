@@ -40,9 +40,8 @@ class HarmonicsTableViewController: UIViewController {
     
     @IBAction func onDeleteSelectedButtonTouch(_ sender: UIButton) {
         if self.index != nil {
-            self.delegate?.harmonicListViewModel.harmonicVMs.remove(at: (self.index?.row)!)
+            self.delegate?.harmonicListViewModel.remove(by: (self.index?.row)!)
             self.index = nil
-            self.tableViewHarmonics.reloadData()
         }
     }
 

@@ -22,9 +22,6 @@ class ScreenViewController: UIViewController, DisplayHarmonicChartAndTableDelega
     
     var harmonicListViewModel = HarmonicListViewModel()
     
-    let pointsCount = 1000
-    let step = 0.01
-    
     var selectedIndex: IndexPath? {
         didSet {
             self.selectedHarmonicVC.resetVariableFields()
@@ -42,7 +39,6 @@ class ScreenViewController: UIViewController, DisplayHarmonicChartAndTableDelega
         self.selectedHarmonicViewContainer.isHidden = true
         
         self.harmonicListViewModel.onAddNewHarmonic = {
-            self.harmonicListViewModel.calculatePoints(points: self.pointsCount, step: self.step)
             self.harmonicsTableVC.reloadTableView()
             self.displayHarmonicChartAndTableVC.reloadSelectedView()
         }

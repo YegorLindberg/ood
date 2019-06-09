@@ -10,8 +10,6 @@ import UIKit
 
 
 protocol AddHarmonicDelegate: class {
-    var pointsCount: Int { get }
-    var step: Double { get }
     var selectedIndex: IndexPath? { get set }
     var harmonicListViewModel: HarmonicListViewModel { get set }
     func addDismissKeyboardButton() -> UIToolbar
@@ -22,7 +20,6 @@ protocol AddHarmonicDelegate: class {
 }
 
 class AddHarmonicViewController: UIViewController {
-
     
     @IBOutlet weak var textFieldAmplitude: UITextField!
     @IBOutlet weak var textFieldFrequency: UITextField!
@@ -42,14 +39,12 @@ class AddHarmonicViewController: UIViewController {
         guard let amplitude = self.delegate?.checkTextFieldForNumber(self.textFieldAmplitude) else { return }
         guard let frequency = self.delegate?.checkTextFieldForNumber(self.textFieldFrequency) else { return }
         guard let phase = self.delegate?.checkTextFieldForNumber(self.textFieldPhase) else { return }
-        let newHarmonic = HarmonicViewModel(harmonic: Harmonic(amplitude: amplitude, frequency: frequency, phase: phase, trigonometricFunc: self.newTrigonometricFunc))
-        newHarmonic.bind {
-            self.delegate?.harmonicListViewModel.calculatePoints(points: self.delegate?.pointsCount ?? 0, step: self.delegate?.step ?? 0)
-            newHarmonic.updateFormula()
+        let newHarmonicVM = HarmonicViewModel(harmonic: Harmonic(amplitude: amplitude, frequency: frequency, phase: phase, trigonometricFunc: self.newTrigonometricFunc))
+        let listener: Listener = {
             self.delegate?.reloadTableRow(by: self.delegate?.selectedIndex ?? IndexPath(row: 0, section: 0))
             self.delegate?.reloadSelectedView()
         }
-        self.delegate?.harmonicListViewModel.harmonicVMs.append(newHarmonic)
+        self.delegate?.harmonicListViewModel.append(newHarmonicVM, listener)
         self.clearAddingView()
     }
     

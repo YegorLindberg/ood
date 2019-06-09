@@ -12,38 +12,45 @@ import Charts
 class HarmonicListViewModel {
     
     init() {}
-    
+
     var onAddNewHarmonic: Listener?
-    var points = [ChartDataEntry]()
-    var harmonicVMs = [HarmonicViewModel]() {
+    private(set) var points = [ChartDataEntry]()
+    private(set) var harmonicVMs = [HarmonicViewModel]() {
         didSet {
+            self.calculatePoints()
             self.onAddNewHarmonic?()
         }
     }
     
-    func calculatePoints(points count: Int, step: Double) {
+    func append(_ newHarmonic: HarmonicViewModel, _ listener: Listener?) {
+        newHarmonic.bind {
+            self.calculatePoints()
+            listener?()
+        }
+        self.harmonicVMs.append(newHarmonic)
+    }
+    
+    func remove(by index: Int) {
+        self.harmonicVMs.remove(at: index)
+    }
+    
+    private func calculatePoints() {
         self.points = [ChartDataEntry]()
-        guard harmonicVMs.count > 0 else { return }
-        for i in 0...(count - 1) {
-            let x = Double(i) * step
-            let y = getSumY(by: x)
-            
-            self.points.append(ChartDataEntry(x: x, y: y))
+        guard self.harmonicVMs.count > 0 else { return }
+        for i in 0...(self.harmonicVMs[0].pointsCount - 1) {
+            let y = getSumY(by: i)
+            self.points.append(ChartDataEntry(x: self.harmonicVMs[0].points[i].x, y: y))
         }
         print("points calculated")
     }
     
-    private func getSumY(by x: Double) -> Double {
+    private func getSumY(by index: Int) -> Double {
         var result = 0.0
         for harmonic in self.harmonicVMs {
-            result += getYPoint(by: x, harmonic: harmonic.harmonic)
+            result += harmonic.points[index].y
         }
         return result
     }
     
-    private func getYPoint(by x: Double, harmonic: Harmonic) -> Double {
-        let angle = harmonic.frequency * x + harmonic.phase
-        let harmonicFunc = harmonic.trigonometricFunc == TrigonometricFunc.sin ? sin(angle) : cos(angle)
-        return harmonic.amplitude * harmonicFunc
-    }
+    
 }
