@@ -10,6 +10,8 @@ class NaiveGumballMachine {
     
     private var state = State.NoQuarter
     private var ballsCount: UInt = 0
+    private var insertedQuarters = 0
+    private let maxQuartersCount = 5
     
     init(ballsCount: UInt) {
         self.ballsCount = ballsCount
@@ -29,9 +31,15 @@ class NaiveGumballMachine {
             print("You can't insert a quarter, the machine is sold out")
         case .NoQuarter:
             print("You inserted a quarter")
+            self.insertedQuarters += 1
             self.state = .HasQuarter
         case .HasQuarter:
-            print("You can't insert another quarter")
+            if self.insertedQuarters + 1 <= maxQuartersCount {
+                self.insertedQuarters += 1
+                print("You inserted a quarter")
+            } else {
+                print("You can no longer insert a quarter")
+            }
         case .Sold:
             print("Please wait, we're already giving you a gumball")
         }
@@ -40,14 +48,25 @@ class NaiveGumballMachine {
     func ejectQuarter() {
         switch self.state {
         case .HasQuarter:
-            print("Quarter returned")
+            while self.insertedQuarters > 0 {
+                self.insertedQuarters -= 1
+                print("Quarter returned")
+            }
             self.state = .NoQuarter
         case .NoQuarter:
             print("You haven't inserted a quarter")
         case .Sold:
             print("Sorry you already turned the crank")
         case .SoldOut:
-            print("You can't eject, you haven't inserted a quarter yet")
+            if self.insertedQuarters > 0 {
+                while self.insertedQuarters > 0 {
+                    self.insertedQuarters -= 1
+                    print("Quarter returned")
+                }
+            } else {
+                print("You can't eject, you haven't inserted a quarter yet")
+            }
+            self.state = .NoQuarter
         }
     }
     
@@ -58,11 +77,12 @@ class NaiveGumballMachine {
         case .NoQuarter:
             print("You turned but there's no quarter\n")
         case .HasQuarter:
-            print("You turned...\n")
+            self.insertedQuarters -= 1
             self.state = .Sold
+            print("You turned...")
             self.dispense();
         case .Sold:
-            print("Turning twice doesn't get you another gumball")
+            print("Wait for your gumball")
         }
     }
     
@@ -73,7 +93,7 @@ class NaiveGumballMachine {
     
     func toString() -> String {
         return """
-        Mighty Gumball, Inc.
+        Naive Gumball, Inc.
         Swift-enabled Standing Gumball Model #2016 (with state)
         Inventory: \(self.ballsCount) gumball\(self.ballsCount != 1 ? "s" : "")
         Machine is \(self.state.rawValue)
@@ -89,7 +109,11 @@ class NaiveGumballMachine {
                 print("Oops, out of gumballs")
                 self.state = .SoldOut
             } else {
-                self.state = .NoQuarter
+                if self.insertedQuarters > 0 {
+                    self.state = .HasQuarter
+                } else {
+                    self.state = .NoQuarter
+                }
             }
         case .NoQuarter:
             print("You need to pay first")

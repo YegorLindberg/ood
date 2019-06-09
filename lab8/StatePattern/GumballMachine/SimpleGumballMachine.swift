@@ -10,6 +10,8 @@ class SimpleGumballMachine: GumballMachine {
     
     private(set) var ballsCount: UInt = 0
     private(set) var currentState: State?
+    private var insertedQuarters = 0
+    private let maxQuartersCount = 5
     
     init(ballsCount: UInt) {
         self.ballsCount = ballsCount
