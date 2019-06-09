@@ -9,6 +9,8 @@
 protocol GumballMachine {
     func releaseBall()
     var ballsCount: UInt { get }
+    var insertedQuarters: UInt { get set }
+    var maxQuartersCount: UInt { get }
     
     func setSoldOutState()
     func setNoQuarterState()

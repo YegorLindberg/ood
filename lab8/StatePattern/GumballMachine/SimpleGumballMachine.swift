@@ -10,8 +10,8 @@ class SimpleGumballMachine: GumballMachine {
     
     private(set) var ballsCount: UInt = 0
     private(set) var currentState: State?
-    private var insertedQuarters = 0
-    private let maxQuartersCount = 5
+    var insertedQuarters: UInt = 0
+    let maxQuartersCount: UInt = 5
     
     init(ballsCount: UInt) {
         self.ballsCount = ballsCount
@@ -37,11 +37,11 @@ class SimpleGumballMachine: GumballMachine {
     
     func toString() -> String {
         return """
-Mighty Gumball, Inc.
-Swift-enabled Standing Gumball Model #2016 (with state)
-Inventory: \(self.ballsCount) gumball\(self.ballsCount != 1 ? "s" : "")
-Machine is \(self.currentState?.toString() ?? "not found")
-"""
+        Mighty Gumball, Inc.
+        Swift-enabled Standing Gumball Model #2016 (with state)
+        Inventory: \(self.ballsCount) gumball\(self.ballsCount != 1 ? "s" : "")
+        Machine is \(self.currentState?.toString() ?? "not found")
+        """
     }
     
     func releaseBall() {

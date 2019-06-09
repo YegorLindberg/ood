@@ -19,10 +19,10 @@ class NaiveGumballMachine {
     }
     
     enum State: String {
-        case SoldOut    = "sold out"        // Жвачка закончилась
-        case NoQuarter  = "no quarter"      // Нет монетки
-        case HasQuarter = "has quarter"     // Есть монетка
-        case Sold       = "sold"            // Монетка выдана
+        case SoldOut    = "sold out"                 // Жвачка закончилась
+        case NoQuarter  = "waiting for quarter"      // Нет монетки
+        case HasQuarter = "has quarter"              // Есть монетка
+        case Sold       = "sold"                     // Монетка выдана
     }
     
     func insertQuarter() {
@@ -75,15 +75,15 @@ class NaiveGumballMachine {
         case .SoldOut:
             print("You turned but there's no gumballs")
         case .NoQuarter:
-            print("You turned but there's no quarter\n")
+            print("You turned but there's no quarter")
         case .HasQuarter:
             self.insertedQuarters -= 1
             self.state = .Sold
             print("You turned...")
-            self.dispense();
         case .Sold:
             print("Wait for your gumball")
         }
+        self.dispense()
     }
     
     func refill(ballsCount: UInt) {
@@ -103,7 +103,7 @@ class NaiveGumballMachine {
     private func dispense() {
         switch self.state {
         case .Sold:
-            print("A gumball comes rolling out the slot")
+            print("A gumball comes rolling out the slot...")
             self.ballsCount -= 1
             if self.ballsCount == 0 {
                 print("Oops, out of gumballs")

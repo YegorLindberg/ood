@@ -8,15 +8,16 @@
 
 class NoQuarterState: State {
     
-    private var delegate: GumballMachine?
+    private var delegate: GumballMachine
     
     init(_ gumballMachine: GumballMachine) {
         self.delegate = gumballMachine
     }
     
     func insertQuarter() {
+        self.delegate.insertedQuarters += 1
         print("You inserted a quarter")
-        self.delegate?.setHasQuarterState()
+        self.delegate.setHasQuarterState()
     }
     
     func ejectQuarter() {
