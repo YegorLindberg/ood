@@ -50,26 +50,32 @@ class PatternMVVMTests: XCTestCase {
         let firstHarmonic = Harmonic(amplitude: 1, frequency: 2, phase: 0, trigonometricFunc: .sin)
         
         let firstHarmonicVM = HarmonicViewModel(harmonic: firstHarmonic)
+        firstHarmonicVM.pointsCount = 3
+        var testVar: Int = 0
         
         let harmonicListVM = HarmonicListViewModel()
         harmonicListVM.onAddNewHarmonic = {
-            harmonicListVM.calculatePoints(points: 3, step: 1)
+            testVar += 1
         }
+        XCTAssert(testVar == 0)
         XCTAssert(harmonicListVM.harmonicVMs.count == 0)
         XCTAssert(harmonicListVM.points.count == 0)
         
-        harmonicListVM.harmonicVMs.append(firstHarmonicVM)
+        harmonicListVM.append(firstHarmonicVM, { testVar += 1 })
+        XCTAssert(testVar == 1)
+        harmonicListVM.harmonicVMs[0].harmonic.amplitude = 2
+        XCTAssert(testVar == 2)
         XCTAssert(harmonicListVM.harmonicVMs.count == 1)
         print(harmonicListVM.points.count, " - points count")
-        XCTAssert(harmonicListVM.points.count == 3)
+        XCTAssert(harmonicListVM.points.count == 1000)
         
         XCTAssert(harmonicListVM.points[0].x == 0)
-        XCTAssert(harmonicListVM.points[1].x == 1)
-        XCTAssert(harmonicListVM.points[2].x == 2)
+        XCTAssert(harmonicListVM.points[1].x == 0.01)
+        XCTAssert(harmonicListVM.points[2].x == 0.02)
         
         XCTAssert(harmonicListVM.points[0].y == 0)
-        XCTAssert(Float(harmonicListVM.points[1].y) == 0.9092974)
-        XCTAssert(Float(harmonicListVM.points[2].y) == -0.7568025)
+        XCTAssert(Float(harmonicListVM.points[1].y) == 0.01999866669)
+//        XCTAssert(Float(harmonicListVM.points[2].y) == )
     }
     
 }

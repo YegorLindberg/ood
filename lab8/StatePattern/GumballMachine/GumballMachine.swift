@@ -6,7 +6,7 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-protocol GumballMachine {
+protocol GumballMachine: class {
     func releaseBall()
     var ballsCount: UInt { get }
     var insertedQuarters: UInt { get set }

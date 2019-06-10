@@ -15,8 +15,8 @@ class HarmonicViewModel {
     private(set) var formula : String = ""
     private(set) var points = [ChartDataEntry]()
     
-    let pointsCount = 1000
-    let step = 0.01
+    var pointsCount = 1000
+    var step = 0.01
     
     init(harmonic: Harmonic) {
         self.harmonic = harmonic

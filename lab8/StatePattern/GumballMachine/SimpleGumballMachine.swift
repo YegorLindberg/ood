@@ -6,65 +6,42 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-class SimpleGumballMachine: GumballMachine {
+class SimpleGumballMachine {
+
+    private var context = GumballMachineContext()
     
-    private(set) var ballsCount: UInt = 0
-    private(set) var currentState: State?
-    var insertedQuarters: UInt = 0
-    let maxQuartersCount: UInt = 5
+//    var output:
     
     init(ballsCount: UInt) {
-        self.ballsCount = ballsCount
+        self.context.ballsCount = ballsCount
         if ballsCount > 0 {
-            self.setNoQuarterState()
+            self.context.setNoQuarterState()
         } else {
-            self.setSoldOutState()
+            self.context.setSoldOutState()
         }
     }
     
     func ejectQuarter() {
-        self.currentState?.ejectQuarter()
+        self.context.currentState?.ejectQuarter()
     }
     
     func insertQuarter() {
-        self.currentState?.insertQuarter()
+        self.context.currentState?.insertQuarter()
     }
     
     func turnCrank() {
-        self.currentState?.turnCrank()
-        self.currentState?.dispense()
+        self.context.currentState?.turnCrank()
+        self.context.currentState?.dispense()
     }
     
     func toString() -> String {
         return """
         Mighty Gumball, Inc.
         Swift-enabled Standing Gumball Model #2016 (with state)
-        Inventory: \(self.ballsCount) gumball\(self.ballsCount != 1 ? "s" : "")
-        Machine is \(self.currentState?.toString() ?? "not found")
+        Inventory: \(self.context.ballsCount ?? 0) gumball\(self.context.ballsCount != 1 ? "s" : "")
+        Machine is \(self.context.currentState?.toString() ?? "not found")
         """
     }
     
-    func releaseBall() {
-        if self.ballsCount != 0 {
-            print("A gumball comes rolling out the slot...")
-            self.ballsCount -= 1
-        }
-    }
-    
-    func setSoldOutState() {
-        self.currentState = SoldOutState(self)
-    }
-    
-    func setNoQuarterState() {
-        self.currentState = NoQuarterState(self)
-    }
-    
-    func setSoldState() {
-        self.currentState = SoldState(self)
-    }
-    
-    func setHasQuarterState() {
-        self.currentState = HasQuarterState(self)
-    }
-    
 }
+

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C9277E222AE40A3001CC4F3 /* GumballMachineContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9277E122AE40A3001CC4F3 /* GumballMachineContext.swift */; };
+		5CB16E0622ADB28B00B020A0 /* StatePatternTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB16E0522ADB28B00B020A0 /* StatePatternTests.swift */; };
+		5CB16E0C22ADB31B00B020A0 /* GumballMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE130322AD2F0F005ADBAD /* GumballMachine.swift */; };
+		5CB16E0D22ADB31E00B020A0 /* SimpleGumballMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE130F22AD3874005ADBAD /* SimpleGumballMachine.swift */; };
+		5CB16E0E22ADB32000B020A0 /* NaiveGumballMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE131122AD47F6005ADBAD /* NaiveGumballMachine.swift */; };
+		5CB16E0F22ADB32300B020A0 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE130122AD2A9B005ADBAD /* State.swift */; };
+		5CB16E1022ADB32600B020A0 /* SoldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE130622AD2FD5005ADBAD /* SoldState.swift */; };
+		5CB16E1122ADB32900B020A0 /* SoldOutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE130822AD3250005ADBAD /* SoldOutState.swift */; };
+		5CB16E1222ADB32B00B020A0 /* HasQuarterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE130A22AD3476005ADBAD /* HasQuarterState.swift */; };
+		5CB16E1322ADB32E00B020A0 /* NoQuarterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE130C22AD366B005ADBAD /* NoQuarterState.swift */; };
 		5CEE12FB22AD2A8A005ADBAD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE12FA22AD2A8A005ADBAD /* main.swift */; };
 		5CEE130222AD2A9B005ADBAD /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE130122AD2A9B005ADBAD /* State.swift */; };
 		5CEE130422AD2F0F005ADBAD /* GumballMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE130322AD2F0F005ADBAD /* GumballMachine.swift */; };
@@ -31,6 +41,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C9277E122AE40A3001CC4F3 /* GumballMachineContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GumballMachineContext.swift; sourceTree = "<group>"; };
+		5CB16E0322ADB28B00B020A0 /* StatePatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatePatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CB16E0522ADB28B00B020A0 /* StatePatternTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePatternTests.swift; sourceTree = "<group>"; };
+		5CB16E0722ADB28B00B020A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CEE12F722AD2A8A005ADBAD /* StatePattern */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StatePattern; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CEE12FA22AD2A8A005ADBAD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5CEE130122AD2A9B005ADBAD /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
@@ -44,6 +58,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5CB16E0022ADB28B00B020A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CEE12F422AD2A8A005ADBAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,10 +75,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CB16E0422ADB28B00B020A0 /* StatePatternTests */ = {
+			isa = PBXGroup;
+			children = (
+				5CB16E0522ADB28B00B020A0 /* StatePatternTests.swift */,
+				5CB16E0722ADB28B00B020A0 /* Info.plist */,
+			);
+			path = StatePatternTests;
+			sourceTree = "<group>";
+		};
 		5CEE12EE22AD2A8A005ADBAD = {
 			isa = PBXGroup;
 			children = (
 				5CEE12F922AD2A8A005ADBAD /* StatePattern */,
+				5CB16E0422ADB28B00B020A0 /* StatePatternTests */,
 				5CEE12F822AD2A8A005ADBAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				5CEE12F722AD2A8A005ADBAD /* StatePattern */,
+				5CB16E0322ADB28B00B020A0 /* StatePatternTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +130,7 @@
 				5CEE130322AD2F0F005ADBAD /* GumballMachine.swift */,
 				5CEE130F22AD3874005ADBAD /* SimpleGumballMachine.swift */,
 				5CEE131122AD47F6005ADBAD /* NaiveGumballMachine.swift */,
+				5C9277E122AE40A3001CC4F3 /* GumballMachineContext.swift */,
 			);
 			path = GumballMachine;
 			sourceTree = "<group>";
@@ -105,6 +138,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5CB16E0222ADB28B00B020A0 /* StatePatternTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CB16E0A22ADB28B00B020A0 /* Build configuration list for PBXNativeTarget "StatePatternTests" */;
+			buildPhases = (
+				5CB16DFF22ADB28B00B020A0 /* Sources */,
+				5CB16E0022ADB28B00B020A0 /* Frameworks */,
+				5CB16E0122ADB28B00B020A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StatePatternTests;
+			productName = StatePatternTests;
+			productReference = 5CB16E0322ADB28B00B020A0 /* StatePatternTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5CEE12F622AD2A8A005ADBAD /* StatePattern */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CEE12FE22AD2A8A005ADBAD /* Build configuration list for PBXNativeTarget "StatePattern" */;
@@ -132,6 +182,9 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Yegor Lindberg";
 				TargetAttributes = {
+					5CB16E0222ADB28B00B020A0 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					5CEE12F622AD2A8A005ADBAD = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -150,15 +203,43 @@
 			projectRoot = "";
 			targets = (
 				5CEE12F622AD2A8A005ADBAD /* StatePattern */,
+				5CB16E0222ADB28B00B020A0 /* StatePatternTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		5CB16E0122ADB28B00B020A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		5CB16DFF22ADB28B00B020A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CB16E0E22ADB32000B020A0 /* NaiveGumballMachine.swift in Sources */,
+				5CB16E1222ADB32B00B020A0 /* HasQuarterState.swift in Sources */,
+				5CB16E0C22ADB31B00B020A0 /* GumballMachine.swift in Sources */,
+				5CB16E0D22ADB31E00B020A0 /* SimpleGumballMachine.swift in Sources */,
+				5CB16E1122ADB32900B020A0 /* SoldOutState.swift in Sources */,
+				5CB16E1022ADB32600B020A0 /* SoldState.swift in Sources */,
+				5CB16E0F22ADB32300B020A0 /* State.swift in Sources */,
+				5CB16E1322ADB32E00B020A0 /* NoQuarterState.swift in Sources */,
+				5CB16E0622ADB28B00B020A0 /* StatePatternTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CEE12F322AD2A8A005ADBAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C9277E222AE40A3001CC4F3 /* GumballMachineContext.swift in Sources */,
 				5CEE131022AD3874005ADBAD /* SimpleGumballMachine.swift in Sources */,
 				5CEE12FB22AD2A8A005ADBAD /* main.swift in Sources */,
 				5CEE130922AD3250005ADBAD /* SoldOutState.swift in Sources */,
@@ -174,6 +255,42 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		5CB16E0822ADB28B00B020A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DQ34MQ3ZUS;
+				INFOPLIST_FILE = StatePatternTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = university.StatePatternTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5CB16E0922ADB28B00B020A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DQ34MQ3ZUS;
+				INFOPLIST_FILE = StatePatternTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = university.StatePatternTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		5CEE12FC22AD2A8A005ADBAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -312,6 +429,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5CB16E0A22ADB28B00B020A0 /* Build configuration list for PBXNativeTarget "StatePatternTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CB16E0822ADB28B00B020A0 /* Debug */,
+				5CB16E0922ADB28B00B020A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5CEE12F222AD2A8A005ADBAD /* Build configuration list for PBXProject "StatePattern" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

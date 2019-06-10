@@ -63,6 +63,9 @@ class DisplayHarmonicChartAndTableVC: UIViewController, ChartViewDelegate {
             set.setColor(NSUIColor.init(cgColor: UIColor.blue.cgColor), alpha: 1.0)
             set.lineWidth = 1.5
             
+            
+            self.delegate?.harmonicListViewModel.points[0].x = 0.1
+            
             let data = LineChartData(dataSet: set)
             self.viewGraphic.legend.form = .square
             data.setDrawValues(false)

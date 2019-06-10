@@ -10,7 +10,7 @@ import UIKit
 
 class ScreenViewController: UIViewController, DisplayHarmonicChartAndTableDelegate {
 
-    @IBOutlet var AddNewHarmonicViewContainer      : UIView!
+    @IBOutlet var addNewHarmonicViewContainer      : UIView!
     @IBOutlet var displayChartAndTableViewContainer: UIView!
     @IBOutlet var selectedHarmonicViewContainer    : UIView!
     @IBOutlet var harmonicsTableViewContainer      : UIView!
@@ -35,7 +35,7 @@ class ScreenViewController: UIViewController, DisplayHarmonicChartAndTableDelega
         
         self.initializeChildrenVCs()
 
-        self.AddNewHarmonicViewContainer.isHidden = true
+        self.addNewHarmonicViewContainer.isHidden = true
         self.selectedHarmonicViewContainer.isHidden = true
         
         self.harmonicListViewModel.onAddNewHarmonic = {
@@ -101,7 +101,7 @@ extension ScreenViewController: AddHarmonicDelegate {
 
 extension ScreenViewController: HarmonicsTableViewDelegate {
     func hideViewAddHarmonic(_ hide: Bool) {
-        self.AddNewHarmonicViewContainer.isHidden = hide
+        self.addNewHarmonicViewContainer.isHidden = hide
     }
     
     func prepareHarmonicViews(indexPath: IndexPath) {

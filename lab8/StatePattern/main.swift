@@ -8,12 +8,17 @@
 
 import Foundation
 
-func testSimpleGumballMachine() {
-//    let gumballMachine = SimpleGumballMachine(ballsCount: 5)
-    let gumballMachine = NaiveGumballMachine(ballsCount: 5)
+func testGumballMachine() {
+    let gumballMachine = SimpleGumballMachine(ballsCount: 5)
+//    let gumballMachine = NaiveGumballMachine(ballsCount: 5)
     
     print(gumballMachine.toString(), "\n")
     
+    gumballMachine.insertQuarter()
+    gumballMachine.insertQuarter()
+    gumballMachine.insertQuarter()
+    gumballMachine.insertQuarter()
+    gumballMachine.insertQuarter()
     gumballMachine.insertQuarter()
     gumballMachine.turnCrank()
     
@@ -46,7 +51,9 @@ func testSimpleGumballMachine() {
     
     print(gumballMachine.toString(), "\n")
     print("---------------------------")
+    
+//    gumballMachine.setNoQuarterState()
 }
 
-testSimpleGumballMachine()
+testGumballMachine()
 

@@ -8,7 +8,7 @@
 
 class SoldState: State {
     
-    private var delegate: GumballMachine
+    private weak var delegate: GumballMachine?
     
     init(_ gumballMachine: GumballMachine) {
         self.delegate = gumballMachine
@@ -27,15 +27,16 @@ class SoldState: State {
     }
     
     func dispense() {
-        self.delegate.releaseBall()
-        if self.delegate.ballsCount == 0 {
+        self.delegate?.releaseBall()
+        if self.delegate?.ballsCount == 0 {
             print("Oops, out of gumballs")
-            self.delegate.setSoldOutState()
+            self.delegate?.setSoldOutState()
         } else {
-            if self.delegate.insertedQuarters > 0 {
-                self.delegate.setHasQuarterState()
+            guard let insertedCoins = self.delegate?.insertedQuarters else { return }
+            if insertedCoins > UInt(0) {
+                self.delegate?.setHasQuarterState()
             } else {
-                self.delegate.setNoQuarterState()
+                self.delegate?.setNoQuarterState()
             }
         }
     }

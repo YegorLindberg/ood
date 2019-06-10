@@ -8,15 +8,16 @@
 
 class HasQuarterState: State {
     
-    private var delegate: GumballMachine
+    private weak var delegate: GumballMachine?
     
     init(_ gumballMachine: GumballMachine) {
         self.delegate = gumballMachine
     }
     
     func insertQuarter() {
-        if self.delegate.insertedQuarters + 1 <= self.delegate.maxQuartersCount {
-            self.delegate.insertedQuarters += 1
+        guard let insertedCoins = self.delegate?.insertedQuarters else { return }
+        if insertedCoins + 1 <= self.delegate!.maxQuartersCount {
+            self.delegate?.insertedQuarters += 1
             print("You inserted a quarter")
         } else {
             print("You can no longer insert a quarter")
@@ -24,16 +25,16 @@ class HasQuarterState: State {
     }
     
     func ejectQuarter() {
-        while self.delegate.insertedQuarters > 0 {
-            self.delegate.insertedQuarters -= 1
+        while self.delegate!.insertedQuarters > 0 {
+            self.delegate?.insertedQuarters -= 1
             print("Quarter returned")
         }
-        self.delegate.setNoQuarterState()
+        self.delegate?.setNoQuarterState()
     }
     
     func turnCrank() {
-        self.delegate.insertedQuarters -= 1
-        self.delegate.setSoldState()
+        self.delegate?.insertedQuarters -= 1
+        self.delegate?.setSoldState()
         print("You turned...")
     }
     

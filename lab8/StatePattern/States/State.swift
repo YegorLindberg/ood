@@ -6,7 +6,7 @@
 //  Copyright © 2019 Yegor Lindberg. All rights reserved.
 //
 
-protocol State {
+protocol State: class {
     func insertQuarter()
     func ejectQuarter()
     func turnCrank()
