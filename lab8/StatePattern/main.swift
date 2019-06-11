@@ -52,7 +52,6 @@ func testGumballMachine() {
     print(gumballMachine.toString(), "\n")
     print("---------------------------")
     
-//    gumballMachine.setNoQuarterState()
 }
 
 testGumballMachine()

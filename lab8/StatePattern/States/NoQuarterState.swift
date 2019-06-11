@@ -16,19 +16,23 @@ class NoQuarterState: State {
     
     func insertQuarter() {
         self.delegate?.insertedQuarters += 1
+        self.delegate?.logger.addLog("You inserted a quarter")
         print("You inserted a quarter")
         self.delegate?.setHasQuarterState()
     }
     
     func ejectQuarter() {
+        self.delegate?.logger.addLog("You haven't inserted a quarter")
         print("You haven't inserted a quarter")
     }
     
     func turnCrank() {
+        self.delegate?.logger.addLog("You turned but there's no quarter")
         print("You turned but there's no quarter")
     }
     
     func dispense() {
+        self.delegate?.logger.addLog("You need to pay first")
         print("You need to pay first")
     }
     

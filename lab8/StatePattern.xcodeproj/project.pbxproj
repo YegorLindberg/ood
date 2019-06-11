@@ -26,6 +26,12 @@
 		5CEE130D22AD366B005ADBAD /* NoQuarterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE130C22AD366B005ADBAD /* NoQuarterState.swift */; };
 		5CEE131022AD3874005ADBAD /* SimpleGumballMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE130F22AD3874005ADBAD /* SimpleGumballMachine.swift */; };
 		5CEE131222AD47F6005ADBAD /* NaiveGumballMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE131122AD47F6005ADBAD /* NaiveGumballMachine.swift */; };
+		5CF2089322AF84E300DA02C7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2089222AF84E300DA02C7 /* Logger.swift */; };
+		5CF2089522AF851400DA02C7 /* Loggerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2089422AF851400DA02C7 /* Loggerable.swift */; };
+		5CF2089622AF8D4B00DA02C7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2089222AF84E300DA02C7 /* Logger.swift */; };
+		5CF2089722AF8D4D00DA02C7 /* Loggerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2089422AF851400DA02C7 /* Loggerable.swift */; };
+		5CF2089822AF8D5E00DA02C7 /* StatePatternTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB16E0522ADB28B00B020A0 /* StatePatternTests.swift */; };
+		5CF2089922AF8D6400DA02C7 /* GumballMachineContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9277E122AE40A3001CC4F3 /* GumballMachineContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +61,8 @@
 		5CEE130C22AD366B005ADBAD /* NoQuarterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoQuarterState.swift; sourceTree = "<group>"; };
 		5CEE130F22AD3874005ADBAD /* SimpleGumballMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleGumballMachine.swift; sourceTree = "<group>"; };
 		5CEE131122AD47F6005ADBAD /* NaiveGumballMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaiveGumballMachine.swift; sourceTree = "<group>"; };
+		5CF2089222AF84E300DA02C7 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		5CF2089422AF851400DA02C7 /* Loggerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggerable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 		5CEE12F922AD2A8A005ADBAD /* StatePattern */ = {
 			isa = PBXGroup;
 			children = (
+				5CF2089122AF84BB00DA02C7 /* Logger */,
 				5CEE130E22AD383C005ADBAD /* GumballMachine */,
 				5CEE130522AD2FC5005ADBAD /* States */,
 				5CEE12FA22AD2A8A005ADBAD /* main.swift */,
@@ -133,6 +142,15 @@
 				5C9277E122AE40A3001CC4F3 /* GumballMachineContext.swift */,
 			);
 			path = GumballMachine;
+			sourceTree = "<group>";
+		};
+		5CF2089122AF84BB00DA02C7 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				5CF2089222AF84E300DA02C7 /* Logger.swift */,
+				5CF2089422AF851400DA02C7 /* Loggerable.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,10 +243,13 @@
 			files = (
 				5CB16E0E22ADB32000B020A0 /* NaiveGumballMachine.swift in Sources */,
 				5CB16E1222ADB32B00B020A0 /* HasQuarterState.swift in Sources */,
+				5CF2089722AF8D4D00DA02C7 /* Loggerable.swift in Sources */,
 				5CB16E0C22ADB31B00B020A0 /* GumballMachine.swift in Sources */,
 				5CB16E0D22ADB31E00B020A0 /* SimpleGumballMachine.swift in Sources */,
 				5CB16E1122ADB32900B020A0 /* SoldOutState.swift in Sources */,
+				5CF2089622AF8D4B00DA02C7 /* Logger.swift in Sources */,
 				5CB16E1022ADB32600B020A0 /* SoldState.swift in Sources */,
+				5CF2089922AF8D6400DA02C7 /* GumballMachineContext.swift in Sources */,
 				5CB16E0F22ADB32300B020A0 /* State.swift in Sources */,
 				5CB16E1322ADB32E00B020A0 /* NoQuarterState.swift in Sources */,
 				5CB16E0622ADB28B00B020A0 /* StatePatternTests.swift in Sources */,
@@ -240,7 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C9277E222AE40A3001CC4F3 /* GumballMachineContext.swift in Sources */,
+				5CF2089322AF84E300DA02C7 /* Logger.swift in Sources */,
+				5CF2089822AF8D5E00DA02C7 /* StatePatternTests.swift in Sources */,
 				5CEE131022AD3874005ADBAD /* SimpleGumballMachine.swift in Sources */,
+				5CF2089522AF851400DA02C7 /* Loggerable.swift in Sources */,
 				5CEE12FB22AD2A8A005ADBAD /* main.swift in Sources */,
 				5CEE130922AD3250005ADBAD /* SoldOutState.swift in Sources */,
 				5CEE131222AD47F6005ADBAD /* NaiveGumballMachine.swift in Sources */,

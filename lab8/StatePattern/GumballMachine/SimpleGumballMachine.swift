@@ -9,9 +9,7 @@
 class SimpleGumballMachine {
 
     private var context = GumballMachineContext()
-    
-//    var output:
-    
+
     init(ballsCount: UInt) {
         self.context.ballsCount = ballsCount
         if ballsCount > 0 {

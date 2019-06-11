@@ -15,6 +15,7 @@ class SoldOutState: State {
     }
     
     func insertQuarter() {
+        self.delegate?.logger.addLog("You can't insert a quarter, the machine is sold out")
         print("You can't insert a quarter, the machine is sold out")
     }
     
@@ -22,19 +23,22 @@ class SoldOutState: State {
         if self.delegate!.insertedQuarters > 0 {
             while self.delegate!.insertedQuarters > 0 {
                 self.delegate!.insertedQuarters -= 1
-//                print("Quarter returned", to: &self.delegate.output)
+                self.delegate?.logger.addLog("Quarter returned")
                 print("Quarter returned")
             }
         } else {
+            self.delegate?.logger.addLog("You can't eject, you haven't inserted a quarter yet")
             print("You can't eject, you haven't inserted a quarter yet")
         }
     }
     
     func turnCrank() {
+        self.delegate?.logger.addLog("You turned but there's no gumballs")
         print("You turned but there's no gumballs")
     }
     
     func dispense() {
+        self.delegate?.logger.addLog("No gumball dispensed")
         print("No gumball dispensed")
     }
     

@@ -18,8 +18,10 @@ class HasQuarterState: State {
         guard let insertedCoins = self.delegate?.insertedQuarters else { return }
         if insertedCoins + 1 <= self.delegate!.maxQuartersCount {
             self.delegate?.insertedQuarters += 1
+            self.delegate?.logger.addLog("You inserted a quarter")
             print("You inserted a quarter")
         } else {
+            self.delegate?.logger.addLog("You can no longer insert a quarter")
             print("You can no longer insert a quarter")
         }
     }
@@ -27,6 +29,7 @@ class HasQuarterState: State {
     func ejectQuarter() {
         while self.delegate!.insertedQuarters > 0 {
             self.delegate?.insertedQuarters -= 1
+            self.delegate?.logger.addLog("Quarter returned")
             print("Quarter returned")
         }
         self.delegate?.setNoQuarterState()
@@ -35,10 +38,12 @@ class HasQuarterState: State {
     func turnCrank() {
         self.delegate?.insertedQuarters -= 1
         self.delegate?.setSoldState()
+        self.delegate?.logger.addLog("You turned...")
         print("You turned...")
     }
     
     func dispense() {
+        self.delegate?.logger.addLog("No gumball dispensed")
         print("No gumball dispensed")
     }
     

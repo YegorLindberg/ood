@@ -7,14 +7,16 @@
 //
 
 class GumballMachineContext: GumballMachine {
-    
+   
     var ballsCount: UInt = 0
     private(set) var currentState: State?
     var insertedQuarters: UInt = 0
     let maxQuartersCount: UInt = 5
+    var logger = Logger()
     
     func releaseBall() {
         if self.ballsCount != 0 {
+            self.logger.addLog("A gumball comes rolling out the slot...")
             print("A gumball comes rolling out the slot...")
             self.ballsCount -= 1
         }

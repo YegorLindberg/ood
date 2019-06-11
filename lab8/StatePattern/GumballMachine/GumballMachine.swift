@@ -8,6 +8,7 @@
 
 protocol GumballMachine: class {
     func releaseBall()
+    var logger: Logger { get }
     var ballsCount: UInt { get }
     var insertedQuarters: UInt { get set }
     var maxQuartersCount: UInt { get }
